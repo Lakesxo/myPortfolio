@@ -76,10 +76,10 @@ button.modeBtn {
 }
 button.resume {
     background: #480403;
-    border-radius: 5px;
+    border-radius: 4px;
     color: #FFFFFF;
     outline: 0;
-    border: 0;
+    border: 1px solid #480403;
     padding: 12px 35px;
     font-size: 16px;
 }
@@ -93,9 +93,13 @@ button.resume {
 .bottom-hero {
     display: flex;
     justify-content: space-between;
+    align-items: center ;
+    padding-left: 90px;
+    margin-top: 20px;
 }
 img.light-dots {
     height: 450px;
+    position: relative;
 }
 img.first-pic {
     height: 418px;
@@ -107,7 +111,134 @@ img.first-pic {
     flex-direction: row-reverse;
     align-items: center;
 }
+p.hi {
+    font-size: 25px;
+}
+h1 {
+    font-size: 35px;
+    color: #480403;
+    position: relative;
+    width: 55%;
+    margin: 20px 0px;
+}
+h1::after {
+    position: absolute;
+    content: '';
+    height: 6px;
+    bottom: 5px;
+    background: #FFA987;
+    margin: 0 auto;
+	left: 0;
+    right: 0;
+    z-index: -1;
+}
+p.title {
+    color: #C4C4C4;
+}
+p.brief {
+    width: 50%;
+    margin: 20px 0px;
+    color: #5F6368;
+}
+.Cta-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+button.view {
+    background-color: transparent;
+    border: 2px solid #480403;
+    padding: 12px 35px;
+    border-radius: 4px;
+    color: #480403;
+    font-size: 15px;
+    outline: 0;
+    font-weight: 600;
+    margin-left: 30px;
+}
+button.view:hover {
+    background-color: #480403;
+    color: #FFFFFF;
+    transition: all 0.4s ease-in-out;
+}
+.fab {
+    color: #fff;
+    font-size: 4vmin;
+}
+.glowing {
+    display: flex;
+}
 
+.glowing ul {
+    display: flex;
+    margin-top: 20px;
+}
+
+.glowing ul li {
+    list-style: none;
+    position: relative;
+    width: 8vmin;
+    height: 8vmin;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.glowing ul li::before,
+.glowing ul li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 50%;
+    opacity: 0;
+    filter: blur(20px);
+    z-index: 1;
+}
+
+.glowing ul li::after {
+    filter: blur(40px);
+}
+
+.glowing ul li:hover::after,
+.glowing ul li:hover::before {
+    opacity: 1;
+}
+
+.glowing ul li a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 50%;
+}
+
+.glow {
+    top: 12px;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 80px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    transform: scale(0.8);
+    opacity: 0.8;
+    z-index: 10;
+}
+
+.glowing ul li:hover a .glow {
+    opacity: 1;
+    transform: scale(1.2);
+}
+.glowing ul li a, 
+.glowing ul li::after,
+.glowing ul li::before {
+    background: #480403;
+}
   
 @keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
