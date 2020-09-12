@@ -144,6 +144,7 @@ p.brief {
     display: flex;
     align-items: center;
     margin-top: 30px;
+    margin-bottom: 40px;
 }
 button.view {
     background-color: transparent;
@@ -163,7 +164,7 @@ button.view:hover {
 }
 .fab {
     color: #fff;
-    font-size: 4vmin;
+    font-size: 3.8vmin;
 }
 .glowing {
     display: flex;
@@ -177,8 +178,8 @@ button.view:hover {
 .glowing ul li {
     list-style: none;
     position: relative;
-    width: 8vmin;
-    height: 8vmin;
+    width: 7vmin;
+    height: 7vmin;
     margin-right: 20px;
     border-radius: 50%;
 }
@@ -205,6 +206,7 @@ button.view:hover {
 .glowing ul li:hover::after,
 .glowing ul li:hover::before {
     opacity: 1;
+    cursor: pointer;
 }
 
 .glowing ul li a {
@@ -226,13 +228,13 @@ button.view:hover {
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
     transform: scale(0.8);
-    opacity: 0.8;
+    opacity: 0.9;
     z-index: 10;
 }
 
 .glowing ul li:hover a .glow {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .glowing ul li a, 
 .glowing ul li::after,
