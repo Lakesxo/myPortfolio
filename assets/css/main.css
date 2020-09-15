@@ -115,7 +115,7 @@ p.hi {
     font-size: 25px;
 }
 h1.top {
-    font-size: 35px;
+    font-size: 38px;
     color: #480403;
     position: relative;
     margin: 20px 0px;
@@ -124,12 +124,12 @@ h1.top::after {
     position: absolute;
     content: '';
     height: 6px;
-    bottom: 5px;
+    bottom: 7px;
     background: #FFA987;
 	left: 0;
     right: 0;
     z-index: -1;
-    width: 36.5%;
+    width: 39.7%;
 }
 p.title {
     color: #C4C4C4;
