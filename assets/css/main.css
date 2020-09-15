@@ -327,6 +327,13 @@ button.view:hover {
         font-size: 19px;
         margin: 25px 0px 35px 0px;
     }
+    .glowing ul li {
+        width: 12vmin;
+        height: 12vmin;
+    }
+    .fab {
+        font-size: 6vmin;
+    }
 }
 @media (max-width: 480px){
 
