@@ -244,9 +244,6 @@ button.view:hover {
 .glowing ul li::before {
     background: #480403;
 }
-.mobile-nav {
-    display: none;
-}
   
 @keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
@@ -258,6 +255,21 @@ button.view:hover {
     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
     100% { transform: rotate( 0.0deg) }
 }
+.mobile-nav {
+    display: none;
+    align-items: center;
+    text-align: center;
+    color: #480403;
+    margin-top: 30px;
+}
+.mobile-nav li {
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.hide {
+    display: block;
+}
 
 
 /* Media Queries */
@@ -268,50 +280,52 @@ button.view:hover {
     .navs {
         display: none;
     }
-    .mobile-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        color: #480403;
-        margin-top: 30px;
-        z-index: 2;
-    }
-    .mobile-nav li {
-        margin-bottom: 40px;
-        font-size: 18px;
-        font-weight: 600;
+    .hero {
+        height: 70vh;
     }
     header {
-        padding: 15px 30px 15px 30px;
+        padding: 15px 25px 15px 25px;
     }
     .head {
         box-shadow: 0px 4px 10px rgba(18, 18, 18, 0.05);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #FFFBF9;
+        z-index: 2;
     }
     button.modeBtn {
         margin-right: 35px;
     }
+    
     .bottom-hero {
         display: block;
-        padding-left: 20px;
+        padding-left: 25px;
+        padding-right: 20px;
+        margin-top: 90px;
+        padding-top: 70px;
     }
     .right-part {
-        display: block;
-    }
-    img.first-pic {
-        position: relative;
-        left: 0;
-        height: 300px;
+        display: none;
     }
     img.logo {
         height: 65px;
     }
     h1.top {
-        font-size: 32px;
+        font-size: 35px;
+        margin: 30px 0px;
     }
     h1.top::after {
-        width: 81%;
+        width: 96%;
         bottom: 6px;
+    }
+    p.title {
+        font-size: 17px;
+    }
+    p.brief {
+        width: 100%;
+        font-size: 19px;
+        margin: 25px 0px 35px 0px;
     }
 }
 @media (max-width: 480px){
