@@ -274,9 +274,26 @@ button.view:hover {
     transition: all 1s ease-in-out;
 }
 .about {
+    display: flex;
+    justify-content: center;
     height: 100vh;
 }
+img.abt {
+    height: 400px;
+}
+.rightt {
+    position: relative;
+}
 
+.rightt .btn {
+    position: absolute;
+    top: 57.4%;
+    left: 50%;
+    transform: translate(2%, -50%);
+    -ms-transform: translate(2%, -50%);
+    cursor: pointer;
+    text-align: center;
+}
 
 /* Media Queries */
 @media (max-width: 768px){
