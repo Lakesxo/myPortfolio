@@ -261,14 +261,20 @@ button.view:hover {
     text-align: center;
     color: #480403;
     margin-top: 30px;
+    transition: all 30s ease-in-out;
 }
 .mobile-nav li {
     margin-bottom: 40px;
     font-size: 18px;
     font-weight: 600;
+    transition: all 1s ease-in-out;
 }
 .hide {
     display: block;
+    transition: all 1s ease-in-out;
+}
+.about {
+    height: 100vh;
 }
 
 
@@ -281,10 +287,11 @@ button.view:hover {
         display: none;
     }
     .hero {
-        height: 70vh;
+        height: 75vh;
     }
     header {
         padding: 15px 25px 15px 25px;
+        transition: all 1s ease-in-out;
     }
     .head {
         box-shadow: 0px 4px 10px rgba(18, 18, 18, 0.05);
@@ -293,6 +300,7 @@ button.view:hover {
         width: 100%;
         background: #FFFBF9;
         z-index: 2;
+        transition: all 1s ease-in-out;
     }
     button.modeBtn {
         margin-right: 35px;
