@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 img.logo {
     height: 80px;
 }
