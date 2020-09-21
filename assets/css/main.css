@@ -91,10 +91,10 @@ button.resume {
     font-size: 16px;
 }
 .wave {
-    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s;        /* Change to speed up or slow down */
-    animation-iteration-count: infinite;  /* Never stop waving :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    animation-name: wave-animation;  
+    animation-duration: 2.5s;       
+    animation-iteration-count: infinite;  
+    transform-origin: 70% 70%;       
     display: inline-block;
 }
 .bottom-hero {
@@ -279,9 +279,16 @@ h2::after {
 .flex {
     display: flex;
     padding-left: 20px;
+    margin-bottom: 15px;
 }
 .flex li {
     margin-right: 60px;
+}
+.set {
+    margin: 40px 0px 20px 0px;
+}
+.secp {
+    margin: 15px 0px;
 }
 @keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
@@ -326,7 +333,7 @@ img.abt {
 
 .rightt .btn {
     position: absolute;
-    top: 57.4%;
+    top: 95.3%;
     left: 50%;
     transform: translate(2%, -50%);
     -ms-transform: translate(2%, -50%);
