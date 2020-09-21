@@ -258,7 +258,22 @@ ul.skill li::before {
     display: inline-block; 
     width: 1em; 
     margin-left: -1em; 
-  }
+}
+h2 {
+    color: #480403;
+    position: relative;
+}
+h2::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: 12px;
+    background: #FFA987;
+	left: 20%;
+    right: 0;
+    z-index: -1;
+    width: 30%;
+}
 @keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
