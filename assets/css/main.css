@@ -247,9 +247,7 @@ button.view:hover {
  
 p.about-deets {
     color: #525252;
-}
-ul.skill {
-    padding-left: 20px;
+    width: 85%;
 }
 ul.skill li::before {
     content: "\2022";  
@@ -262,6 +260,7 @@ ul.skill li::before {
 h2 {
     color: #480403;
     position: relative;
+    margin-bottom: 40px;
 }
 h2::after {
     position: absolute;
@@ -269,19 +268,26 @@ h2::after {
     height: 2px;
     bottom: 12px;
     background: #FFA987;
-	left: 20%;
+	left: 23%;
     right: 0;
     z-index: -1;
     width: 30%;
 }
+.flex {
+    display: flex;
+    padding-left: 20px;
+}
+.flex li {
+    margin-right: 60px;
+}
 @keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
-    10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+    10% { transform: rotate(14.0deg) }  
     20% { transform: rotate(-8.0deg) }
     30% { transform: rotate(14.0deg) }
     40% { transform: rotate(-4.0deg) }
     50% { transform: rotate(10.0deg) }
-    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    60% { transform: rotate( 0.0deg) }  
     100% { transform: rotate( 0.0deg) }
 }
 .mobile-nav {
@@ -306,6 +312,7 @@ h2::after {
     display: flex;
     justify-content: center;
     height: 100vh;
+    padding: 20vh 70px 20vh 90px;
 }
 img.abt {
     height: 400px;
