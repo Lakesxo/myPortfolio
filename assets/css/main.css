@@ -244,7 +244,21 @@ button.view:hover {
 .glowing ul li::before {
     background: #480403;
 }
-  
+ 
+p.about-deets {
+    color: #525252;
+}
+ul.skill {
+    padding-left: 20px;
+}
+ul.skill li::before {
+    content: "\2022";  
+    color:#E54B4B;
+    font-weight: bolder; 
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em; 
+  }
 @keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
