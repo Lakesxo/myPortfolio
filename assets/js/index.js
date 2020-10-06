@@ -1,3 +1,4 @@
+// Elements selected from html
 let menu = document.querySelector('.hamburger');
 let navs = document.querySelector('.mobile-nav');
 let hng = document.querySelector('.hng');
@@ -7,6 +8,7 @@ let hngBtn = document.querySelector('li.top');
 let moreBtn = document.querySelector('li.mid');
 let migrantBtn = document.querySelector('li.last');
 
+// Hamburger menu function
 menuToggle =()=> {
     menu.classList.toggle('change');
     navs.classList.toggle('hide');
