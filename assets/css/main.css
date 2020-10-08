@@ -252,13 +252,16 @@ p.about-deets {
     color: #525252;
     width: 85%;
 }
-ul.skill li::before {
+ul.skill li::before, ul.skillmb li::before {
     content: "\2022";  
     color:#E54B4B;
     font-weight: bolder; 
     display: inline-block; 
     width: 1em; 
     margin-left: -1em; 
+}
+ul.skillmb {
+    display: none;
 }
 h2 {
     color: #480403;
@@ -358,6 +361,7 @@ ul.company li {
     cursor: pointer;
     color:#C4C4C4;
     border-left: 2px solid #C4C4C4;
+    border-bottom: 0px;
 }
 ul.company li.top {
     color: #480403;
@@ -380,6 +384,9 @@ ul.company li:active, ul.company li:target, ul.company li:hover{
 }
 h3 {
     color: #480403;
+}
+h2.sxt {
+    padding-left: 90px;
 }
 span.comp {
     color: #E54B4B;
@@ -433,7 +440,7 @@ ul.doings li::before {
         top: 0;
         width: 100%;
         background: #FFFBF9;
-        z-index: 2;
+        z-index: 100;
         transition: all 1s ease-in-out;
     }
     button.modeBtn {
@@ -475,6 +482,71 @@ ul.doings li::before {
     }
     .fab {
         font-size: 6vmin;
+    }
+    .about{
+        display: block;
+        padding: 20px 0px 20px 25px;
+    }
+    h2::after {
+        left: 45%;
+    }
+    ul.skill {
+        display: none;
+    }
+    ul.skillmb {
+        display: block;
+    }
+    .flex {
+        justify-content: space-between;
+    }
+    img.abt {
+        height: 300px;
+        margin-top: 30px;
+    }
+    .rightt .btn {
+        top: 91.2%;
+        left: 28%;
+        transform: translate(2%, -50%);
+        -ms-transform: translate(2%, -50%);
+    }
+    .experience {
+        padding: 80px 0px 20px 25px;
+    }
+    .tabbed {
+        display: block;
+        margin-top: 40px;
+    }
+    ul.company {
+        display: flex;
+        overflow-x: auto;
+        margin-bottom: 30px;
+    }
+    ul.company li {
+        border-left: 0px;
+        border-bottom: 2px solid #C4C4C4;
+        padding: 0px 20px;
+        min-width: 120px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    ul.company li.top {
+        border-bottom: 2px solid #480403;
+        border-left: 0px;
+    }
+    .tabbed-right {
+        padding-right: 0px;
+        width: 90%;
+        margin-top: 70px;
+    }
+    ul.doings {
+        padding-left: 15px;
+    }
+    p, li {
+        font-size: 17px;
+    }
+    h2.work::after {
+        left: 67%;
+        width: 22%;
     }
 }
 @media (max-width: 480px){
