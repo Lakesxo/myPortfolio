@@ -57,7 +57,7 @@ ul.nav {
     align-items: center;
 }
 ul.nav li {
-    margin-left: 80px;
+    margin-left: 60px;
     color: #480403;
 }
 ul {
@@ -417,7 +417,101 @@ ul.doings li::before {
 .tabbed {
     margin-top: 100px;
 }
-
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #480403; 
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #E54B4B; 
+}
+.myWorks {
+    padding-top: 70px;
+}
+h2.workHeader {
+    padding-left: 90px;
+}
+p.projName {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 26px;
+    color: #480403;
+    font-weight: 600;
+}
+p.toolsUsed {
+    text-align: center;
+    color: #FFFFFF;
+}
+.proj1, .proj2, .proj3 {
+    background: linear-gradient(181.72deg, #FFA987 15.88%, #480403 221.85%);
+    height: 300px;
+    width: 300px;
+    border-top: 8px solid #480403;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.proj1, .proj2 {
+    margin-right: 100px;
+}
+.firstThree, .secondThree, .thirdThree {
+    display: flex;
+}
+.secondThree, .thirdThree {
+    margin-top: 100px;
+}
+.worksContainer {
+    padding-left: 90px;
+    margin-top: 100px;
+}
+.link {
+    text-align: right;
+}
+button.viewMore {
+    background-color: transparent;
+    border: 2px solid #E54B4B;
+    padding: 12px 35px;
+    border-radius: 4px;
+    color: #E54B4B;
+    font-size: 15px;
+    outline: 0;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+button.viewMore:hover {
+    color: #FFFFFF;
+    background-color: #E54B4B;
+    transition: all 0.4s ease-in-out;
+}
+.viewMoreCont {
+    display: flex;
+    justify-content: center;
+}
+.thirdThree {
+    display: none;
+}
+i.fas {
+    cursor: pointer;
+}
+i.fas:hover {
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
 
 /* Media Queries */
 @media (max-width: 768px){
