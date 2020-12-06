@@ -12,7 +12,7 @@ img.logo {
     height: 80px;
 }
 .hero {
-    background: rgba(255, 169, 135, 0.04);
+    background: rgba(255, 169, 135, 0.08);
     height: 100vh;
 }
 .hamburger {
@@ -308,11 +308,12 @@ h2::after {
     align-items: center;
     text-align: center;
     color: #480403;
-    margin-top: 30px;
-    transition: all 30s ease-in-out;
+    padding-top: 1px;
+    background: rgba(255, 169, 135, 0.04);
+    padding-bottom: 40px;
 }
 .mobile-nav li {
-    margin-bottom: 40px;
+    margin-top: 40px;
     font-size: 18px;
     font-weight: 600;
     transition: all 1s ease-in-out;
@@ -346,7 +347,7 @@ img.abt {
 .experience {
     height: 100vh;
     padding-left: 200px;
-    background: rgba(255, 169, 135, 0.04);
+    background: rgba(255, 169, 135, 0.08);
     padding-top: 100px;
 }
 .tabbed {
@@ -494,9 +495,7 @@ button.viewMore {
     margin-bottom: 100px;
 }
 button.viewMore:hover {
-    color: #FFFFFF;
-    background-color: #E54B4B;
-    transition: all 0.4s ease-in-out;
+    background-color: #e54b4b11;
 }
 .viewMoreCont {
     display: flex;
@@ -527,6 +526,7 @@ i.fas:hover {
     header {
         padding: 15px 25px 15px 25px;
         transition: all 1s ease-in-out;
+        background: rgba(255, 169, 135, 0.04);
     }
     .head {
         box-shadow: 0px 4px 10px rgba(18, 18, 18, 0.05);
@@ -540,7 +540,6 @@ i.fas:hover {
     button.modeBtn {
         margin-right: 35px;
     }
-    
     .bottom-hero {
         display: block;
         padding-left: 25px;
@@ -641,6 +640,34 @@ i.fas:hover {
     h2.work::after {
         left: 67%;
         width: 22%;
+    }
+    h2.workHeader {
+        padding-left: 25px;
+    }
+    h2.workHeader::after {
+        left: 50%;
+        width: 30%;
+    }
+    .firstThree, .secondThree, .thirdThree {
+        display: block;
+        margin-top: 50px;
+    }
+    .worksContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 25px;
+        margin-top: 0px;
+    }
+    .proj1, .proj2 {
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+    .proj1, .proj2, .proj3 {
+        width: 350px;
+    }
+    button.viewMore {
+        margin: 60px 0px;
     }
 }
 @media (max-width: 480px){
