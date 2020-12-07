@@ -12,7 +12,7 @@ img.logo {
     height: 80px;
 }
 .hero {
-    background: rgba(255, 169, 135, 0.08);
+    background: rgba(255, 169, 135, 0.1);
     height: 100vh;
 }
 .hamburger {
@@ -274,10 +274,13 @@ h2::after {
     height: 2px;
     bottom: 12px;
     background: #FFA987;
-	left: 23%;
+	left: 18%;
     right: 0;
     z-index: -1;
     width: 30%;
+}
+h2.work::after {
+    left: 20%;
 }
 .flex {
     display: flex;
@@ -339,15 +342,15 @@ img.abt {
     position: absolute;
     top: 95.3%;
     left: 50%;
-    transform: translate(2%, -50%);
-    -ms-transform: translate(2%, -50%);
+    transform: translate(2%, -23%);
+    -ms-transform: translate(2%, -23%);
     cursor: pointer;
     text-align: center;
 }
 .experience {
     height: 100vh;
     padding-left: 200px;
-    background: rgba(255, 169, 135, 0.08);
+    background: rgba(255, 169, 135, 0.1);
     padding-top: 100px;
 }
 .tabbed {
@@ -421,18 +424,12 @@ ul.doings li::before {
 ::-webkit-scrollbar {
     width: 5px;
 }
-  
-  /* Track */
 ::-webkit-scrollbar-track {
     background: transparent;
 }
-   
-  /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #480403; 
 }
-  
-  /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #E54B4B; 
 }
@@ -581,7 +578,7 @@ i.fas:hover {
         padding: 20px 0px 20px 25px;
     }
     h2::after {
-        left: 45%;
+        left: 38%;
     }
     ul.skill {
         display: none;
@@ -638,14 +635,14 @@ i.fas:hover {
         font-size: 17px;
     }
     h2.work::after {
-        left: 67%;
-        width: 22%;
+        left: 60%;
+        width: 25%;
     }
     h2.workHeader {
         padding-left: 25px;
     }
     h2.workHeader::after {
-        left: 50%;
+        left: 44%;
         width: 30%;
     }
     .firstThree, .secondThree, .thirdThree {
