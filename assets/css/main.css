@@ -501,6 +501,10 @@ button.viewMore:hover {
 .thirdThree {
     display: none;
 }
+.none {
+    display: flex;
+    transition: all 1s ease-out;
+}
 i.fas {
     cursor: pointer;
 }
@@ -665,6 +669,12 @@ i.fas:hover {
     }
     button.viewMore {
         margin: 60px 0px;
+    }
+    .thirdThree {
+        display: none;
+    }
+    .none {
+        display: block;
     }
 }
 @media (max-width: 480px){

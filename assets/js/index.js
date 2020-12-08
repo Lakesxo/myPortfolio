@@ -9,6 +9,8 @@ let moreBtn = document.querySelector('li.mid');
 let migrantBtn = document.querySelector('li.last');
 let mediaQuery = window.matchMedia("(max-width: 768px)")
 let xo = document.querySelector('ul.company li')
+let viewMoreBtn = document.querySelector('button.viewMore');
+let moreExperience = document.querySelector('.thirdThree');
 
 // Hamburger menu function
 menuToggle =()=> {
@@ -69,8 +71,19 @@ moreFunc =()=> {
     migrantBtn.style.color = "#C4C4C4"
 }
 
+showMoreExperience =()=> {
+    moreExperience.classList.toggle('none');
+    if (viewMoreBtn.innerHTML === 'View More Projects'){
+        viewMoreBtn.innerHTML = 'Show Less Projects'
+    } else {
+        viewMoreBtn.innerHTML = 'View More Projects'
+    }
+}
+
+
 // Event listeners
 menu.addEventListener('click', menuToggle);
 hngBtn.addEventListener('click', hngFunc);
 moreBtn.addEventListener('click', moreFunc);
 migrantBtn.addEventListener('click', migrantFunc);
+viewMoreBtn.addEventListener('click', showMoreExperience);
