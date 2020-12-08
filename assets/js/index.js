@@ -18,7 +18,27 @@ menuToggle =()=> {
     navs.classList.toggle('hide');
 }
 
-// Tabbed content menu
+/* Tabbed content menu */
+// Change orirntation of borders on screen change
+changeTabbedOnScreen =()=> {
+    if (mediaQuery.matches){
+        moreBtn.style.borderBottom = "2px solid #C4C4C4"
+        moreBtn.style.borderLeft = '0px'
+        hngBtn.style.borderBottom = "2px solid #C4C4C4"
+        hngBtn.style.borderLeft = '0px'
+        migrantBtn.style.borderBottom = "2px solid #C4C4C4"
+        migrantBtn.style.borderLeft = '0px'
+    } else {
+        moreBtn.style.borderLeft = "2px solid #C4C4C4"
+        moreBtn.style.borderBottom = '0px'
+        hngBtn.style.borderLeft = "2px solid #C4C4C4"
+        hngBtn.style.borderBottom = '0px'
+        migrantBtn.style.borderLeft = "2px solid #C4C4C4"
+        migrantBtn.style.borderBottom = '0px'
+    }
+}
+
+// Function when Hng tab is clicked
 hngFunc =()=> {
     hng.style.display = "block";
     more.style.display = "none";
@@ -36,6 +56,8 @@ hngFunc =()=> {
     moreBtn.style.color = "#C4C4C4"
     migrantBtn.style.color = "#C4C4C4"
 }
+
+// Function when Migrant Tab is clicked
 migrantFunc =()=> {
     migrant.style.display = "block";
     more.style.display = "none";
@@ -53,6 +75,8 @@ migrantFunc =()=> {
     hngBtn.style.color = "#C4C4C4"
     moreBtn.style.color = "#C4C4C4"
 }
+
+// Function when More Tab is clicked
 moreFunc =()=> {
     more.style.display = "block";
     migrant.style.display = "none"
@@ -71,7 +95,8 @@ moreFunc =()=> {
     migrantBtn.style.color = "#C4C4C4"
 }
 
-showMoreExperience =()=> {
+// Function to load more projects
+showMoreProjects =()=> {
     moreExperience.classList.toggle('none');
     if (viewMoreBtn.innerHTML === 'View More Projects'){
         viewMoreBtn.innerHTML = 'Show Less Projects'
@@ -86,4 +111,5 @@ menu.addEventListener('click', menuToggle);
 hngBtn.addEventListener('click', hngFunc);
 moreBtn.addEventListener('click', moreFunc);
 migrantBtn.addEventListener('click', migrantFunc);
-viewMoreBtn.addEventListener('click', showMoreExperience);
+viewMoreBtn.addEventListener('click', showMoreProjects);
+mediaQuery.addEventListener('change', changeTabbedOnScreen);
