@@ -59,6 +59,10 @@ ul.nav {
 ul.nav li {
     margin-left: 60px;
     color: #480403;
+    font-weight: 600;
+}
+ul.nav li:hover {
+    color: #702c2b;
 }
 ul {
     list-style-type: none;
@@ -484,7 +488,7 @@ button.viewMore {
     margin-bottom: 100px;
 }
 button.viewMore:hover {
-    background-color: #e54b4b11;
+    background: rgba(255, 169, 135, 0.1);
 }
 .viewMoreCont {
     display: flex;
@@ -503,6 +507,82 @@ i.fas {
 i.fas:hover {
     font-size: 20px;
     transition: all 0.2s ease-in-out;
+}
+.contact {
+    background: rgba(255, 169, 135, 0.1);
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p.head {
+    color: #480403;
+    font-size: 40px;
+    font-weight: 600;
+}
+p.headDeets {
+    text-align: center;
+    color: #828282;
+    width: 40%;
+    margin: 40px 0px;
+} 
+form {
+    width: 40%;
+}
+input, textarea {
+    border: 0;
+    padding: 10px;
+    outline: 0;
+}
+.flexr {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+input[type="text"]{
+    margin-right: 30px;
+    width: 100%;
+}
+input[type="email"], textarea{
+    width: 100%;
+}
+button[type="submit"]{
+    background-color: #480403;
+    border-radius: 4px;
+    color: #FFFFFF;
+    outline: 0;
+    border: 1px solid #480403;
+    padding: 10px 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+::placeholder {
+    color: #C4C4C4;
+}
+.linkCont {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.topFoot {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #702c2b;
+    color: #FFFFFF;
+}
+a.emeka {
+    border-bottom: 2px solid #FFFFFF;
+}
+a.emeka:hover {
+    border-bottom: 2px solid #c4c4c4;
+    color: #C4C4C4;
+}
+.bottomFoot {
+    text-align: center;
+    padding: 20px 80px;
+    background-color: #480403;
+    color: #FFFFFF;
 }
 
 /* Media Queries */
@@ -608,7 +688,7 @@ i.fas:hover {
         margin-bottom: 30px;
     }
     ul.company::-webkit-scrollbar {
-        height: 2px;
+        height: 1px;
     }
     ul.company::-webkit-scrollbar-track {
         background: transparent;
