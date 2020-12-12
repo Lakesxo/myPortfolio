@@ -515,7 +515,7 @@ i.fas:hover {
     flex-direction: column;
     align-items: center;
 }
-p.head {
+p.headr {
     color: #480403;
     font-size: 40px;
     font-weight: 600;
@@ -756,6 +756,44 @@ a.emeka:hover {
     }
     .none {
         display: block;
+    }
+    p.headr {
+        font-size: 30px;
+        text-align: center;
+    }
+    p.headDeets {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+    }
+    .contact {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .flexr {
+        display: block;
+    }
+    input[type="text"]{
+        margin-right: 0px;
+        height: 50px;
+    }
+    input[type="email"]{
+        margin-top: 30px;
+        height: 50px;
+    }
+    button[type="submit"]{
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .topFoot {
+        display: block;
+        padding: 25px;
+        text-align: center;
+    }
+    p.code {
+        margin-top: 30px;
     }
 }
 @media (max-width: 480px){
