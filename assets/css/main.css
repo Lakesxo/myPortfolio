@@ -367,21 +367,13 @@ ul.company li {
     border-left: 2px solid #C4C4C4;
     border-bottom: 0px;
 }
-ul.company li.top {
+ul.company li.opti {
     color: #480403;
     border-left: 2px solid #480403;
 }
-li.mid {
+li.mid, li.top, li.last, li.opti, li.bees {
     padding-top: 10px;
     padding-bottom: 10px;
-}
-li.top {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-li.last {
-    padding-bottom: 10px;
-    padding-top: 10px;
 }
 ul.company li:active, ul.company li:target, ul.company li:hover{
     transition: all 0.5s ease-in-out;
@@ -399,7 +391,7 @@ span.comp {
     width: 65%;
     padding-right: 200px;
 }
-.migrant, .more {
+.migrant, .more, .hng, .beesng {
     display: none;
 }
 p.time {
@@ -604,7 +596,7 @@ i.fas:hover {
         -ms-transform: translate(2%, -50%);
     }
     .experience {
-        padding: 80px 0px 20px 25px;
+        padding: 80px 20px 20px 25px;
     }
     .tabbed {
         display: block;
@@ -615,6 +607,15 @@ i.fas:hover {
         overflow-x: auto;
         margin-bottom: 30px;
     }
+    ul.company::-webkit-scrollbar {
+        height: 2px;
+    }
+    ul.company::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    ul.company::-webkit-scrollbar-thumb {
+        background: #C4C4C4; 
+    }
     ul.company li {
         border-left: 0px;
         border-bottom: 2px solid #C4C4C4;
@@ -623,7 +624,7 @@ i.fas:hover {
         text-align: center;
         padding-bottom: 10px;
     }
-    ul.company li.top {
+    ul.company li.opti {
         border-bottom: 2px solid #480403;
         border-left: 0px;
     }
