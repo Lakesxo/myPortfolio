@@ -23,6 +23,7 @@ menuToggle =()=> {
 }
 
 /* Tabbed content menu */
+
 // Change orirntation of borders on screen change
 changeTabbedOnScreen =()=> {
     if (mediaQuery.matches){
