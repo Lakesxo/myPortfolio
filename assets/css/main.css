@@ -530,7 +530,7 @@ form {
     width: 40%;
 }
 input, textarea {
-    border: 0;
+    border: 1px solid #48040338;
     padding: 10px;
     outline: 0;
 }
@@ -587,6 +587,9 @@ a.emeka:hover {
 
 /* Media Queries */
 @media (max-width: 768px){
+
+}
+@media (max-width: 480px){
     .hamburger {
         display: block;
     }
@@ -796,6 +799,56 @@ a.emeka:hover {
         margin-top: 30px;
     }
 }
-@media (max-width: 480px){
+@media (max-width: 420px){
 
+}
+@media (max-width: 380px){
+    .hero {
+        height: 86vh;
+    }
+    h1.top {
+        font-size: 32px;
+    }
+    .bottom-hero {
+        padding-top: 50px;
+        padding-left: 20px;
+    }
+    p.title {
+        font-size: 16px;
+    }
+    p.brief {
+        font-size: 17px;
+    }
+    button.resume, button.view {
+        padding: 12px 30px;
+    }
+    .about, .experience {
+        padding: 50px 0px 50px 20px;
+        height: auto;
+    }
+    h2 {
+        margin-bottom: 30px;
+    }
+    h2.work::after {
+        width: 30%;
+        left: 63%;
+    }
+    .rightt .btn {
+        top: 91.5%;
+        left: 33.5%;
+    }
+    h2.workHeader {
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .myWorks {
+        padding-top: 50px;
+    }
+    .worksContainer {
+        padding-left: 20px;
+    }
+    .proj1, .proj2, .proj3 {
+        width: 330px;
+        height: 290px;
+    }
 }
