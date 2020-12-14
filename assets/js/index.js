@@ -15,6 +15,7 @@ let mediaQuery = window.matchMedia("(max-width: 768px)");
 let xo = document.querySelector('ul.company li');
 let viewMoreBtn = document.querySelector('button.viewMore');
 let moreExperience = document.querySelector('.thirdThree');
+let submitBtn = document.querySelector('.butSubmit')
 
 // Hamburger menu function
 menuToggle =()=> {
@@ -196,6 +197,11 @@ showMoreProjects =()=> {
     }
 }
 
+// Prevent redirecting to another page
+noRedirect =(e)=> {
+    e.preventDefault();
+}
+
 
 // Event listeners
 menu.addEventListener('click', menuToggle);
@@ -206,3 +212,4 @@ migrantBtn.addEventListener('click', migrantFunc);
 theBeesBtn.addEventListener('click', theBeesFunc);
 viewMoreBtn.addEventListener('click', showMoreProjects);
 mediaQuery.addEventListener('change', changeTabbedOnScreen);
+submitBtn.addEventListener('click', noRedirect)
