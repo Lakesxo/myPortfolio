@@ -749,7 +749,7 @@ a.emeka:hover {
         margin-bottom: 50px;
     }
     .proj1, .proj2, .proj3 {
-        width: 350px;
+        width: 360px;
     }
     button.viewMore {
         margin: 60px 0px;
@@ -800,7 +800,23 @@ a.emeka:hover {
     }
 }
 @media (max-width: 420px){
-
+    .hero {
+        height: 87vh;
+    }
+    .about {
+        padding: 50px 0px 50px 25px;
+        height: auto;
+    }
+    .experience {
+        padding: 50px 25px 50px 25px;
+        height: auto;
+    }
+    h2.workHeader {
+        margin-bottom: 10px;
+    }
+    .fab {
+        font-size: 7vmin;
+    }
 }
 @media (max-width: 380px){
     .hero {
@@ -854,6 +870,9 @@ a.emeka:hover {
         width: 330px;
         height: 290px;
     }
+    .fab {
+        font-size: 6vmin;
+    }
 }
 @media (max-width: 360px){
     h1.top {
@@ -877,5 +896,65 @@ a.emeka:hover {
     }
     .proj1, .proj2, .proj3 {
         width: 320px;
+    }
+}
+@media (max-width: 320px){
+    header {
+        padding: 15px 20px;
+    }
+    img.logo {
+        height: 58px;
+    }
+    .hero {
+        height: 86vh;
+    }
+    .bottom-hero {
+        margin-top: 80px;
+    }
+    h1.top {
+        font-size: 28px;
+    }
+    h1.top::after {
+        width: 100%;
+        bottom: 5px;
+    }
+    img.abt {
+        height: 250px;
+    }
+    p.title {
+        font-size: 13px;
+    }
+    p.brief {
+        font-size: 15px;
+    }
+    button.resume, button.view {
+        padding: 11px 18px;
+    }
+    button.resume {
+        border: 2px solid #480403;
+    }
+    .Cta-btns {
+        margin-bottom: 20px;
+    }
+    .fab {
+        font-size: 7vmin;
+        margin: 0px 20px 20px 1px;
+    }
+    .proj1, .proj2, .proj3 {
+        width: 280px;
+    }
+    h2::after {
+        left: 47%;
+    }
+    .rightt .btn {
+        top: 90%;
+        left: 31%;
+    }
+    h2.work::after {
+        left: 76%;
+        width: 25%;
+    }
+    h2.workHeader::after {
+        left: 47%;
     }
 }
