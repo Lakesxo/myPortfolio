@@ -817,10 +817,13 @@ a.emeka:hover {
     .fab {
         font-size: 7vmin;
     }
+    button.resume {
+        border: 2px solid #480403;
+    }
 }
 @media (max-width: 380px){
     .hero {
-        height: 86vh;
+        height: 80vh;
     }
     h1.top {
         font-size: 32px;
