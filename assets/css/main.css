@@ -826,12 +826,15 @@ a.emeka:hover {
         padding: 50px 0px 50px 20px;
         height: auto;
     }
+    .experience {
+        padding-right: 20px;
+    }
     h2 {
         margin-bottom: 30px;
     }
     h2.work::after {
         width: 30%;
-        left: 63%;
+        left: 66%;
     }
     .rightt .btn {
         top: 91.5%;
@@ -850,5 +853,29 @@ a.emeka:hover {
     .proj1, .proj2, .proj3 {
         width: 330px;
         height: 290px;
+    }
+}
+@media (max-width: 360px){
+    h1.top {
+        font-size: 31px;
+    }
+    p.title {
+        font-size: 15px;
+    }
+    p.brief {
+        font-size: 16px;
+    }
+    button.resume, button.view {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+    .rightt .btn {
+        left: 38.5%;
+    }
+    h2.work::after {
+        left: 67%;
+    }
+    .proj1, .proj2, .proj3 {
+        width: 320px;
     }
 }
