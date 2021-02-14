@@ -197,11 +197,6 @@ showMoreProjects =()=> {
     }
 }
 
-// Prevent redirecting to another page
-noRedirect =(e)=> {
-    e.preventDefault();
-}
-
 
 // Event listeners
 menu.addEventListener('click', menuToggle);
@@ -212,4 +207,3 @@ migrantBtn.addEventListener('click', migrantFunc);
 theBeesBtn.addEventListener('click', theBeesFunc);
 viewMoreBtn.addEventListener('click', showMoreProjects);
 mediaQuery.addEventListener('change', changeTabbedOnScreen);
-submitBtn.addEventListener('click', noRedirect)
