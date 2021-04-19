@@ -313,6 +313,10 @@
             form.reset();
             button.style = "display: none";
             status.innerHTML = "Thanks for reaching out !";
+            setTimeout(() => {
+                button.style = "display: block";
+                status.style.display = 'none';
+            }, 5000)
           }
       
           function error() {

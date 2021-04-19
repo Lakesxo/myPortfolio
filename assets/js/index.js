@@ -15,7 +15,8 @@ let mediaQuery = window.matchMedia("(max-width: 768px)");
 let xo = document.querySelector('ul.company li');
 let viewMoreBtn = document.querySelector('button.viewMore');
 let moreExperience = document.querySelector('.thirdThree');
-let submitBtn = document.querySelector('.butSubmit')
+let submitBtn = document.querySelector('.butSubmit');
+let mbNavLi = document.querySelectorAll('.mobile-nav li')
 
 // Hamburger menu function
 menuToggle =()=> {
@@ -23,6 +24,11 @@ menuToggle =()=> {
     navs.classList.toggle('hide');
 }
 
+closeOnNavClick = () => {
+    mbNavLi.map((nav)=> {
+        
+    })
+}
 /* Tabbed content menu */
 
 // Change orirntation of borders on screen change

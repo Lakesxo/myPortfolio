@@ -318,9 +318,10 @@ h2.work::after {
     padding-top: 1px;
     background: rgba(255, 169, 135, 0.04);
     padding-bottom: 40px;
+    height: 90vh;
 }
 .mobile-nav li {
-    margin-top: 40px;
+    margin-top: 60px;
     font-size: 18px;
     font-weight: 600;
     transition: all 1s ease-in-out;
@@ -723,7 +724,7 @@ p#my-form-status {
     }
     .rightt .btn {
         top: 91.2%;
-        left: 28%;
+        left: 27.6%;
         transform: translate(2%, -50%);
         -ms-transform: translate(2%, -50%);
     }
