@@ -606,7 +606,7 @@ p#my-form-status {
     transition: transform .5s ease-out;
 }
 .skew {
-    transition: transform 0.3s;
+    transition: transform 0.5s;
     will-change: transform;
 }
 
