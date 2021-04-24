@@ -379,6 +379,7 @@ ul.company li.opti {
 li.mid, li.top, li.last, li.opti, li.bees {
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 15px;
 }
 ul.company li:active, ul.company li:target, ul.company li:hover{
     transition: all 0.5s ease-in-out;
@@ -609,6 +610,29 @@ p#my-form-status {
     transition: transform 0.25s;
     will-change: transform;
 }
+.mdQueryStyling {
+    border-bottom: 2px solid #C4C4C4;
+    border-left: 0 !important;
+}
+.otherSizeStyling {
+    border-left: 2px solid #C4C4C4;
+    border-bottom: 0 !important;
+}
+.activeTabMobile {
+    color: #480403 !important;
+    font-weight: 500 !important;
+    border-bottom: 2px solid #480403 !important;
+    background-color: #4804031a;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.activeTabDesktop {
+    color: #480403 !important;
+    font-weight: 500 !important;
+    border-left: 2px solid #480403 !important;
+    background-color: #48040314;
+    border-bottom-right-radius: 10px;
+}
 
 /* Media Queries */
 @media (max-width: 768px){
@@ -752,6 +776,9 @@ p#my-form-status {
     .tabbed {
         display: block;
         margin-top: 40px;
+    }
+    li.mid, li.top, li.last, li.opti, li.bees {
+        padding-top: 10px !important;
     }
     ul.company {
         display: flex;
