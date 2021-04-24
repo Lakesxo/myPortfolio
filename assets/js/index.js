@@ -17,6 +17,9 @@ let viewMoreBtn = document.querySelector('button.viewMore');
 let moreExperience = document.querySelector('.thirdThree');
 let submitBtn = document.querySelector('.butSubmit');
 let mbNavLi = document.querySelectorAll('.mobile-nav li')
+let header = document.querySelector('.head');
+let new_scroll_position = 0;
+let last_scroll_position;
 
 // Hamburger menu function
 menuToggle =()=> {
@@ -28,14 +31,31 @@ menuToggle =()=> {
     }
 }
 
+// Close mobile menu on link click
 closeOnNavClick = () => {  
     setTimeout(()=> {
         menu.classList.toggle('change');
         navs.classList.add('none');
     }, 500) 
-   
 }
-/* Tabbed content menu */
+
+// Close and open header on scroll
+window.addEventListener('scroll', function(e) {
+    last_scroll_position = window.scrollY;
+  
+    // Scrolling down
+    if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
+      header.classList.remove("slideDown");
+      header.classList.add("slideUp");
+  
+    // Scrolling up
+    } else if (new_scroll_position > last_scroll_position) {
+      header.classList.remove("slideUp");
+      header.classList.add("slideDown");
+    }
+  
+    new_scroll_position = last_scroll_position;
+});
 
 // Change orirntation of borders on screen change
 changeTabbedOnScreen =()=> {
