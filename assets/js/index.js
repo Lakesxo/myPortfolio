@@ -18,16 +18,30 @@ let moreExperience = document.querySelector('.thirdThree');
 let submitBtn = document.querySelector('.butSubmit');
 let mbNavLi = document.querySelectorAll('.mobile-nav li')
 let header = document.querySelector('.head');
+const section = document.querySelector('.skew');
+let currentPos = window.pageYOffset;
 let new_scroll_position = 0;
 let last_scroll_position;
+
+// Skew on scroll
+const skew = () => {
+    const newPos = window.pageYOffset;
+    const diff = newPos - currentPos;
+    const speed = diff * -0.25;
+    const final = (speed > 3) ? 3 : speed;
+    section.style.transform = `skewY(${ final }deg)`;
+    currentPos = newPos;
+    requestAnimationFrame(skew);
+}
+skew();
 
 // Hamburger menu function
 menuToggle =()=> {
     menu.classList.toggle('change');
     navs.classList.toggle('hide');
-    if (navs.classList.contains('none')){
+    if (navs.classList.contains('nonezz')){
         navs.classList.add('hide')
-        navs.classList.remove('none');
+        navs.classList.remove('nonezz');
     }
 }
 
@@ -35,7 +49,7 @@ menuToggle =()=> {
 closeOnNavClick = () => {  
     setTimeout(()=> {
         menu.classList.toggle('change');
-        navs.classList.add('none');
+        navs.classList.add('nonezz');
     }, 500) 
 }
 
@@ -80,7 +94,7 @@ changeTabbedOnScreen =()=> {
         optisourceBtn.style.borderLeft = "2px solid #C4C4C4"
         optisourceBtn.style.borderBottom = '0px'
         theBeesBtn.style.borderLeft = "2px solid #C4C4C4"
-        theBeesBtn.style.borderBottom = '0px'
+        theBeesBtn.style.borderBottom = '0px' 
     }
 }
 
