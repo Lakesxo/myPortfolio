@@ -27,7 +27,7 @@ let last_scroll_position;
 const skew = () => {
     const newPos = window.pageYOffset;
     const diff = newPos - currentPos;
-    const speed = diff * -0.25;
+    const speed = diff * 0.05;
     const final = (speed > 3) ? 3 : speed;
     section.style.transform = `skewY(${ final }deg)`;
     currentPos = newPos;
