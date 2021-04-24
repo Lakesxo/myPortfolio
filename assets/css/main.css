@@ -375,6 +375,8 @@ ul.company li {
 ul.company li.opti {
     color: #480403;
     border-left: 2px solid #480403;
+    background-color: #48040314;
+    border-bottom-right-radius: 10px;
 }
 li.mid, li.top, li.last, li.opti, li.bees {
     padding-top: 10px;
@@ -805,6 +807,10 @@ p#my-form-status {
     ul.company li.opti {
         border-bottom: 2px solid #480403;
         border-left: 0px;
+        background-color: #4804031a;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 0px;
     }
     .tabbed-right {
         padding-right: 0px;

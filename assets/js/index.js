@@ -97,6 +97,7 @@ optiTechFunc =()=> {
     migrant.style.display = "none";
     more.style.display = "none";
     beesNG.style.display = "none";
+    optisourceBtn.style.backgroundColor = '#48040314'
     optiArray.forEach((opt) => opt.style.color = "#C4C4C4")
     if (mediaQuery.matches){
         optisourceBtn.classList.add('activeTabMobile');
@@ -119,6 +120,7 @@ hngFunc = () => {
     migrant.style.display = "none";
     optisource.style.display = "none";
     beesNG.style.display = "none";
+    optisourceBtn.style.backgroundColor = 'transparent';
     hngArray.forEach((hg) => hg.style.color = "#C4C4C4")
     if (mediaQuery.matches){
         hngBtn.classList.add('activeTabMobile');
@@ -141,6 +143,7 @@ migrantFunc = () => {
     hng.style.display = "none";
     optisource.style.display = "none";
     beesNG.style.display = "none";
+    optisourceBtn.style.backgroundColor = 'transparent';
     migArray.forEach((mg) => mg.style.color = "#C4C4C4")
     if (mediaQuery.matches){
         migrantBtn.classList.add('activeTabMobile');
@@ -163,6 +166,7 @@ moreFunc =()=> {
     hng.style.display = "none";
     optisource.style.display = "none";
     beesNG.style.display = "none";
+    optisourceBtn.style.backgroundColor = 'transparent';
     moreArray.forEach((mg) => mg.style.color = "#C4C4C4")
     if (mediaQuery.matches){
         moreBtn.classList.add('activeTabMobile');
@@ -185,7 +189,8 @@ theBeesFunc =()=> {
     hng.style.display = "none";
     migrant.style.display = "none";
     more.style.display = "none";
-    beesArray.forEach((mg) => mg.style.color = "#C4C4C4")
+    optisourceBtn.style.backgroundColor = 'transparent';
+    beesArray.forEach((mg) =>mg.style.color = "#C4C4C4")
     if (mediaQuery.matches){
         theBeesBtn.classList.add('activeTabMobile');
         theBeesBtn.classList.remove('activeTabDesktop');
