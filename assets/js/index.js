@@ -22,12 +22,18 @@ let mbNavLi = document.querySelectorAll('.mobile-nav li')
 menuToggle =()=> {
     menu.classList.toggle('change');
     navs.classList.toggle('hide');
+    if (navs.classList.contains('none')){
+        navs.classList.add('hide')
+        navs.classList.remove('none');
+    }
 }
 
-closeOnNavClick = () => {
-    mbNavLi.map((nav)=> {
-        
-    })
+closeOnNavClick = () => {  
+    setTimeout(()=> {
+        menu.classList.toggle('change');
+        navs.classList.add('none');
+    }, 500) 
+   
 }
 /* Tabbed content menu */
 
@@ -213,3 +219,6 @@ migrantBtn.addEventListener('click', migrantFunc);
 theBeesBtn.addEventListener('click', theBeesFunc);
 viewMoreBtn.addEventListener('click', showMoreProjects);
 mediaQuery.addEventListener('change', changeTabbedOnScreen);
+mbNavLi.forEach((li)=> {
+    li.addEventListener('click', closeOnNavClick)
+})

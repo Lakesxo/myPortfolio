@@ -327,7 +327,7 @@ h2.work::after {
     transition: all 1s ease-in-out;
 }
 .hide {
-    display: block;
+    display: block !important;
     transition: all 1s ease-in-out;
 }
 .about {
@@ -590,6 +590,9 @@ p#my-form-status {
     margin-top: 20px;
     font-size: 14px;
     font-weight: bold;
+}
+.none {
+    display: none !important;
 }
 
 /* Media Queries */
