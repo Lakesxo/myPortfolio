@@ -631,6 +631,14 @@ p#my-form-status {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+.activeDarkMobile {
+    color: #E54B4B !important;
+    font-weight: 500 !important;
+    border-bottom: 2px solid #E54B4B !important;
+    background-color: #E54B4B14 !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 .activeTabDesktop {
     color: #480403 !important;
     font-weight: 500 !important;
@@ -638,7 +646,57 @@ p#my-form-status {
     background-color: #48040314;
     border-bottom-right-radius: 10px;
 }
-
+.activeDarkDesktop {
+    color: #E54B4B !important;
+    font-weight: 500 !important;
+    border-left: 2px solid #E54B4B !important;
+    background-color: #E54B4B14 !important;
+    border-bottom-right-radius: 10px;
+}
+.bodyDark {
+    background-color: #000 !important;
+    transition: 0.4s ease-out;
+}
+.whiteText {
+    color: #fff !important;
+    transition: 0.4s ease-out;
+}
+.btnBackColor {
+    background-color: #231C1B !important;
+    transition: 0.4s ease-out;
+}
+.allBgColor {
+    background: #E54B4B !important;
+    transition: 0.4s ease-out;
+}
+.allColor {
+    color: #E54B4B !important;
+    transition: 0.4s ease-out;
+}
+.borderColorDark {
+    border-color: #E54B4B !important;
+    transition: 0.4s ease-out;
+}
+.txtColormain {
+    color: #C4C4C4 !important;
+    transition: 0.4s ease-out;
+}
+.sudo:hover, .sudo::after, .sudo::before {
+    background: #E54B4B !important;
+    color: #fff !important;
+}
+.formBdColor {
+    border: 1px solid #E54B4B90 !important;
+}
+.specialTxt {
+    color: #828282 !important;
+}
+.bar::-webkit-scrollbar-thumb:hover {
+    background: #FFA987 !important;
+}
+.bar::-webkit-scrollbar-thumb {
+    background: #E54B4B !important;
+}
 /* Media Queries */
 @media (max-width: 768px){
     .hamburger {
