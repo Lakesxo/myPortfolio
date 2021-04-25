@@ -473,8 +473,11 @@ p.toolsUsed {
     margin-top: 100px;
 }
 .worksContainer {
-    padding-left: 90px;
     margin-top: 100px;
+}
+.contWork {
+    display: flex;
+    justify-content: center;
 }
 .link {
     text-align: right;
@@ -844,6 +847,9 @@ p#my-form-status {
         align-items: flex-start;
         padding-left: 25px;
         margin-top: 0px;
+    }
+    .contWork {
+        justify-content: flex-start;
     }
     .proj1, .proj2 {
         margin-right: 0px;
