@@ -918,7 +918,7 @@ img.hero-pic {
     }
     .about{
         display: block;
-        padding: 20px 0px 20px 25px;
+        padding: 20px 0px 100px 25px;
     }
     h2::after {
         left: 38%;
@@ -933,12 +933,12 @@ img.hero-pic {
         justify-content: space-between;
     }
     img.abt {
-        height: 300px;
+        height: 350px;
         margin-top: 30px;
     }
     .rightt .btn {
-        top: 91.2%;
-        left: 27.6%;
+        top: 86.1%;
+        left: 27.5%;
         transform: translate(2%, -50%);
         -ms-transform: translate(2%, -50%);
     }
@@ -1078,11 +1078,14 @@ img.hero-pic {
         height: 87vh;
     }
     .about {
-        padding: 50px 0px 50px 25px;
+        padding: 50px 0px 80px 25px;
         height: auto;
     }
+    img.abt {
+        margin-top: 50px;
+    }
     .experience {
-        padding: 50px 25px 50px 25px;
+        padding: 50px 25px 80px 25px;
         height: auto;
     }
     h2.workHeader {
@@ -1119,6 +1122,9 @@ img.hero-pic {
         padding: 50px 0px 50px 20px;
         height: auto;
     }
+    img.abt {
+        height: 320px;
+    }
     .experience {
         padding-right: 20px;
     }
@@ -1130,8 +1136,8 @@ img.hero-pic {
         left: 66%;
     }
     .rightt .btn {
-        top: 91.3%;
-        left: 33%;
+        top: 85.5%;
+        left: 25%;
     }
     h2.workHeader {
         padding-left: 20px;
@@ -1166,7 +1172,8 @@ img.hero-pic {
         font-size: 15px;
     }
     .rightt .btn {
-        left: 38.2%;
+        top: 85.8%;
+        left: 29.8%;
     }
     h2.work::after {
         left: 67%;
@@ -1196,7 +1203,7 @@ img.hero-pic {
         bottom: 5px;
     }
     img.abt {
-        height: 250px;
+        height: 300px;
     }
     p.title {
         font-size: 13px;
@@ -1224,8 +1231,8 @@ img.hero-pic {
         left: 47%;
     }
     .rightt .btn {
-        top: 90%;
-        left: 31%;
+        top: 85.6%;
+        left: 34.7%;
     }
     h2.work::after {
         left: 76%;
