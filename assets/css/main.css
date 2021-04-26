@@ -107,6 +107,8 @@ button.resume {
     align-items: center ;
     padding-left: 90px;
     margin-top: 20px;
+    margin-top: 100px;
+    padding-right: 28px;
 }
 img.light-dots {
     height: 450px;
@@ -140,13 +142,13 @@ h1.top::after {
 	left: 0;
     right: 0;
     z-index: -1;
-    width: 39.7%;
+    width: 62%;
 }
 p.title {
     color: #C4C4C4;
 }
 p.brief {
-    width: 50%;
+    width: 70%;
     margin: 20px 0px;
     color: #5F6368;
 }
@@ -343,8 +345,8 @@ img.abt {
 
 .rightt .btn {
     position: absolute;
-    top: 95.3%;
-    left: 50%;
+    top: 83.6%;
+    left: 41.5%;
     transform: translate(2%, -23%);
     -ms-transform: translate(2%, -23%);
     cursor: pointer;
@@ -705,6 +707,28 @@ p#my-form-status {
 .headDarkShadow {
     box-shadow: 0px -2px 15px #e54b4b !important;
 }
+.head {
+    box-shadow: 0px 4px 10px rgba(18, 18, 18, 0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FFFBF9;
+    z-index: 100;
+}
+header {
+    padding: 10px 100px;
+    background: rgba(255, 169, 135, 0.04);
+}
+img.hero-pic {
+    height: 570px;
+}
+
+
+
+
+
+
+
 /* Media Queries */
 
 /* For Large screens */
@@ -742,6 +766,7 @@ p#my-form-status {
     h1.top::after {
         bottom: 10px;
         position: absolute;
+        width: 40%;
     }
     img.hero-pic {
         height: 800px;
@@ -766,7 +791,7 @@ p#my-form-status {
         height: 450px;
     }
     .rightt .btn {
-        top: 66.8%;
+        top: 67%;
         left: 48.2%;
         transform: translate(2%, -50%);
         -ms-transform: translate(2%, -50%);
