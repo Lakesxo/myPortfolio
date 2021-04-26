@@ -324,11 +324,9 @@ h2.work::after {
     margin-top: 60px;
     font-size: 18px;
     font-weight: 600;
-    transition: all 1s ease-in-out;
 }
 .hide {
     display: block !important;
-    transition: all 1s ease-in-out;
 }
 .about {
     display: flex;
@@ -697,6 +695,16 @@ p#my-form-status {
 .bar::-webkit-scrollbar-thumb {
     background: #E54B4B !important;
 }
+.hamburgerDark {
+    background: #e54b4bc0;
+    transition: 0.4s ease-out;
+}
+.headerDark {
+    background: rgba(26,17,14,255);
+}
+.headDarkShadow {
+    box-shadow: 0px -2px 15px #e54b4b !important;
+}
 /* Media Queries */
 @media (max-width: 768px){
     .hamburger {
@@ -707,7 +715,6 @@ p#my-form-status {
     }
     header {
         padding: 15px 50px;
-        transition: all 1s ease-in-out;
         background: rgba(255, 169, 135, 0.04);
     }
     .head {
@@ -717,7 +724,6 @@ p#my-form-status {
         width: 100%;
         background: #FFFBF9;
         z-index: 100;
-        transition: all 1s ease-in-out;
     }
     button.modeBtn {
         margin-right: 80px;
@@ -756,7 +762,6 @@ p#my-form-status {
     }
     header {
         padding: 15px 25px 15px 25px;
-        transition: all 1s ease-in-out;
         background: rgba(255, 169, 135, 0.04);
     }
     .head {
@@ -766,7 +771,6 @@ p#my-form-status {
         width: 100%;
         background: #FFFBF9;
         z-index: 100;
-        transition: all 1s ease-in-out;
     }
     button.modeBtn {
         margin-right: 35px;

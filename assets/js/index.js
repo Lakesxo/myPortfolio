@@ -19,6 +19,7 @@ let submitBtn = document.querySelector('.butSubmit');
 let mbNavLi = document.querySelectorAll('.mobile-nav li');
 let desktpNavLi = document.querySelectorAll('ul.nav li')
 let header = document.querySelector('.head');
+let mainHead = document.querySelector('header')
 const section = document.querySelector('.skew');
 let currentPos = window.pageYOffset;
 let new_scroll_position = 0;
@@ -35,6 +36,23 @@ let psuedoAllBgcolor = document.querySelectorAll('[data-sudo]');
 let formBdColor = document.querySelectorAll('[data-fm]');
 let specialTxtColor = document.querySelectorAll('[data-sp]');
 const allTabBtns = [moreBtn, hngBtn, migrantBtn, optisourceBtn, theBeesBtn];
+let hamburgerBars = document.querySelectorAll('[data-menu]');
+
+(onLoadActiveFunc = () => {
+    if ((body.classList.contains('bodyDark'))) {
+        if (mediaQuery.matches) {
+            optisourceBtn.classList.add('activeDarkMobile')
+        } else {
+            optisourceBtn.classList.add('activeDarkDesktop')
+        }
+    } else {
+        if (mediaQuery.matches) {
+            optisourceBtn.classList.add('activeTabMobile')
+        } else {
+            optisourceBtn.classList.add('activeTabDesktop')
+        }
+    }
+})()
 
 // Tab Dark Function
 tabDarkSwitch = () => {
@@ -75,6 +93,10 @@ tabDarkSwitch = () => {
 
 // Dark mode function
 darkMode = () => {
+    mainHead.classList.toggle('headerDark')
+    navs.classList.toggle('headerDark')
+    header.classList.toggle('headDarkShadow')
+    hamburgerBars.forEach((bar) => bar.classList.toggle('hamburgerDark'))
     body.classList.toggle('bodyDark');
     body.classList.toggle('bar');
     if (body.classList.contains('bodyDark')) {
@@ -82,6 +104,7 @@ darkMode = () => {
     } else {
         darkMdImage.src = "./assets/img/light.png"
     }
+    
     darkModeBtn.classList.toggle('btnBackColor')
     mbNavLi.forEach((li) => li.classList.toggle('whiteText'));
     desktpNavLi.forEach((li) => li.classList.toggle('whiteText'));
@@ -93,8 +116,7 @@ darkMode = () => {
     psuedoAllBgcolor.forEach((su) => su.classList.toggle('sudo'));
     formBdColor.forEach((fm) => fm.classList.toggle('formBdColor'));
     specialTxtColor.forEach((sp) => sp.classList.toggle('specialTxt'));
-    tabDarkSwitch()
-    //header.classList.toggle('')
+    tabDarkSwitch();
 }
 
 // Skew on scroll
