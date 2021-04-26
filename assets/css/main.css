@@ -653,31 +653,31 @@ p#my-form-status {
 }
 .bodyDark {
     background-color: #000 !important;
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-in-out;
 }
 .whiteText {
     color: #fff !important;
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-in-out;
 }
 .btnBackColor {
     background-color: #231C1B !important;
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-in-out;
 }
 .allBgColor {
     background: #E54B4B !important;
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-in-out;
 }
 .allColor {
     color: #E54B4B !important;
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-in-out;
 }
 .borderColorDark {
     border-color: #E54B4B !important;
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-in-out;
 }
 .txtColormain {
     color: #C4C4C4 !important;
-    transition: 0.4s ease-out;
+    transition: 0.4s ease-in-out;
 }
 .sudo:hover, .sudo::after, .sudo::before {
     background: #E54B4B !important;
@@ -706,6 +706,86 @@ p#my-form-status {
     box-shadow: 0px -2px 15px #e54b4b !important;
 }
 /* Media Queries */
+
+/* For Large screens */
+@media (min-width: 1900px) {
+    .head {
+        box-shadow: 0px 4px 10px rgba(18, 18, 18, 0.05);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #FFFBF9;
+        z-index: 100;
+        height: 10vh;
+    }
+    header {
+        padding: 10px 100px;
+        background: rgba(255, 169, 135, 0.04);
+    }
+    .bottom-hero {
+        padding-left: 100px;
+        height: 90vh;
+        justify-content: center;
+        padding-right: 20px;
+        margin-top: 50px;
+    }
+    p.brief {
+        margin: 30px 0px;
+        width: 60%;
+    }
+    p.brief, p.title {
+        font-size: 18px;
+    }
+    h1.top {
+        font-size: 43px;
+    }
+    h1.top::after {
+        bottom: 10px;
+        position: absolute;
+    }
+    img.hero-pic {
+        height: 800px;
+    }
+    .right-part {
+        width: 40%;
+    }
+    .left-part {
+        width: 60%;
+    }
+    .glowing ul li {
+        width: 6vmin;
+        height: 6vmin;
+    }
+    .fab {
+        font-size: 3.4vmin;
+    }
+    h2::after {
+        left: 15%;
+    }
+    img.abt {
+        height: 450px;
+    }
+    .rightt .btn {
+        top: 66.8%;
+        left: 48.2%;
+        transform: translate(2%, -50%);
+        -ms-transform: translate(2%, -50%);
+    }
+    .experience {
+        height: auto;
+        padding-bottom: 150px;
+    }
+    .proj1, .proj2, .proj3 {
+        height: 350px;
+        width: 400px;
+    }
+    .proj2, .proj1 {
+        margin-right: 150px;
+    }
+    h2.workHeader {
+        padding-left: 100px;
+    }
+}
 @media (max-width: 768px){
     .hamburger {
         display: block;

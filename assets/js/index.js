@@ -37,8 +37,9 @@ let formBdColor = document.querySelectorAll('[data-fm]');
 let specialTxtColor = document.querySelectorAll('[data-sp]');
 const allTabBtns = [moreBtn, hngBtn, migrantBtn, optisourceBtn, theBeesBtn];
 let hamburgerBars = document.querySelectorAll('[data-menu]');
+let heroPic = document.querySelector('img.hero-pic')
 
-(onLoadActiveFunc = () => {
+onLoadActiveFunc = () => {
     if ((body.classList.contains('bodyDark'))) {
         if (mediaQuery.matches) {
             optisourceBtn.classList.add('activeDarkMobile')
@@ -52,7 +53,8 @@ let hamburgerBars = document.querySelectorAll('[data-menu]');
             optisourceBtn.classList.add('activeTabDesktop')
         }
     }
-})()
+}
+onLoadActiveFunc();
 
 // Tab Dark Function
 tabDarkSwitch = () => {
@@ -100,11 +102,12 @@ darkMode = () => {
     body.classList.toggle('bodyDark');
     body.classList.toggle('bar');
     if (body.classList.contains('bodyDark')) {
-        darkMdImage.src = "./assets/img/sun.png"
+        darkMdImage.src = "./assets/img/sun.png";
+        heroPic.src = 'https://res.cloudinary.com/dt9pwfpi5/image/upload/v1619443810/Group_46_jkaz3g.png'
     } else {
-        darkMdImage.src = "./assets/img/light.png"
+        darkMdImage.src = "./assets/img/light.png";
+        heroPic.src = 'https://res.cloudinary.com/dt9pwfpi5/image/upload/v1619444072/clone_k3bpog.png';
     }
-    
     darkModeBtn.classList.toggle('btnBackColor')
     mbNavLi.forEach((li) => li.classList.toggle('whiteText'));
     desktpNavLi.forEach((li) => li.classList.toggle('whiteText'));
