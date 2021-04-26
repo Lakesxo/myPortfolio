@@ -102,7 +102,7 @@ const skew = () => {
     const newPos = window.pageYOffset;
     const diff = newPos - currentPos;
     const speed = diff * 0.05;
-    const final = (speed > 0) ? 0 : speed;
+    const final = (speed > 1) ? 1 : speed;
     section.style.transform = `skewY(${ final }deg)`;
     currentPos = newPos;
     requestAnimationFrame(skew);
