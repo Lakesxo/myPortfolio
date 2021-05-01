@@ -123,6 +123,7 @@ img.first-pic {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    z-index: 1;
 }
 p.hi {
     font-size: 25px;
@@ -726,8 +727,17 @@ header {
 img.hero-pic {
     height: 570px;
 }
-
-
+.particleCont {
+    position: relative;
+}
+.partiku {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+.bottom-hero {
+    position: absolute;
+}
 
 
 
@@ -756,6 +766,12 @@ img.hero-pic {
         justify-content: center;
         padding-right: 20px;
         margin-top: 50px;
+    }
+    .hero {
+        height: 100vh;
+    }
+    .partiku {
+        height: 100vh;
     }
     p.brief {
         margin: 30px 0px;
@@ -839,6 +855,9 @@ img.hero-pic {
         background: #FFFBF9;
         z-index: 100;
     }
+    .partiku {
+        height: 100vh;
+    }
     button.modeBtn {
         margin-right: 80px;
     }
@@ -890,7 +909,7 @@ img.hero-pic {
         font-size: 4.9vmin;
     }
     img.hero-pic {
-        height: 700px;
+        height: 650px;
     }
     .about{
         display: block;
@@ -1006,6 +1025,9 @@ img.hero-pic {
     header {
         padding: 15px 50px;
         background: rgba(255, 169, 135, 0.04);
+    }
+    .partiku {
+        height: 100vh;
     }
     .head {
         box-shadow: 0px 4px 10px rgba(18, 18, 18, 0.05);
@@ -1169,7 +1191,10 @@ img.hero-pic {
         display: none;
     }
     .hero {
-        height: 75vh;
+        height: 100vh;
+    }
+    .partiku {
+        height: 100vh;
     }
     header {
         padding: 15px 25px 15px 25px;
@@ -1382,7 +1407,7 @@ img.hero-pic {
 
 @media (max-width: 600px) and (min-width: 540px) {
     .hero {
-        height: 88vh;
+        height: 100vh;
     }
     h1.top::after {
         width: 71%;
@@ -1431,9 +1456,6 @@ img.hero-pic {
 }
 
 @media (max-width: 420px){
-    .hero {
-        height: 88vh;
-    }
     .about {
         padding: 50px 0px 80px 25px;
         height: auto;
@@ -1457,9 +1479,6 @@ img.hero-pic {
 }
 
 @media (max-width: 380px){
-    .hero {
-        height: 88vh;
-    }
     h1.top {
         font-size: 32px;
     }
@@ -1517,9 +1536,6 @@ img.hero-pic {
 }
 
 @media (max-width: 360px){
-    .hero {
-        height: 87vh;
-    }
     h1.top {
         font-size: 31px;
     }
@@ -1551,9 +1567,6 @@ img.hero-pic {
     }
     img.logo {
         height: 58px;
-    }
-    .hero {
-        height: 86vh;
     }
     .bottom-hero {
         margin-top: 80px;
@@ -1609,7 +1622,10 @@ img.hero-pic {
 /* For Galaxy fold */
 @media (max-width: 280px) {
     .hero {
-        height: 99vh;
+        height: 100vh;
+    }
+    .bottom-hero {
+        width: 100%;
     }
     p.hi {
         font-size: 18px;
