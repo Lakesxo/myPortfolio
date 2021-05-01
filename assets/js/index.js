@@ -126,7 +126,7 @@ darkMode = () => {
 const skew = () => {
     const newPos = window.pageYOffset;
     const diff = newPos - currentPos;
-    const speed = diff * 0.05;
+    const speed = diff * 0.015;
     const final = (speed > 1) ? 1 : speed;
     section.style.transform = `skewY(${ final }deg)`;
     currentPos = newPos;
