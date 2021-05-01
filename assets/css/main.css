@@ -811,7 +811,7 @@ img.hero-pic {
         padding-left: 100px;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 768px) and (min-width: 500px) {
     .hamburger {
         display: block;
     }
@@ -837,20 +837,139 @@ img.hero-pic {
         display: block;
         padding-left: 50px;
         margin-top: 90px;
-        padding-top: 70px;
+        padding-top: 150px;
     }
     .right-part {
         display: none;
     }
     h1.top {
-        font-size: 35px;
+        font-size: 45px;
         margin: 30px 0px;
         position: relative;
     }
     h1.top::after {
-        width: 96%;
-        bottom: 6px;
+        width: 65%;
+        bottom: 10px;
         position: absolute;
+    }
+    p.title {
+        font-size: 25px;
+    }
+    p.brief {
+        width: 100%;
+        font-size: 20px;
+        margin: 30px 0px 35px 0px;
+    }
+    button.resume, button.view {
+        font-size: 18px;
+    }
+    .about{
+        display: block;
+        padding: 100px 0px 100px 50px;
+        font-size: 18px;
+    }
+    h2::after {
+        left: 25%;
+        bottom: 15px;
+    }
+    .set {
+        font-size: 23px !important;
+    }
+    img.abt {
+        height: 430px;
+        margin-top: 50px;
+    }
+    .rightt .btn {
+        top: 87.2%;
+        left: 23%;
+        transform: translate(2%, -50%);
+        -ms-transform: translate(2%, -50%);
+    }
+    .experience {
+        padding: 100px 0px 100px 50px;
+        font-size: 18px;
+        height: inherit;
+    }
+    .tabbed {
+        display: block;
+        margin-top: 40px;
+    }
+    ul.company {
+        display: flex;
+        overflow-x: auto;
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    .tabbed-right {
+        padding-right: 0px;
+        width: 90%;
+        margin-top: 70px;
+    }
+    h2.work::after {
+        left: 40%;
+        width: 30%;
+    }
+    ul.company li.opti {
+        border-bottom: 2px solid #480403;
+        border-left: 0px !important;
+        background-color: #4804031a;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 0px;
+    }
+    ul.company li {
+        border-left: 0px;
+        border-bottom: 2px solid #C4C4C4;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    h2.workHeader {
+        padding-left: 50px;
+        font-size: 27px;
+    }
+    h2.workHeader::after {
+        left: 31%;
+        width: 30%;
+    }
+    .firstThree, .secondThree, .thirdThree {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 70px;
+    }
+    .worksContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+    .proj1, .proj2, .proj3 {
+        width: 450px;
+        height: 350px;
+        padding: 20px 40px;
+    }
+    .proj1, .proj2 {
+        margin-right: 0px;
+        margin-bottom: 70px;
+    }
+    .thirdThree {
+        display: none;
+    }
+    .none {
+        display: block;
+    }
+    p.headDeets {
+        width: 80%;
+    }
+    form {
+        width: 80%;
+    }
+    .contact {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .topFoot {
+        padding: 20px 50px;
     }
 }
 
@@ -1075,7 +1194,7 @@ img.hero-pic {
 }
 @media (max-width: 420px){
     .hero {
-        height: 87vh;
+        height: 88vh;
     }
     .about {
         padding: 50px 0px 80px 25px;
@@ -1100,7 +1219,7 @@ img.hero-pic {
 }
 @media (max-width: 380px){
     .hero {
-        height: 80vh;
+        height: 88vh;
     }
     h1.top {
         font-size: 32px;
@@ -1158,6 +1277,9 @@ img.hero-pic {
     }
 }
 @media (max-width: 360px){
+    .hero {
+        height: 87vh;
+    }
     h1.top {
         font-size: 31px;
     }
