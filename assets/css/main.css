@@ -320,7 +320,7 @@ h2.work::after {
     padding-top: 1px;
     background: rgba(255, 169, 135, 0.04);
     padding-bottom: 40px;
-    height: 90vh;
+    height: 100vh;
 }
 .mobile-nav li {
     margin-top: 60px;
@@ -811,6 +811,184 @@ img.hero-pic {
         padding-left: 100px;
     }
 }
+
+/* For Big Tablet */
+@media (max-width: 1025px) and (min-width: 780px) {
+    .hamburger {
+        display: block;
+    }
+    .navs {
+        display: none;
+    }
+    header {
+        padding: 15px 50px;
+        background: rgba(255, 169, 135, 0.04);
+    }
+    .head {
+        box-shadow: 0px 4px 10px rgba(18, 18, 18, 0.05);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #FFFBF9;
+        z-index: 100;
+    }
+    button.modeBtn {
+        margin-right: 80px;
+    }
+    .bottom-hero {
+        display: block;
+        padding-left: 50px;
+        margin-top: 90px;
+        padding-top: 100px;
+    }
+    .mobile-nav {
+        height: 100vh;
+    }
+    .right-part {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    p.hi {
+        font-size: 40px;
+    }
+    h1.top {
+        font-size: 60px;
+        margin: 30px 0px;
+        position: relative;
+    }
+    h1.top::after {
+        width: 63%;
+        bottom: 13px;
+        position: absolute;
+        height: 10px;
+    }
+    p.title {
+        font-size: 27px;
+    }
+    p.brief {
+        width: 100%;
+        font-size: 26px;
+        margin: 30px 0px 35px 0px;
+    }
+    button.resume, button.view {
+        font-size: 20px;
+        padding: 20px 45px;
+    }
+    .glowing ul li {
+        width: 8vmin;
+        height: 8vmin;
+    }
+    .fab {
+        font-size: 4.9vmin;
+    }
+    img.hero-pic {
+        height: 700px;
+    }
+    .about{
+        display: block;
+        padding: 100px 0px 100px 50px;
+        font-size: 18px;
+        height: inherit;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h2::after {
+        left: 25%;
+        bottom: 22px;
+    }
+    p.about-deets {
+        font-size: 25px;
+    }
+    .set {
+        font-size: 23px !important;
+    }
+    ul.skill {
+        font-size: 25px;
+    }
+    img.abt {
+        height: 650px;
+        margin-top: 50px;
+    }
+    .rightt .btn {
+        top: 87.5%;
+        left: 34%;
+        transform: translate(2%, -50%);
+        -ms-transform: translate(2%, -50%);
+    }
+    .experience {
+        padding: 100px 50px 100px 50px;
+        font-size: 18px;
+        height: inherit;
+    }
+    .tabbed-right {
+        padding-right: 0px;
+        width: 70%;
+        font-size: 22px;
+    }
+    .tabbed-left {
+        font-size: 22px;
+    }
+    ul.company {
+        padding-top: 0px;
+    }
+    h2.work::after {
+        left: 40%;
+        width: 30%;
+    }
+    h2.workHeader {
+        padding-left: 50px;
+        font-size: 40px;
+    }
+    h2.workHeader::after {
+        left: 31%;
+        width: 30%;
+    }
+    .firstThree, .secondThree, .thirdThree {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 70px;
+    }
+    .worksContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+    .proj1, .proj2, .proj3 {
+        width: 550px;
+        height: 450px;
+        padding: 20px 40px;
+    }
+    .proj1, .proj2 {
+        margin-right: 0px;
+        margin-bottom: 70px;
+    }
+    .thirdThree {
+        display: none;
+    }
+    .none {
+        display: block;
+    }
+    p.headDeets {
+        width: 80%;
+        font-size: 22px;
+    }
+    form {
+        width: 80%;
+    }
+    .contact {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .topFoot {
+        padding: 20px 50px;
+    }
+}
+
+/* For Tablet */
 @media (max-width: 768px) and (min-width: 500px) {
     .hamburger {
         display: block;
@@ -974,7 +1152,9 @@ img.hero-pic {
 }
 
 
-@media (max-width: 480px){
+
+/* For Mobile phones */
+@media (max-width: 540px){
     .hamburger {
         display: block;
     }
@@ -1192,6 +1372,57 @@ img.hero-pic {
         margin-top: 30px;
     }
 }
+
+@media (max-width: 600px) and (min-width: 540px) {
+    .hero {
+        height: 88vh;
+    }
+    h1.top::after {
+        width: 71%;
+        bottom: 7px;
+    }
+    .glowing ul li {
+        width: 10vmin;
+        height: 10vmin;
+    }
+    .fab {
+        font-size: 5.7vmin;
+    }
+    .about {
+        padding: 50px 25px;
+        height: inherit;
+    }
+    .set {
+        font-size: 17px !important;
+    }
+    button.resume, button.view {
+        font-size: 14px;
+    }
+    .rightt .btn {
+        top: 86.2%;
+        left: 26%;
+    }
+    .experience{
+        padding-bottom: 100px;
+    }
+    .contWork {
+        justify-content: center;
+    }
+    .worksContainer {
+        padding-left: 0px;
+    }
+    .proj1, .proj2, .proj3 {
+        width: 330px;
+        height: 290px;
+    }
+    p.headr {
+        font-size: 35px;
+    }
+    p.headDeets, form {
+        width: 95%;
+    }
+}
+
 @media (max-width: 420px){
     .hero {
         height: 88vh;
@@ -1217,6 +1448,7 @@ img.hero-pic {
         border: 2px solid #480403;
     }
 }
+
 @media (max-width: 380px){
     .hero {
         height: 88vh;
@@ -1276,6 +1508,7 @@ img.hero-pic {
         font-size: 6vmin;
     }
 }
+
 @media (max-width: 360px){
     .hero {
         height: 87vh;
@@ -1304,6 +1537,7 @@ img.hero-pic {
         width: 320px;
     }
 }
+
 @media (max-width: 320px){
     header {
         padding: 15px 20px;
@@ -1362,5 +1596,73 @@ img.hero-pic {
     }
     h2.workHeader::after {
         left: 47%;
+    }
+}
+
+/* For Galaxy fold */
+@media (max-width: 280px) {
+    .hero {
+        height: 99vh;
+    }
+    p.hi {
+        font-size: 18px;
+    }
+    h1.top {
+        font-size: 24px;
+    }
+    h1.top::after {
+        bottom: 3px;
+    }
+    button.resume, button.view {
+        font-size: 11px;
+    }
+    .glowing ul li {
+        width: 15vmin;
+        height: 15vmin;
+    }
+    .fab {
+        font-size: 9.7vmin;
+    }
+    img.abt {
+        height: 260px;
+    }
+    .rightt .btn {
+        top: 85.6%;
+        left: 39.6%;
+    }
+    .flex li {
+        margin-right: 0px;
+        font-size: 12px;
+    }
+    .proj1, .proj2, .proj3 {
+        width: 240px;
+        height: 220px;
+    }
+    button.viewMore {
+        font-size: 12px;
+    }
+    p.headr {
+        font-size: 25px;
+    }
+    p.headDeets {
+        font-size: 14px;
+    }
+    .contact {
+        padding: 50px 20px 50px 20px;
+    }
+    .linkCont {
+        margin: 15px 0px;
+    }
+    .bottomFoot {
+        padding: 20px;
+    }
+    .flex {
+        padding-right: 25px;
+    }
+    button.modeBtn {
+        margin-right: 20px;
+    }
+    h2.work {
+        font-size: 20px;
     }
 }
