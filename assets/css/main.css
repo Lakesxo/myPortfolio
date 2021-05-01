@@ -463,6 +463,10 @@ p.toolsUsed {
     justify-content: space-between;
     padding: 10px 20px;
 }
+.proj1:hover, .proj2:hover, .proj3:hover {
+    transform: translateY(-10px);
+    transition: all 0.7s;
+}
 .proj1, .proj2 {
     margin-right: 100px;
 }
@@ -787,11 +791,14 @@ img.hero-pic {
     h2::after {
         left: 15%;
     }
+    .about {
+        height: inherit;
+    }
     img.abt {
         height: 450px;
     }
     .rightt .btn {
-        top: 67%;
+        top: 86.2%;
         left: 48.2%;
         transform: translate(2%, -50%);
         -ms-transform: translate(2%, -50%);
