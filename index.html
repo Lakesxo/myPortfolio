@@ -328,6 +328,9 @@
             form.reset();
             button.style = "display: none";
             status.innerHTML = "Thanks for reaching out !";
+            if (button.style.display === "none") {
+                status.style.display = 'block';
+            }
             setTimeout(() => {
                 button.style = "display: block";
                 status.style.display = 'none';
