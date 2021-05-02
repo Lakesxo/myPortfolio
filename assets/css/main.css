@@ -734,6 +734,7 @@ img.hero-pic {
     position: absolute;
     z-index: -1;
     width: 100%;
+    height: 100vh;
 }
 .bottom-hero {
     position: absolute;
@@ -954,7 +955,7 @@ img.hero-pic {
         font-size: 22px;
     }
     .tabbed-left {
-        font-size: 22px;
+        font-size: 19px;
     }
     ul.company {
         padding-top: 0px;
