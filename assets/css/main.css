@@ -485,7 +485,8 @@ p.toolsUsed {
     justify-content: center;
 }
 .link {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
 }
 button.viewMore {
     background-color: transparent;
@@ -513,12 +514,16 @@ button.viewMore:hover {
     display: flex;
     transition: all 1s ease-out;
 }
-i.fas {
-    cursor: pointer;
+i.fas:hover, i.fab:hover {
+    transform: translateY(-1px);
+    transition: all 0.3s;
 }
-i.fas:hover {
-    font-size: 20px;
-    transition: all 0.2s ease-in-out;
+i.git {
+    color: #000;
+    font-size: 22px;
+}
+a.gthub {
+    margin-right: 25px;
 }
 .contact {
     background: rgba(255, 169, 135, 0.1);
