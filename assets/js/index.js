@@ -102,10 +102,10 @@ darkMode = () => {
     body.classList.toggle('bodyDark');
     body.classList.toggle('bar');
     if (body.classList.contains('bodyDark')) {
-        darkMdImage.src = "./assets/img/sun.png";
+        darkMdImage.src = "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1620140420/sun_kdybiu.png";
         heroPic.src = 'https://res.cloudinary.com/dt9pwfpi5/image/upload/v1619443810/Group_46_jkaz3g.png'
     } else {
-        darkMdImage.src = "./assets/img/light.png";
+        darkMdImage.src = "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1620140420/light_vprpfl.png";
         heroPic.src = 'https://res.cloudinary.com/dt9pwfpi5/image/upload/v1619444072/clone_k3bpog.png';
     }
     darkModeBtn.classList.toggle('btnBackColor')
