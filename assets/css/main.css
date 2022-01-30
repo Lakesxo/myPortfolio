@@ -444,13 +444,14 @@ p.projName {
     margin-top: 25px;
     margin-bottom: 25px;
     text-align: center;
-    font-size: 26px;
+    font-size: 27px;
     color: #480403;
-    font-weight: 600;
+    font-weight: 700;
 }
 p.toolsUsed {
     text-align: center;
-    color: #FFFFFF;
+    color: #480403;
+    font-weight: 600;
 }
 .proj1, .proj2, .proj3 {
     background: linear-gradient(181.72deg, #FFA987 15.88%, #480403 221.85%);
@@ -470,6 +471,42 @@ p.toolsUsed {
 }
 .proj1, .proj2 {
     margin-right: 100px;
+}
+.modelNest {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1643357357/modnest_vyd5ef.png");
+    background-size: cover;
+}
+.socialLizard {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1643357357/socliz_lv7zvr.png");
+    background-size: cover;
+}
+.carscanner {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1643357357/carscanner_vwgqxd.png");
+    background-size: cover;
+}
+.mypally {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1643357357/mypally_njxy3b.png");
+    background-size: cover;
+}
+.becca {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1643357357/becca_rwmyxy.png");
+    background-size: cover;
+}
+.shoppies {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1643357357/shoppies_povkho.png");
+    background-size: cover;
+}
+.calc {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1643357357/calc_fxqwtj.png");
+    background-size: cover;
+}
+.structurescan {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1643357405/structuresc_ip95vr.png");
+    background-size: cover;
+}
+.todo {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1643357405/todo_vusrhs.png");
+    background-size: cover;
 }
 .firstThree, .secondThree, .thirdThree {
     display: flex;
