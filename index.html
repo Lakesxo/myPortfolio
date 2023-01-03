@@ -39,8 +39,7 @@
                             <li><a href="#experience">Work Experience</a></li>
                             <li><a href="#myWorks">View my works</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="https://drive.google.com/file/d/1cX3ydk8FMZzDwVFKbjJ99LRrVeZ82uTJ/view?usp=sharing" target="_blank"><button
-                                        data-bgColor data-bd class="resume">Resumé</button></a></li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -51,8 +50,7 @@
                     <li><a href="#experience">Work Experience</a></li>
                     <li><a href="#myWorks">View my works</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://drive.google.com/file/d/1cX3ydk8FMZzDwVFKbjJ99LRrVeZ82uTJ/view?usp=sharing" target="_blank"><button
-                                data-bgColor data-bd class="resume">Resumé</button></a></li>
+                    
                 </ul>
             </div>
         </div>
@@ -124,8 +122,7 @@
             </div>
             <div data-aos="fade-up" data-aos-duration="3000" class="rightt">
                 <img class="abt" src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1619434294/dark-main_tauqht.png" alt="Ridwan Ajanaku Lakes" draggable="false">
-                <a href="https://drive.google.com/file/d/1cX3ydk8FMZzDwVFKbjJ99LRrVeZ82uTJ/view?usp=sharing" target="_blank"><button
-                        data-bgColor data-bd class="resume btn">Download Resumé</button></a>
+                
             </div>
         </div>
         <div class="experience" id="experience">
@@ -298,17 +295,9 @@
         <div class="contact" id="contact">
             <p data-aos="zoom-in-up" data-color class="headr">Get In Touch !</p>
             <p data-mainTxt class="headDeets">
-                I’m interested in remote and freelance opportunities. However, if you have other requests or questions, please don’t hesitate to use the form.
+                I’m interested in remote and freelance opportunities. However, if you have other requests or questions, please don’t
+                hesitate to shoot me a mail <b><a href="mailto:lakes.ajanaku@gmail.com">lakes.ajanaku@gmail.com</a></b>.
             </p>
-            <form action="https://formspree.io/f/mvovnzre" method="post" id="my-form">
-                <div class="flexr">
-                    <input data-fm type="text" placeholder="Name" required name="name">
-                    <input data-fm type="email" placeholder="Email address" required name="email">
-                </div>
-                <textarea data-fm rows="10" placeholder="Message" required name="message"></textarea>
-                <button data-bgColor data-bd type="submit" class="butSubmit" id="my-form-button">Send</button>
-                <p id="my-form-status"></p>
-            </form>
             <div class="linkCont">
                 <section class="glowing">
                     <ul>
@@ -343,60 +332,6 @@
     </script>
     <script>
         particlesJS.load('particles-js', 'assets/particle/particles.json');
-    </script>
-    <script>
-        window.addEventListener("DOMContentLoaded", function() {
-      
-          // get the form elements defined in your form HTML above
-          
-          var form = document.getElementById("my-form");
-          var button = document.getElementById("my-form-button");
-          var status = document.getElementById("my-form-status");
-      
-          // Success and Error functions for after the form is submitted
-          
-          function success() {
-            form.reset();
-            button.style = "display: none";
-            status.innerHTML = "Thanks for reaching out !";
-            if (button.style.display === "none") {
-                status.style.display = 'block';
-            }
-            setTimeout(() => {
-                button.style = "display: block";
-                status.style.display = 'none';
-            }, 5000)
-          }
-      
-          function error() {
-            status.innerHTML = "Oops! There was a problem.";
-          }
-      
-          // handle the form submission event
-      
-          form.addEventListener("submit", function(ev) {
-            ev.preventDefault();
-            var data = new FormData(form);
-            ajax(form.method, form.action, data, success, error);
-          });
-        });
-        
-        // helper function for sending an AJAX request
-      
-        function ajax(method, url, data, success, error) {
-          var xhr = new XMLHttpRequest();
-          xhr.open(method, url);
-          xhr.setRequestHeader("Accept", "application/json");
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState !== XMLHttpRequest.DONE) return;
-            if (xhr.status === 200) {
-              success(xhr.response, xhr.responseType);
-            } else {
-              error(xhr.status, xhr.response, xhr.responseType);
-            }
-          };
-          xhr.send(data);
-        }
-    </script>
+</script>
 </body>
 </html>

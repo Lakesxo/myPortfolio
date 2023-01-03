@@ -1521,7 +1521,7 @@ img.hero-pic {
     }
 }
 
-@media (max-width: 380px){
+@media (max-width: 390px) {
     h1.top {
         font-size: 32px;
     }
