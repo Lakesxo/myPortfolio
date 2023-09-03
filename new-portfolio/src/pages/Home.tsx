@@ -1,7 +1,13 @@
+import Header from "../components/header/Header";
+
 interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
-  return <div>This is the home page</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default Home;
