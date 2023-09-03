@@ -1,7 +1,13 @@
+import Header from "../components/header/Header";
+
 interface AboutProps {}
 
 const About: React.FunctionComponent<AboutProps> = () => {
-  return <div>This is the about page</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default About;

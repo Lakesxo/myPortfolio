@@ -1,7 +1,13 @@
+import Header from "../components/header/Header";
+
 interface ContactMeProps {}
 
 const ContactMe: React.FunctionComponent<ContactMeProps> = () => {
-  return <div>This is the contact me page</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default ContactMe;
