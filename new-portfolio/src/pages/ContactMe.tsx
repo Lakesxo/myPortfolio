@@ -1,7 +1,7 @@
 interface ContactMeProps {}
 
 const ContactMe: React.FunctionComponent<ContactMeProps> = () => {
-  return <div></div>;
+  return <div>This is the contact me page</div>;
 };
 
 export default ContactMe;

@@ -1,7 +1,7 @@
 interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
-  return <div></div>;
+  return <div>This is the home page</div>;
 };
 
 export default Home;
