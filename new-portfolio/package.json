@@ -12,8 +12,10 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-particles": "^2.12.2",
     "react-router-dom": "^6.15.0",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "tsparticles-slim": "^2.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

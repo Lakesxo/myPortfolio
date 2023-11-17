@@ -1,0 +1,42 @@
+.hero-container {
+  position: relative;
+  #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+  }
+  .heroWrapper {
+    display: flex;
+    padding: 4.375rem 8.875rem 6rem 8.125rem;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(250, 251, 254, 0.7);
+    .leftHero {
+      p.hello {
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 3.75rem;
+        color: #000;
+      }
+      h2.name {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 4.6875rem;
+        color: #101828;
+      }
+      p.extraDetails {
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.75rem;
+        color: #101828;
+        width: 36.0625rem;
+        margin: 1.25rem 0 4.28rem 0;
+      }
+    }
+  }
+}
