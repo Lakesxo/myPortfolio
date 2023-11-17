@@ -8,18 +8,13 @@ interface HeroProps {}
 
 const Hero: React.FunctionComponent<HeroProps> = () => {
   const particlesInit = useCallback(async (engine: any) => {
-    console.log(engine);
     await loadSlim(engine);
-  }, []);
-  const particlesLoaded = useCallback(async (container: any) => {
-    await console.log(container);
   }, []);
   return (
     <div className="hero-container">
       <Particles
         id="tsparticles"
         init={particlesInit}
-        loaded={particlesLoaded}
         options={{
           fpsLimit: 120,
           fullScreen: { enable: false },
@@ -86,27 +81,29 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
           detectRetina: true,
         }}
       />
-      <div className="heroWrapper">
-        <div className="leftHero">
-          <p className="hello">
-            Hello <span className="wave">👋</span>
-          </p>
-          <h2 className="name">I'm Ridwan Ajanaku</h2>
-          <p className="extraDetails">
-            I'm a Frontend developer based in Nigeria, specializing in building
-            exceptional websites, applications, and making the web accessible to
-            everyone
-          </p>
-          <div className="socials">
-            <Socials />
+      <div className="heroContainer">
+        <div className="heroWrapper">
+          <div className="leftHero">
+            <p className="hello">
+              Hello <span className="wave">👋</span>
+            </p>
+            <h2 className="name">I'm Ridwan Ajanaku</h2>
+            <p className="extraDetails">
+              I'm a Frontend developer based in Nigeria, specializing in
+              building exceptional websites, applications, and making the web
+              accessible to everyone
+            </p>
+            <div className="socials">
+              <Socials />
+            </div>
           </div>
-        </div>
-        <div className="rightHero">
-          <img
-            src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700206112/hero-ridwan_ikktxc.png"
-            alt="Ridwan-ajanaku"
-            draggable={false}
-          />
+          <div className="rightHero">
+            <img
+              src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700206112/hero-ridwan_ikktxc.png"
+              alt="Ridwan-ajanaku"
+              draggable={false}
+            />
+          </div>
         </div>
       </div>
     </div>
