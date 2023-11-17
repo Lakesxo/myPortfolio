@@ -10,12 +10,17 @@
     margin: 0;
     z-index: -1;
   }
+  .heroContainer {
+    display: flex;
+    justify-content: center;
+    background: rgba(250, 251, 254, 0.7);
+  }
   .heroWrapper {
     display: flex;
     padding: 4.375rem 8.875rem 6rem 8.125rem;
     align-items: center;
     justify-content: space-between;
-    background: rgba(250, 251, 254, 0.7);
+    width: 117rem;
     .leftHero {
       p.hello {
         font-size: 1.5rem;
