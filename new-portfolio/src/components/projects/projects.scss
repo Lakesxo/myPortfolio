@@ -1,0 +1,21 @@
+.projectWrapper {
+  background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
+  padding: 50px 0px;
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .projectContainer {
+    display: flex;
+    justify-content: center;
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
+  }
+  .projectWrapper {
+    background-image: unset;
+    width: 100rem;
+  }
+}

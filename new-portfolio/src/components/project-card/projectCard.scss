@@ -1,0 +1,42 @@
+.projectCardwrapper,
+.projectCardwrapperInvert {
+  display: flex;
+  align-items: center;
+  gap: 8.5rem;
+}
+.projectCardwrapperInvert {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.rightPjInvert {
+  padding-left: 10rem;
+}
+p.projectName {
+  color: #101828;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4.6875rem;
+}
+p.projectDesc {
+  color: #000;
+  font-family: Mulish;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding-right: 40px;
+}
+a.moreDetails {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 3px;
+  color: #101828;
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.6875rem;
+  span.warning {
+    margin-top: 7px;
+  }
+}
