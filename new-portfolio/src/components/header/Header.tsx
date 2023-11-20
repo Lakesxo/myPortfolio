@@ -12,7 +12,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
         <a onClick={() => navigate("/")}>
           <div className="logo">
             <img
-              src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1693737575/Ellipse_13_mregnx.png"
+              src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700482039/final_jwalyu.png"
               alt="ridwan ajanaku"
               draggable={false}
             />

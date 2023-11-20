@@ -1,0 +1,24 @@
+.skillscontainer {
+  display: flex;
+  justify-content: center;
+  background: #fafcfe;
+}
+.skillsWrapper {
+  padding: 3rem 7.75rem 3.75rem 7.875rem;
+  width: 117rem;
+  .flexSkills {
+    display: flex;
+    justify-content: space-between;
+    .skillsWrap,
+    .othSkills {
+      display: flex;
+      gap: 40px;
+      margin-top: 30px;
+    }
+  }
+  .flex-skill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+}
