@@ -1,0 +1,48 @@
+.contactwrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 60px 90px 60px;
+  position: relative;
+  background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
+  p {
+    text-align: center;
+    color: #101828;
+    font-family: Outfit;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.35781rem;
+    margin-bottom: 3rem;
+  }
+  button.contact {
+    background: #135fdc;
+    color: #fff;
+    cursor: pointer;
+    padding: 14px 40px;
+    border-radius: 28px;
+    border: 2px solid #135fdc;
+    margin-bottom: 70px;
+  }
+  .purple,
+  .green,
+  .gold,
+  .pink {
+    position: absolute;
+  }
+  .purple {
+    top: 60px;
+    left: 250px;
+  }
+  .green {
+    top: 60px;
+    right: 250px;
+  }
+  .gold {
+    top: 200px;
+    left: 500px;
+  }
+  .pink {
+    top: 200px;
+    right: 500px;
+  }
+}

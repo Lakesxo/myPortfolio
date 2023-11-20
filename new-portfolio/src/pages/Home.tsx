@@ -1,3 +1,4 @@
+import Contact from "../components/contact/Contact";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
 import Projects from "../components/projects/Projects";
@@ -12,6 +13,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
       <Hero />
       <Projects />
       <Skills />
+      <Contact />
     </div>
   );
 };

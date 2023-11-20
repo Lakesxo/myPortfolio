@@ -914,3 +914,127 @@ export const AntDesignIcon = () => {
     </svg>
   );
 };
+
+export const PurpleRects = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="61"
+      height="44"
+      viewBox="0 0 61 44"
+      fill="none"
+    >
+      <rect
+        x="0.199312"
+        y="2.4877"
+        width="26.8736"
+        height="27.0299"
+        transform="matrix(0.750903 0.660412 -0.636176 0.771544 21.0385 0.436704)"
+        stroke="#5A71EB"
+        strokeWidth="3.47455"
+      />
+      <rect
+        x="0.199312"
+        y="2.4877"
+        width="26.8736"
+        height="27.0299"
+        transform="matrix(0.750903 0.660412 -0.636176 0.771544 39.853 0.436704)"
+        stroke="#5A71EB"
+        strokeWidth="3.47455"
+      />
+    </svg>
+  );
+};
+
+export const GreenRects = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="62"
+      height="44"
+      viewBox="0 0 62 44"
+      fill="none"
+    >
+      <rect
+        x="0.178708"
+        y="2.23053"
+        width="27.2328"
+        height="27.3891"
+        transform="matrix(0.750903 0.660412 -0.636176 0.771544 21.025 0.391558)"
+        stroke="#008753"
+        strokeWidth="3.11536"
+      />
+      <rect
+        x="0.178708"
+        y="2.23053"
+        width="27.2328"
+        height="27.3891"
+        transform="matrix(0.750903 0.660412 -0.636176 0.771544 39.8395 0.391558)"
+        stroke="#008753"
+        strokeWidth="3.11536"
+      />
+    </svg>
+  );
+};
+
+export const GoldRects = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="61"
+      height="44"
+      viewBox="0 0 61 44"
+      fill="none"
+    >
+      <rect
+        x="0.178708"
+        y="2.23053"
+        width="27.2328"
+        height="27.3891"
+        transform="matrix(0.750903 0.660412 -0.636176 0.771544 20.8698 0.391558)"
+        stroke="#ECC39F"
+        strokeWidth="3.11536"
+      />
+      <rect
+        x="0.178708"
+        y="2.23053"
+        width="27.2328"
+        height="27.3891"
+        transform="matrix(0.750903 0.660412 -0.636176 0.771544 39.6842 0.391558)"
+        stroke="#ECC39F"
+        strokeWidth="3.11536"
+      />
+    </svg>
+  );
+};
+
+export const PinkRects = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="61"
+      height="44"
+      viewBox="0 0 61 44"
+      fill="none"
+    >
+      <rect
+        x="0.178708"
+        y="2.23053"
+        width="27.2328"
+        height="27.3891"
+        transform="matrix(0.750903 0.660412 -0.636176 0.771544 20.8698 0.391558)"
+        stroke="#E977E4"
+        strokeWidth="3.11536"
+      />
+      <rect
+        x="0.178708"
+        y="2.23053"
+        width="27.2328"
+        height="27.3891"
+        transform="matrix(0.750903 0.660412 -0.636176 0.771544 39.6842 0.391558)"
+        stroke="#E977E4"
+        strokeWidth="3.11536"
+      />
+    </svg>
+  );
+};
