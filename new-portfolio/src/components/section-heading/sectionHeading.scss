@@ -1,0 +1,21 @@
+.headingWrapper {
+  position: relative;
+  padding-left: 10rem;
+  margin-bottom: 5.5em;
+  text-align: center;
+  p.headName {
+    color: #101828;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .headLine {
+    border-radius: 2px;
+    background: #bfc7d7;
+    height: 4px;
+    width: 130px;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+  }
+}
