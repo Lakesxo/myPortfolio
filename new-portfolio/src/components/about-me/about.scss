@@ -1,0 +1,19 @@
+.abtCont {
+  display: flex;
+  align-items: center;
+  padding: 7.4rem;
+  gap: 4.38rem;
+  background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
+  .details {
+    p.meet {
+      color: #000;
+      font-family: Outfit;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+    }
+    p.deetsT {
+      margin-top: 30px;
+    }
+  }
+}

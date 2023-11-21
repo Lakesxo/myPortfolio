@@ -29,6 +29,10 @@
       font-style: normal;
       font-weight: 500;
     }
+    a.activeLink {
+      color: $blue-100;
+      font-weight: 700;
+    }
     button {
       display: flex;
       align-items: center;

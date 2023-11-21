@@ -7,6 +7,29 @@
     gap: 7.5rem;
   }
 }
+.flexWks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7.4rem;
+  background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
+  p.bel {
+    color: #000;
+    font-family: Outfit;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+  }
+  p.intTrext {
+    color: #000;
+    font-family: Mulish;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 2rem;
+    margin-bottom: 4.5rem;
+    width: 40rem;
+  }
+}
 
 @media (min-width: 2000px) {
   .projectContainer {
