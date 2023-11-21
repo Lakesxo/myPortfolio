@@ -1,0 +1,53 @@
+.pageHeroWrapper {
+  position: relative;
+  img {
+    position: absolute;
+    z-index: 1;
+  }
+}
+.pageHeroContainer {
+  padding: 7.5rem 8.875rem 6rem 8.125rem;
+  background: #fafcfe;
+  position: relative;
+  .topText {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  p.heading {
+    color: #101828;
+    font-family: Outfit;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 4.6875rem;
+    margin: 1.5rem 0 4.25rem 0;
+  }
+  .extraTextCont {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  p.extraText {
+    color: #101828;
+    font-family: Mulish;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+  }
+  .purpleRects,
+  .goldRects,
+  .greenRects {
+    position: absolute;
+  }
+  .purpleRects {
+    top: 40px;
+  }
+  .goldRects {
+    top: 330px;
+    right: 650px;
+  }
+  .greenRects {
+    top: 60px;
+    right: 350px;
+  }
+}
