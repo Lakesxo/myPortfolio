@@ -46,3 +46,39 @@
     right: 500px;
   }
 }
+.cardCWrapper {
+  border-radius: 0.75rem;
+  border: 0.5px solid rgba(242, 242, 242, 0.5);
+  background: #fff;
+  text-align: center;
+  width: 20.125rem;
+  height: 16.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  p.appName {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: -0.01913rem;
+  }
+  p.details a {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-family: Mulish;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 2.2885rem;
+    letter-spacing: -0.01488rem;
+    text-decoration-line: underline;
+  }
+}
+.flexMeans {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  padding: 11rem;
+  background: #fcfeff;
+}
