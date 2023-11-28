@@ -114,20 +114,11 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
           <div className="progLangs">
             <h3 className="skill-head">Programming Languages</h3>
             <div className="skillsWrap">
-              {programmingSkills.slice(0, 3).map((skill) => (
+              {programmingSkills.map((skill) => (
                 <SkillsCard
                   key={skill.name}
                   icon={skill.icon}
                   name={skill.name}
-                />
-              ))}
-            </div>
-            <div className="othSkills">
-              {programmingSkills.slice(3).map((skill) => (
-                <SkillsCard
-                  key={skill.name}
-                  name={skill.name}
-                  icon={skill.icon}
                 />
               ))}
             </div>
@@ -135,25 +126,7 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
           <div className="libraries">
             <h3 className="skill-head">Libraries & Frameworks</h3>
             <div className="skillsWrap">
-              {libraryFrameworks.slice(0, 3).map((skill) => (
-                <SkillsCard
-                  key={skill.name}
-                  name={skill.name}
-                  icon={skill.icon}
-                />
-              ))}
-            </div>
-            <div className="othSkills">
-              {libraryFrameworks.slice(3, 6).map((skill) => (
-                <SkillsCard
-                  key={skill.name}
-                  name={skill.name}
-                  icon={skill.icon}
-                />
-              ))}
-            </div>
-            <div className="othSkills">
-              {libraryFrameworks.slice(6, 9).map((skill) => (
+              {libraryFrameworks.map((skill) => (
                 <SkillsCard
                   key={skill.name}
                   name={skill.name}
@@ -165,25 +138,7 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
           <div className="tools">
             <h3 className="skill-head">Tools & Platforms</h3>
             <div className="skillsWrap">
-              {toolsSkills.slice(0, 3).map((skill) => (
-                <SkillsCard
-                  key={skill.name}
-                  name={skill.name}
-                  icon={skill.icon}
-                />
-              ))}
-            </div>
-            <div className="othSkills">
-              {toolsSkills.slice(3, 6).map((skill) => (
-                <SkillsCard
-                  key={skill.name}
-                  name={skill.name}
-                  icon={skill.icon}
-                />
-              ))}
-            </div>
-            <div className="othSkills">
-              {toolsSkills.slice(6, 9).map((skill) => (
+              {toolsSkills.map((skill) => (
                 <SkillsCard
                   key={skill.name}
                   name={skill.name}

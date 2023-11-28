@@ -6,6 +6,7 @@
   img {
     position: absolute;
     z-index: 1;
+    width: 100%;
   }
 }
 .pageHeroContainer {
@@ -58,5 +59,19 @@
 @media (min-width: 2500px) {
   .pageHeroWrapper img {
     left: 30rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .pageHeroContainer {
+    p.heading {
+      font-size: 5.5rem;
+    }
+    .goldRects {
+      right: 350px;
+    }
+    .greenRects {
+      right: 200px;
+    }
   }
 }
