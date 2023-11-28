@@ -22,3 +22,12 @@
     }
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1240px) {
+  .abtCont {
+    padding: 6.5rem;
+    img {
+      height: 450px;
+    }
+  }
+}

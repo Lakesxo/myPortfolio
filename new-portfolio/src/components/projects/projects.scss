@@ -47,3 +47,18 @@
     width: 100rem;
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .introWrapper {
+    padding: 6rem;
+  }
+  .flexWks {
+    padding: unset;
+    p.intTrext {
+      width: 90%;
+    }
+    img {
+      height: 380px;
+    }
+  }
+}

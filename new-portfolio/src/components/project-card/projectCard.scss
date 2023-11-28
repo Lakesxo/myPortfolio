@@ -40,3 +40,18 @@ a.moreDetails {
     margin-top: 7px;
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1420px) {
+  .projectCardwrapper,
+  .projectCardwrapperInvert {
+    gap: 5rem;
+  }
+  .leftPj {
+    img {
+      height: 360px;
+    }
+  }
+  .rightPjInvert {
+    padding-left: 5rem;
+  }
+}

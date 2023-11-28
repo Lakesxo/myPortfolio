@@ -9,16 +9,39 @@
   .flexSkills {
     display: flex;
     justify-content: space-between;
+    .progLangs,
+    .libraries,
+    .tools {
+      width: 28%;
+    }
     .skillsWrap,
     .othSkills {
       display: flex;
       gap: 40px;
       margin-top: 30px;
+      flex-wrap: wrap;
     }
   }
   .flex-skill {
     display: flex;
     align-items: center;
     gap: 7px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1420px) {
+  .skillscontainer {
+    padding: 3rem 1rem;
+  }
+  .skillsWrapper {
+    width: unset;
+    padding: 3rem 5rem;
+    .flexSkills {
+      .progLangs,
+      .libraries,
+      .tools {
+        width: 28%;
+      }
+    }
   }
 }

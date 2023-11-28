@@ -82,3 +82,20 @@
   padding: 11rem;
   background: #fcfeff;
 }
+
+@media (min-width: 1025px) and (max-width: 1420px) {
+  .contactwrapper {
+    .purple {
+      left: 150px;
+    }
+    .green {
+      right: 150px;
+    }
+    .gold {
+      left: 300px;
+    }
+    .pink {
+      right: 300px;
+    }
+  }
+}

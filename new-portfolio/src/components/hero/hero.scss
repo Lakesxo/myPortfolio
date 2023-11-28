@@ -45,3 +45,28 @@
     }
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1370px) {
+  .hero-container {
+    .heroWrapper {
+      padding: 4.375rem 6rem 6rem 6rem;
+      .leftHero {
+        p.hello {
+          font-size: 1.3rem;
+        }
+        h2.name {
+          font-size: 3.2rem;
+        }
+        p.extraDetails {
+          font-size: 1.1rem;
+          width: 80%;
+        }
+      }
+      .rightHero {
+        img {
+          height: 340px;
+        }
+      }
+    }
+  }
+}
