@@ -1,5 +1,8 @@
 .pageHeroWrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
+  background: #fafcfe;
   img {
     position: absolute;
     z-index: 1;
@@ -7,7 +10,7 @@
 }
 .pageHeroContainer {
   padding: 7.5rem 8.875rem 6rem 8.125rem;
-  background: #fafcfe;
+  width: 117rem;
   position: relative;
   .topText {
     display: flex;
@@ -49,5 +52,11 @@
   .greenRects {
     top: 60px;
     right: 350px;
+  }
+}
+
+@media (min-width: 2500px) {
+  .pageHeroWrapper img {
+    left: 30rem;
   }
 }
