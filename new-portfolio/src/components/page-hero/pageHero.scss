@@ -123,9 +123,17 @@
   .pageHeroContainer {
     p.heading {
       font-size: 2rem;
+      margin: 0;
     }
     p.extraText {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
+    }
+    span.naij {
+      display: none;
+    }
+    .greenRects {
+      top: 310px;
+      right: 90px;
     }
   }
 }
@@ -136,7 +144,7 @@
       font-size: 1.8rem;
     }
     p.extraText {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
     span.naij {
       display: none;
