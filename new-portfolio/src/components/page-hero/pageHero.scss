@@ -118,3 +118,28 @@
     }
   }
 }
+
+@media (max-width: 390px) {
+  .pageHeroContainer {
+    p.heading {
+      font-size: 2rem;
+    }
+    p.extraText {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 328px) {
+  .pageHeroContainer {
+    p.heading {
+      font-size: 1.8rem;
+    }
+    p.extraText {
+      font-size: 0.7rem;
+    }
+    span.naij {
+      display: none;
+    }
+  }
+}
