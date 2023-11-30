@@ -36,7 +36,7 @@ const PageHero: React.FunctionComponent<PageHeroProps> = ({
         <div className="extraTextCont">
           <p className="extraText">{extraText}</p>{" "}
           {location.pathname === "/about" && (
-            <span>
+            <span className="naij">
               <NaijaIcon />
             </span>
           )}

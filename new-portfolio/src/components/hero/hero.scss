@@ -82,6 +82,7 @@
       width: 100%;
       padding: 1.69rem 1.31rem 6rem 1.31rem;
       .leftHero {
+        margin-top: 25px;
         p.hello {
           font-size: 1.2rem;
           line-height: 2.625rem;
@@ -103,6 +104,42 @@
         img {
           margin-top: 3rem;
           height: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .heroContainer {
+    .heroWrapper {
+      .leftHero {
+        h2.name {
+          font-size: 1.9rem;
+        }
+        p.extraDetails {
+          font-size: 1rem;
+        }
+        p.hello {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .heroContainer {
+    .heroWrapper {
+      .leftHero {
+        h2.name {
+          font-size: 1.6rem;
+        }
+      }
+      .rightHero {
+        img {
+          margin-top: 3rem;
+          height: 250px;
         }
       }
     }

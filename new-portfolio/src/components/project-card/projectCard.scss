@@ -83,3 +83,11 @@ a.moreDetails {
     padding: 1.31rem;
   }
 }
+
+@media (max-width: 370px) {
+  .leftPj {
+    img {
+      height: 200px;
+    }
+  }
+}

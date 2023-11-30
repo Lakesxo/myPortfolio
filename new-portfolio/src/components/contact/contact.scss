@@ -140,3 +140,35 @@
     align-items: center;
   }
 }
+
+@media (max-width: 350px) {
+  .contactwrapper {
+    padding: 50px;
+    p {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .purple {
+      top: 30px;
+      left: 10px;
+    }
+    .green {
+      top: 20px;
+      right: 20px;
+    }
+    .gold {
+      top: 220px;
+      left: 30px;
+    }
+    .pink {
+      top: 150px;
+      right: 30px;
+    }
+  }
+  .flexMeans {
+    flex-direction: column;
+    padding: 3rem 1.31rem;
+    align-items: center;
+  }
+}

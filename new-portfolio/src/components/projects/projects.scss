@@ -72,7 +72,6 @@
   .flexWks {
     flex-direction: column;
     padding: 3rem 1.31rem;
-    align-items: flex-start;
     p.intTrext {
       font-size: 1rem;
       font-weight: 500;
@@ -83,6 +82,18 @@
     img {
       height: 320px;
       margin-top: 2rem;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .flexWks {
+    padding: 3rem 1rem;
+    p.intTrext {
+      font-size: 0.9rem;
+    }
+    img {
+      height: 250px;
     }
   }
 }
