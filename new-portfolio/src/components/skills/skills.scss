@@ -45,3 +45,18 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .skillsWrapper {
+    padding: 3rem 1.31rem 3.75rem 1.31rem;
+    .flexSkills {
+      flex-direction: column;
+      gap: 3.5rem;
+      .progLangs,
+      .libraries,
+      .tools {
+        width: 100%;
+      }
+    }
+  }
+}

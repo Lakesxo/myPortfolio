@@ -18,3 +18,12 @@
     left: 48%;
   }
 }
+
+@media (max-width: 480px) {
+  .headingWrapper {
+    margin-bottom: 3rem;
+    .headLine {
+      left: 43%;
+    }
+  }
+}

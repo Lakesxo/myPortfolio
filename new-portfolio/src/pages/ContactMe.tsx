@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { PhoneIcon } from "../assets/icons/icons";
 import Contact from "../components/contact/Contact";
 import MeansOfContact from "../components/contact/MeansOfContact";
@@ -7,6 +8,9 @@ import PageHero from "../components/page-hero/PageHero";
 interface ContactMeProps {}
 
 const ContactMe: React.FunctionComponent<ContactMeProps> = () => {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header />

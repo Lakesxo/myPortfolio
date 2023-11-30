@@ -62,3 +62,27 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .projectWrapper {
+    .projects {
+      gap: 1.2rem;
+    }
+  }
+  .flexWks {
+    flex-direction: column;
+    padding: 3rem 1.31rem;
+    align-items: flex-start;
+    p.intTrext {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.8rem;
+      margin-bottom: 2.5rem;
+      width: 100%;
+    }
+    img {
+      height: 320px;
+      margin-top: 2rem;
+    }
+  }
+}

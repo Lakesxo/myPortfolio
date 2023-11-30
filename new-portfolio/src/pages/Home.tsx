@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Contact from "../components/contact/Contact";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
@@ -7,6 +8,9 @@ import Skills from "../components/skills/Skills";
 interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header />

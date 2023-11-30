@@ -31,3 +31,14 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .abtCont {
+    flex-direction: column;
+    width: unset;
+    padding: 3rem 1.31rem;
+    img {
+      height: 360px;
+    }
+  }
+}
