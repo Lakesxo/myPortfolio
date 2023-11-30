@@ -45,6 +45,7 @@ const MeansOfContact: React.FunctionComponent<MeansOfContactProps> = () => {
     <div className="flexMeans">
       {contacts.map((contact) => (
         <ContactCard
+          key={contact.appText}
           icon={contact.icon}
           appName={contact.appText}
           details={contact.appDetails}

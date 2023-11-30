@@ -55,3 +55,31 @@ a.moreDetails {
     padding-left: 5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .projectCardwrapper,
+  .projectCardwrapperInvert {
+    flex-direction: column-reverse;
+    gap: 0;
+    padding-bottom: 4rem;
+    border-bottom: 1.2px solid rgba(241, 245, 250, 0.7);
+  }
+  .projectCardwrapper {
+    align-items: flex-start;
+  }
+  .projectCardwrapperInvert {
+    align-items: flex-end;
+  }
+  .leftPj {
+    img {
+      height: 250px;
+    }
+  }
+  .rightPjInvert {
+    padding-left: 0;
+  }
+  .rightPjInvert,
+  .rightPj {
+    padding: 1.31rem;
+  }
+}

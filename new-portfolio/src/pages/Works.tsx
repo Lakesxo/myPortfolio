@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { FolderIcon } from "../assets/icons/icons";
 import Contact from "../components/contact/Contact";
 import Header from "../components/header/Header";
@@ -9,6 +10,9 @@ import Skills from "../components/skills/Skills";
 interface WorksProps {}
 
 const Works: React.FunctionComponent<WorksProps> = () => {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header />

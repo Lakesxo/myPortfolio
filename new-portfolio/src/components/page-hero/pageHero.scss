@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   background: #fafcfe;
+  margin-top: 7rem;
   img {
     position: absolute;
     z-index: 1;
@@ -58,7 +59,8 @@
 
 @media (min-width: 2500px) {
   .pageHeroWrapper img {
-    left: 30rem;
+    width: unset;
+    margin-right: 10rem;
   }
 }
 
@@ -73,6 +75,45 @@
     }
     .greenRects {
       right: 200px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .pageHeroWrapper {
+    margin-top: 5.4rem;
+    img {
+      position: absolute;
+      z-index: 1;
+      width: unset;
+    }
+  }
+  .pageHeroContainer {
+    padding: 7.5rem 1.31rem 6rem 1.31rem;
+    p.heading {
+      font-size: 2.5rem;
+      margin: 1rem 0 1rem 0;
+    }
+    p.extraText {
+      font-size: 0.875rem;
+    }
+    .purpleRects,
+    .goldRects,
+    .greenRects {
+      svg {
+        height: 28px;
+      }
+    }
+    .purpleRects {
+      top: 60px;
+    }
+    .goldRects {
+      top: 30px;
+      right: 30px;
+    }
+    .greenRects {
+      top: 320px;
+      right: 90px;
     }
   }
 }

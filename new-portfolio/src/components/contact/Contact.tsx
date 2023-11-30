@@ -17,7 +17,13 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
       <p>
         Want us to work <br /> together ?
       </p>
-      <button onClick={() => navigate("/contact")} className="contact">
+      <button
+        onClick={() => {
+          navigate("/contact");
+          scrollTo(0, 0);
+        }}
+        className="contact"
+      >
         Contact Me
       </button>
       <Socials />

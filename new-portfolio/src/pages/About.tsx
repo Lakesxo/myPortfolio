@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { AboutIcon } from "../assets/icons/icons";
 import AboutMe from "../components/about-me/AboutMe";
 import Contact from "../components/contact/Contact";
@@ -8,6 +9,9 @@ import Skills from "../components/skills/Skills";
 interface AboutProps {}
 
 const About: React.FunctionComponent<AboutProps> = () => {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header />
