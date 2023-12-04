@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MoonIcon } from "../../assets/icons/icons";
+import { MoonIcon, ScrollUpButton } from "../../assets/icons/icons";
 import "./header.scss";
 import { useNavigate, useLocation } from "react-router";
 
@@ -10,14 +10,17 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
   const location = useLocation();
   const [position, setPosition] = useState(window.scrollY);
   const [visible, setVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 820);
+  const [showScrollUpButton, setShowScrollUpButton] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
       let moving = window.scrollY;
       setVisible(position < moving);
+      setShowScrollUpButton(true);
       if (moving < 80) {
         setVisible(false);
+        setShowScrollUpButton(false);
       }
       setPosition(moving);
     };
@@ -28,7 +31,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
   });
 
   useEffect(() => {
-    setIsMobile(window.innerWidth <= 768);
+    setIsMobile(window.innerWidth <= 820);
   });
 
   const handleHomeClick = () => {
@@ -109,6 +112,11 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           </nav>
         </div>
       </div>
+      {showScrollUpButton && (
+        <button onClick={() => scrollTo(0, 0)} className="scrollUp">
+          <ScrollUpButton />
+        </button>
+      )}
     </div>
   ) : (
     <div className={visible ? `hidden headerWrapper` : `visible headerWrapper`}>

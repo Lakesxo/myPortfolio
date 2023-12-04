@@ -64,17 +64,72 @@
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1400px) {
+@media (min-width: 1024px) and (max-width: 1400px) {
   .pageHeroContainer {
     padding: 7.5rem 8.875rem 6rem 6rem;
     p.heading {
       font-size: 5.5rem;
     }
     .goldRects {
-      right: 350px;
+      right: 220px;
     }
     .greenRects {
       right: 200px;
+    }
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1023px) {
+  .pageHeroContainer {
+    padding: 7.5rem 4rem 6rem 4rem;
+    p.heading {
+      font-size: 5rem;
+    }
+    .goldRects {
+      right: 150px;
+      top: 370px;
+    }
+    .greenRects {
+      right: 200px;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 820px) {
+  .pageHeroContainer {
+    padding: 7.5rem 4rem 6rem 4rem;
+    p.heading {
+      font-size: 4rem;
+      margin: 1rem 0 1rem 0;
+    }
+    p.extraText {
+      font-size: 0.875rem;
+    }
+    .purpleRects,
+    .goldRects,
+    .greenRects {
+      svg {
+        height: 28px;
+      }
+    }
+    .purpleRects {
+      top: 60px;
+    }
+    .goldRects {
+      top: 30px;
+      right: 30px;
+    }
+    .greenRects {
+      top: 320px;
+      right: 90px;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 680px) {
+  .pageHeroContainer {
+    p.heading {
+      font-size: 2.5rem;
     }
   }
 }
@@ -148,6 +203,26 @@
     }
     span.naij {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 290px) {
+  .pageHeroContainer {
+    padding: 7rem 0.9rem 5rem 0.9rem;
+    p.heading {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    p.extraText {
+      font-size: 0.9rem;
+    }
+    span.naij {
+      display: none;
+    }
+    .greenRects {
+      top: 300px;
+      right: 50px;
     }
   }
 }
