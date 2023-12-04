@@ -10,7 +10,7 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
   const particlesInit = useCallback(async (engine: any) => {
     await loadSlim(engine);
   }, []);
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 820;
   return (
     <div className="hero-container">
       {!isMobile && (

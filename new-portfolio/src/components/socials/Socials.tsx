@@ -13,14 +13,6 @@ const Socials: React.FunctionComponent<SocialsProps> = () => {
     <div className="socialswrapper">
       <a
         className="socialIcons"
-        href="https://twitter.com/lakes__xo_"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <TwitterIcon />
-      </a>
-      <a
-        className="socialIcons"
         href="https://github.com/Lakesxo"
         target="_blank"
         rel="noreferrer"
@@ -34,6 +26,14 @@ const Socials: React.FunctionComponent<SocialsProps> = () => {
         rel="noreferrer"
       >
         <InstagramIcon />
+      </a>
+      <a
+        className="socialIcons"
+        href="https://twitter.com/lakes__xo_"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <TwitterIcon />
       </a>
       <a
         className="socialIcons"

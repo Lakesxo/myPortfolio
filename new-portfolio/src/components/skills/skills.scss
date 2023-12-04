@@ -29,7 +29,7 @@
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1420px) {
+@media (min-width: 1024px) and (max-width: 1420px) {
   .skillscontainer {
     padding: 3rem 1rem;
   }
@@ -41,6 +41,40 @@
       .libraries,
       .tools {
         width: 28%;
+      }
+    }
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1023px) {
+  .skillscontainer {
+    padding: 2rem 1rem;
+  }
+  .skillsWrapper {
+    width: unset;
+    padding: 3rem;
+    .flexSkills {
+      flex-direction: column;
+      gap: 3.5rem;
+      .progLangs,
+      .libraries,
+      .tools {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 820px) {
+  .skillsWrapper {
+    padding: 4rem;
+    .flexSkills {
+      flex-direction: column;
+      gap: 3.5rem;
+      .progLangs,
+      .libraries,
+      .tools {
+        width: 100%;
       }
     }
   }
