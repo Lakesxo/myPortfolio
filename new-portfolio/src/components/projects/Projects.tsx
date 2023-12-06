@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import ProjectCard from "../project-card/ProjectCard";
 import SectionHeading from "../section-heading/SectionHeading";
 import "./projects.scss";
+import { ThemeContext } from "../../App";
 
 interface ProjectsProps {}
 
@@ -56,9 +58,14 @@ export const projects = [
 ];
 
 const Projects: React.FunctionComponent<ProjectsProps> = () => {
+  const theme = useContext(ThemeContext);
   return (
-    <div className="projectContainer">
-      <div className="projectWrapper">
+    <div
+      className={theme.isDarkmode ? "projectContainerDark" : "projectContainer"}
+    >
+      <div
+        className={theme.isDarkmode ? "projectWrapperDark" : "projectWrapper"}
+      >
         <SectionHeading sectionName="Selected Projects" />
         <div className="projects">
           {projects.map((project, index) => (

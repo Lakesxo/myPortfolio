@@ -6,6 +6,8 @@ import {
   PurpleRects,
 } from "../../assets/icons/icons";
 import "./pageHero.scss";
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
 
 interface PageHeroProps {
   topIcon: JSX.Element;
@@ -21,20 +23,31 @@ const PageHero: React.FunctionComponent<PageHeroProps> = ({
   extraText,
 }) => {
   const location = useLocation();
+  const theme = useContext(ThemeContext);
   return (
-    <div className="pageHeroWrapper">
+    <div
+      className={theme.isDarkmode ? "pageHeroWrapperDark" : "pageHeroWrapper"}
+    >
       <img
-        src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700577159/Vectorbg_q6nt9c.png"
+        src={
+          theme.isDarkmode
+            ? "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1701866485/phero_lnil62.png"
+            : "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700577159/Vectorbg_q6nt9c.png"
+        }
         alt="vector"
       />
       <div className="pageHeroContainer">
-        <div className="topText">
+        <div className={theme.isDarkmode ? "topTextDark" : "topText"}>
           <span>{topIcon}</span>
           <p>{topText}</p>
         </div>
-        <p className="heading">{pageHeading}</p>
+        <p className={theme.isDarkmode ? "headingDark" : "heading"}>
+          {pageHeading}
+        </p>
         <div className="extraTextCont">
-          <p className="extraText">{extraText}</p>{" "}
+          <p className={theme.isDarkmode ? "extraTextDark" : "extraText"}>
+            {extraText}
+          </p>{" "}
           {location.pathname === "/about" && (
             <span className="naij">
               <NaijaIcon />

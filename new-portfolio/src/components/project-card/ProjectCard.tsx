@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { WarningIcon } from "../../assets/icons/icons";
 import "./projectCard.scss";
+import { ThemeContext } from "../../App";
 
 interface ProjectCardProps {
   projectName: string;
@@ -16,6 +18,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   link,
   index,
 }) => {
+  const theme = useContext(ThemeContext);
   return (
     <div
       className={
@@ -26,9 +29,17 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
         <img src={image} alt="ridwan ajanaku project" />
       </div>
       <div className={index % 2 === 0 ? "rightPjInvert" : "rightPj"}>
-        <p className="projectName">{projectName}</p>
-        <p className="projectDesc">{description}</p>
-        <a className="moreDetails" href={link} target="_blank">
+        <p className={theme.isDarkmode ? "projectNameDark" : "projectName"}>
+          {projectName}
+        </p>
+        <p className={theme.isDarkmode ? "projectDescDark" : "projectDesc"}>
+          {description}
+        </p>
+        <a
+          className={theme.isDarkmode ? "moreDetailsDark" : "moreDetails"}
+          href={link}
+          target="_blank"
+        >
           <span>View more details </span>
           <span className="warning">
             <WarningIcon />

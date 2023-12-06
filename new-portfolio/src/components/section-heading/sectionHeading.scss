@@ -1,4 +1,5 @@
-.headingWrapper {
+.headingWrapper,
+.headingWrapperDark {
   position: relative;
   margin-bottom: 5.5em;
   text-align: center;
@@ -16,6 +17,11 @@
     position: absolute;
     top: 45px;
     left: 48%;
+  }
+}
+.headingWrapperDark {
+  p.headName {
+    color: #fff;
   }
 }
 

@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   AntDesignIcon,
   BootstrapIcon,
@@ -21,6 +22,7 @@ import {
 import SectionHeading from "../section-heading/SectionHeading";
 import SkillsCard from "./SkillsCard";
 import "./skills.scss";
+import { ThemeContext } from "../../App";
 
 interface SkillsProps {}
 
@@ -106,8 +108,12 @@ const Skills: React.FunctionComponent<SkillsProps> = () => {
     },
   ];
 
+  const theme = useContext(ThemeContext);
+
   return (
-    <div className="skillscontainer">
+    <div
+      className={theme.isDarkmode ? "skillscontainerDark" : "skillscontainer"}
+    >
       <div className="skillsWrapper">
         <SectionHeading sectionName="Skills" />
         <div className="flexSkills">

@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   GoldRects,
   GreenRects,
@@ -7,13 +8,15 @@ import {
 import Socials from "../socials/Socials";
 import "./contact.scss";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../App";
 
 interface ContactProps {}
 
 const Contact: React.FunctionComponent<ContactProps> = () => {
   const navigate = useNavigate();
+  const theme = useContext(ThemeContext);
   return (
-    <div className="contactwrapper">
+    <div className={theme.isDarkmode ? "contactwrapperDark" : "contactwrapper"}>
       <p>
         Want us to work <br /> together ?
       </p>
