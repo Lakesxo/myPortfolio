@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
-import { MoonIcon, ScrollUpButton } from "../../assets/icons/icons";
+import { useContext, useEffect, useState, useRef } from "react";
+import {
+  LightModeIcon,
+  MoonIcon,
+  ScrollUpButton,
+} from "../../assets/icons/icons";
 import "./header.scss";
 import { useNavigate, useLocation } from "react-router";
+import { ThemeContext } from "../../App";
 
 interface HeaderProps {}
 
@@ -12,6 +17,8 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 820);
   const [showScrollUpButton, setShowScrollUpButton] = useState<boolean>(false);
+  const theme = useContext(ThemeContext);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,8 +61,23 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
     scrollTo(0, 0);
   };
 
+  useEffect(() => {
+    theme.isDarkmode
+      ? headerRef.current?.classList.replace(
+          "headerWrapper",
+          "headerWrapperDark"
+        )
+      : headerRef.current?.classList.replace(
+          "headerWrapperDark",
+          "headerWrapper"
+        );
+  }, [theme.isDarkmode, visible]);
+
   return isMobile ? (
-    <div className={visible ? `hidden headerWrapper` : `visible headerWrapper`}>
+    <div
+      ref={headerRef}
+      className={visible ? `hidden headerWrapper` : `visible headerWrapper`}
+    >
       <div className="header">
         <a onClick={handleHomeClick}>
           <div className="logo">
@@ -67,16 +89,19 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           </div>
         </a>
         <div className="header-links">
-          <button className="theme">
-            <MoonIcon />
+          <button
+            className={theme.isDarkmode ? "themeDark" : "theme"}
+            onClick={() => theme.toggleTheme()}
+          >
+            {theme.isDarkmode ? <LightModeIcon /> : <MoonIcon />}
           </button>
           <nav role="navigation">
-            <div id="menuToggle">
+            <div id={theme.isDarkmode ? "menuToggleDark" : "menuToggle"}>
               <input type="checkbox" />
               <span></span>
               <span></span>
               <span></span>
-              <ul id="menu">
+              <ul id={theme.isDarkmode ? "menuDark" : "menu"}>
                 <a
                   onClick={handleHomeClick}
                   className={location.pathname === "/" ? "activeLink" : "links"}
@@ -119,7 +144,10 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
       )}
     </div>
   ) : (
-    <div className={visible ? `hidden headerWrapper` : `visible headerWrapper`}>
+    <div
+      ref={headerRef}
+      className={visible ? `hidden headerWrapper` : `visible headerWrapper`}
+    >
       <div className="header">
         <a onClick={handleHomeClick}>
           <div className="logo">
@@ -157,8 +185,11 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           >
             Contact me
           </a>
-          <button className="theme">
-            <MoonIcon />
+          <button
+            className={theme.isDarkmode ? "themeDark" : "theme"}
+            onClick={() => theme.toggleTheme()}
+          >
+            {theme.isDarkmode ? <LightModeIcon /> : <MoonIcon />}
           </button>
         </div>
       </div>

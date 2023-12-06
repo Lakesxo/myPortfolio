@@ -1,7 +1,12 @@
-.abtMewrapper {
+.abtMewrapper,
+.abtMewrapperDark {
   display: flex;
   justify-content: center;
   background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
+}
+.abtMewrapperDark {
+  background-color: #061122;
+  background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1701798285/dvc2_svrx3u.png");
 }
 .abtCont {
   display: flex;
@@ -10,15 +15,23 @@
   gap: 4.38rem;
   width: 117rem;
   .details {
-    p.meet {
+    p.meet,
+    p.meetDark {
       color: #000;
       font-family: Outfit;
       font-size: 2rem;
       font-weight: 600;
       line-height: 1.5rem;
     }
-    p.deetsT {
+    p.meetDark {
+      color: #fff;
+    }
+    p.deetsT,
+    p.deetsTDark {
       margin-top: 30px;
+    }
+    p.deetsTDark {
+      color: #bdbdbd;
     }
   }
 }

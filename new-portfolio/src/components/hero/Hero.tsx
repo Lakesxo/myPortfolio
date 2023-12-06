@@ -1,8 +1,9 @@
 import Socials from "../socials/Socials";
 import "./hero.scss";
-import { useCallback } from "react";
+import { useCallback, useContext } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
+import { ThemeContext } from "../../App";
 
 interface HeroProps {}
 
@@ -11,6 +12,7 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
     await loadSlim(engine);
   }, []);
   const isMobile = window.innerWidth <= 820;
+  const theme = useContext(ThemeContext);
   return (
     <div className="hero-container">
       {!isMobile && (
@@ -44,10 +46,10 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
             },
             particles: {
               color: {
-                value: "#135FDC",
+                value: theme.isDarkmode ? "#606874" : "#a6c0ea",
               },
               links: {
-                color: "#135FDC",
+                color: theme.isDarkmode ? "#606874" : "#a6c0ea",
                 distance: 150,
                 enable: true,
                 opacity: 0.5,
@@ -84,7 +86,7 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
           }}
         />
       )}
-      <div className="heroContainer">
+      <div className={theme.isDarkmode ? "heroContainerDark" : "heroContainer"}>
         <div className="heroWrapper">
           <div className="leftHero">
             <p className="hello">

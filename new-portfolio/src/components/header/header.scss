@@ -1,5 +1,6 @@
 @import "../../variables";
-.headerWrapper {
+.headerWrapper,
+.headerWrapperDark {
   box-shadow: 0px 2px 12px 0px rgba(196, 214, 222, 0.25);
   display: flex;
   justify-content: center;
@@ -7,6 +8,17 @@
   width: 100%;
   background-color: #fff;
   z-index: 1000;
+}
+.headerWrapperDark {
+  background: #0d1727;
+  box-shadow: 0px -6px 13px 0px #735d49;
+  a {
+    color: #818184 !important;
+  }
+  a.activeLink {
+    color: $blue-100 !important;
+    font-weight: 700;
+  }
 }
 .header {
   display: flex;
@@ -37,7 +49,8 @@
       color: $blue-100;
       font-weight: 700;
     }
-    button {
+    button.theme,
+    button.themeDark {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -47,6 +60,9 @@
       border-radius: 100%;
       filter: drop-shadow(0px 3px 7px rgba(72, 4, 3, 0.05));
       cursor: pointer;
+    }
+    button.themeDark {
+      background-color: #135fdc;
     }
   }
 }
@@ -68,7 +84,8 @@ button.scrollUp {
   border: 0;
 }
 
-#menuToggle {
+#menuToggle,
+#menuToggleDark {
   display: block;
   position: relative;
   z-index: 1;
@@ -77,17 +94,15 @@ button.scrollUp {
   user-select: none;
 }
 
-#menuToggle a {
+#menuToggle a,
+#menuToggleDark a {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover {
-  color: tomato;
-}
-
-#menuToggle input {
+#menuToggle input,
+#menuToggleDark input {
   display: block;
   width: 40px;
   height: 32px;
@@ -106,7 +121,8 @@ button.scrollUp {
 /*
 * Just a quick hamburger
 */
-#menuToggle span {
+#menuToggle span,
+#menuToggleDark span {
   display: block;
   width: 33px;
   height: 4px;
@@ -124,30 +140,43 @@ button.scrollUp {
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child {
+#menuToggleDark span {
+  background-color: #e0e0e0;
+}
+
+#menuToggle span:first-child,
+#menuToggleDark span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2) {
+#menuToggle span:nth-last-child(2),
+#menuToggleDark span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span {
+#menuToggle input:checked ~ span,
+#menuToggleDark input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
+#menuToggleDark input:checked ~ span {
+  background: #e0e0e0;
+}
 
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#menuToggle input:checked ~ span:nth-last-child(3),
+#menuToggleDark input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2) {
+#menuToggle input:checked ~ span:nth-last-child(2),
+#menuToggleDark input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menu {
+#menu,
+#menuDark {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -171,6 +200,11 @@ button.scrollUp {
   }
 }
 
+#menuDark {
+  background: #0d1727;
+  background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1701798285/dvc2_svrx3u.png");
+}
+
 #menu li {
   padding: 10px 0;
   font-size: 22px;
@@ -180,7 +214,8 @@ button.scrollUp {
 /*
 * And let's slide it in from the left
 */
-#menuToggle input:checked ~ ul {
+#menuToggle input:checked ~ ul,
+#menuToggleDark input:checked ~ ul {
   transform: none;
 }
 
@@ -200,6 +235,9 @@ button.scrollUp {
   .headerWrapper {
     background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
   }
+  .headerWrapperDark {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1701798285/dvc2_svrx3u.png");
+  }
   .header {
     padding: 1rem 4rem;
   }
@@ -214,6 +252,9 @@ button.scrollUp {
 @media (max-width: 480px) {
   .headerWrapper {
     background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
+  }
+  .headerWrapperDark {
+    background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1701798285/dvc2_svrx3u.png");
   }
   .header {
     width: 100%;

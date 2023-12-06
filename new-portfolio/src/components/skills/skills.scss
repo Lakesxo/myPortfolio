@@ -1,7 +1,17 @@
-.skillscontainer {
+.skillscontainer,
+.skillscontainerDark {
   display: flex;
   justify-content: center;
   background: #fafcfe;
+}
+.skillscontainerDark {
+  background-color: #0d1727;
+  .skill-head {
+    color: #fff;
+  }
+  .skillsWrap {
+    color: #e0e0e0;
+  }
 }
 .skillsWrapper {
   padding: 3rem 7.75rem 3.75rem 7.875rem;
@@ -30,7 +40,8 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1420px) {
-  .skillscontainer {
+  .skillscontainer,
+  .skillscontainerDark {
     padding: 3rem 1rem;
   }
   .skillsWrapper {
@@ -47,7 +58,8 @@
 }
 
 @media (min-width: 821px) and (max-width: 1023px) {
-  .skillscontainer {
+  .skillscontainer,
+  .skillscontainerDark {
     padding: 2rem 1rem;
   }
   .skillsWrapper {

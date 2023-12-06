@@ -1,6 +1,6 @@
 .hero-container {
   position: relative;
-  margin-top: 7rem;
+  margin-top: 6.5rem;
   #tsparticles {
     position: absolute;
     top: 0;
@@ -9,12 +9,17 @@
     right: 0;
     padding: 0;
     margin: 0;
-    z-index: -1;
+    z-index: 0;
   }
-  .heroContainer {
+  .heroContainer,
+  .heroContainerDark {
     display: flex;
     justify-content: center;
     background: rgba(250, 251, 254, 0.7);
+  }
+  .heroContainerDark {
+    background: #061122;
+    z-index: 1;
   }
   .heroWrapper {
     display: flex;
@@ -22,6 +27,7 @@
     align-items: center;
     justify-content: space-between;
     width: 117rem;
+    z-index: 2;
     .leftHero {
       p.hello {
         font-size: 1.5rem;
@@ -42,6 +48,21 @@
         color: #101828;
         width: 36.0625rem;
         margin: 1.25rem 0 4.28rem 0;
+      }
+    }
+  }
+  .heroContainerDark {
+    .heroWrapper {
+      .leftHero {
+        p.hello {
+          color: #818184;
+        }
+        h2.name {
+          color: #fff;
+        }
+        p.extraDetails {
+          color: #bdbdbd;
+        }
       }
     }
   }
@@ -99,7 +120,8 @@
 }
 
 @media (min-width: 481px) and (max-width: 820px) {
-  .heroContainer {
+  .heroContainer,
+  .heroContainerDark {
     .heroWrapper {
       padding: 2rem 4rem 6rem 4rem;
       flex-direction: column;
@@ -117,7 +139,8 @@
 }
 
 @media (min-width: 481px) and (max-width: 707px) {
-  .heroContainer {
+  .heroContainer,
+  .heroContainerDark {
     .heroWrapper {
       padding: 1.69rem 1.31rem 6rem 1.31rem;
       flex-direction: column;
@@ -163,7 +186,8 @@
   .hero-container {
     margin-top: 5.4rem;
   }
-  .heroContainer {
+  .heroContainer,
+  .heroContainerDark {
     .heroWrapper {
       flex-direction: column;
       width: 100%;
@@ -198,7 +222,8 @@
 }
 
 @media (max-width: 370px) {
-  .heroContainer {
+  .heroContainer,
+  .heroContainerDark {
     .heroWrapper {
       .leftHero {
         h2.name {
@@ -216,7 +241,8 @@
 }
 
 @media (max-width: 320px) {
-  .heroContainer {
+  .heroContainer,
+  .heroContainerDark {
     .heroWrapper {
       .leftHero {
         h2.name {
@@ -234,7 +260,8 @@
 }
 
 @media (max-width: 290px) {
-  .heroContainer {
+  .heroContainer,
+  .heroContainerDark {
     .heroWrapper {
       .leftHero {
         h2.name {

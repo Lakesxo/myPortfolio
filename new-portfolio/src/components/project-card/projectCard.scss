@@ -11,13 +11,18 @@
 .rightPjInvert {
   padding-left: 10rem;
 }
-p.projectName {
+p.projectName,
+p.projectNameDark {
   color: #101828;
   font-size: 2rem;
   font-weight: 700;
   line-height: 4.6875rem;
 }
-p.projectDesc {
+p.projectNameDark {
+  color: #fff;
+}
+p.projectDesc,
+p.projectDescDark {
   color: #000;
   font-family: Mulish;
   font-size: 1rem;
@@ -25,7 +30,11 @@ p.projectDesc {
   line-height: 1.5rem;
   padding-right: 40px;
 }
-a.moreDetails {
+p.projectDescDark {
+  color: #bdbdbd;
+}
+a.moreDetails,
+a.moreDetailsDark {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -37,7 +46,18 @@ a.moreDetails {
   font-weight: 700;
   line-height: 4.6875rem;
   span.warning {
-    margin-top: 7px;
+    margin-top: 8px;
+    margin-left: 3px;
+  }
+}
+a.moreDetailsDark {
+  color: #fff;
+  span.warning {
+    svg {
+      path {
+        stroke: #fff;
+      }
+    }
   }
 }
 
