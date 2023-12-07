@@ -12,10 +12,10 @@
 .headerWrapperDark {
   background: #0d1727;
   box-shadow: 0px -6px 13px 0px #735d49;
-  a {
+  p {
     color: #818184 !important;
   }
-  a.activeLink {
+  p.activeLink {
     color: $blue-100 !important;
     font-weight: 700;
   }
@@ -33,7 +33,7 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    a {
+    p {
       color: $grey-900;
       text-decoration: none;
       cursor: pointer;
@@ -45,7 +45,7 @@
       font-style: normal;
       font-weight: 500;
     }
-    a.activeLink {
+    p.activeLink {
       color: $blue-100;
       font-weight: 700;
     }
@@ -94,11 +94,16 @@ button.scrollUp {
   user-select: none;
 }
 
-#menuToggle a,
-#menuToggleDark a {
+#menuToggle p,
+#menuToggleDark p {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease;
+}
+
+#menuToggle p.activeLink,
+#menuToggleDark p.activeLink {
+  color: $blue-100;
 }
 
 #menuToggle input,
@@ -214,8 +219,8 @@ button.scrollUp {
 /*
 * And let's slide it in from the left
 */
-#menuToggle input:checked ~ ul,
-#menuToggleDark input:checked ~ ul {
+#menuToggle input:checked ~ div,
+#menuToggleDark input:checked ~ div {
   transform: none;
 }
 

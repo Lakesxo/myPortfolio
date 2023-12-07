@@ -39,6 +39,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
           className={theme.isDarkmode ? "moreDetailsDark" : "moreDetails"}
           href={link}
           target="_blank"
+          aria-label="view more details about the project"
         >
           <span>View more details </span>
           <span className="warning">
