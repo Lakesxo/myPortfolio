@@ -26,6 +26,7 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
           scrollTo(0, 0);
         }}
         className="contact"
+        aria-label="contact me"
       >
         Contact Me
       </button>

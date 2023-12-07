@@ -16,6 +16,7 @@ const Socials: React.FunctionComponent<SocialsProps> = () => {
         href="https://github.com/Lakesxo"
         target="_blank"
         rel="noreferrer"
+        aria-label="link to lakes github account"
       >
         <GithubIcon />
       </a>
@@ -24,6 +25,7 @@ const Socials: React.FunctionComponent<SocialsProps> = () => {
         href="https://instagram.com/lakes_xo_"
         target="_blank"
         rel="noreferrer"
+        aria-label="link to lakes instagram account"
       >
         <InstagramIcon />
       </a>
@@ -32,6 +34,7 @@ const Socials: React.FunctionComponent<SocialsProps> = () => {
         href="https://twitter.com/lakes__xo_"
         target="_blank"
         rel="noreferrer"
+        aria-label="link to lakes twitter account"
       >
         <TwitterIcon />
       </a>
@@ -40,6 +43,7 @@ const Socials: React.FunctionComponent<SocialsProps> = () => {
         href="https://linkedin.com/in/ridwan-ajanaku"
         target="_blank"
         rel="noreferrer"
+        aria-label="link to lakes linkedin account"
       >
         <LinkedInIcon />
       </a>

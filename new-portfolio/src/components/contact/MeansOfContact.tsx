@@ -19,7 +19,9 @@ const MeansOfContact: React.FunctionComponent<MeansOfContactProps> = () => {
       icon: theme.isDarkmode ? <GmailDarkIcon /> : <GmailIcon />,
       appText: "Send me an email",
       appDetails: (
-        <a href="mailto:lakes.ajanaku@gmail.com">lakes.ajanaku@gmail.com</a>
+        <a href="mailto:lakes.ajanaku@gmail.com" aria-label="send lakes a mail">
+          lakes.ajanaku@gmail.com
+        </a>
       ),
     },
     {
@@ -30,6 +32,7 @@ const MeansOfContact: React.FunctionComponent<MeansOfContactProps> = () => {
           href="https://twitter.com/lakes__xo_"
           target="_blank"
           rel="noreferrer"
+          aria-label="follow lakes on twitter"
         >
           @lakes__xo_
         </a>
@@ -43,6 +46,7 @@ const MeansOfContact: React.FunctionComponent<MeansOfContactProps> = () => {
           href="https://linkedin.com/in/ridwan-ajanaku"
           target="_blank"
           rel="noreferrer"
+          aria-label="connect with Lakes on Linkedin"
         >
           Ridwan Ajanaku
         </a>
