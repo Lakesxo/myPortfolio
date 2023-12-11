@@ -98,7 +98,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           </button>
           <nav role="navigation">
             <div id={theme.isDarkmode ? "menuToggleDark" : "menuToggle"}>
-              <input type="checkbox" aria-label="checkbox" />
+              <input type="checkbox" aria-label="checkbox" id="checkobox" />
               <span></span>
               <span></span>
               <span></span>

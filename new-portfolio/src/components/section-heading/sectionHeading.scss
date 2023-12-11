@@ -26,7 +26,8 @@
 }
 
 @media (max-width: 480px) {
-  .headingWrapper {
+  .headingWrapper,
+  .headingWrapperDark {
     margin-bottom: 3rem;
     .headLine {
       left: 43%;

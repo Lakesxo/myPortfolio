@@ -102,6 +102,14 @@ a.moreDetailsDark {
     padding-bottom: 4rem;
     border-bottom: 1.2px solid rgba(241, 245, 250, 0.7);
   }
+  .cardDark {
+    border-bottom: 1px solid #81818421;
+  }
+  .projectCardwrapper:last-child,
+  .projectCardwrapperInvert:last-child {
+    border-bottom: unset;
+    padding-bottom: 0;
+  }
   .projectCardwrapper {
     align-items: flex-start;
   }
@@ -139,6 +147,14 @@ a.moreDetailsDark {
     gap: 0;
     padding-bottom: 4rem;
     border-bottom: 1.2px solid rgba(241, 245, 250, 0.7);
+  }
+  .cardDark {
+    border-bottom: 1px solid #81818421;
+  }
+  .projectCardwrapper:last-child,
+  .projectCardwrapperInvert:last-child {
+    border-bottom: unset;
+    padding-bottom: 0;
   }
   .projectCardwrapper {
     align-items: flex-start;
