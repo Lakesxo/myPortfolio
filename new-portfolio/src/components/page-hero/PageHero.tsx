@@ -28,14 +28,17 @@ const PageHero: React.FunctionComponent<PageHeroProps> = ({
     <div
       className={theme.isDarkmode ? "pageHeroWrapperDark" : "pageHeroWrapper"}
     >
-      <img
-        src={
-          theme.isDarkmode
-            ? "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1701866485/phero_lnil62.png"
-            : "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700577159/Vectorbg_q6nt9c.png"
-        }
-        alt="vector"
-      />
+      {theme.isDarkmode ? (
+        <img
+          src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1701866485/phero_lnil62.png"
+          alt="bg"
+        />
+      ) : (
+        <img
+          src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700577159/Vectorbg_q6nt9c.png"
+          alt="bg"
+        />
+      )}
       <div className="pageHeroContainer">
         <div className={theme.isDarkmode ? "topTextDark" : "topText"}>
           <span>{topIcon}</span>

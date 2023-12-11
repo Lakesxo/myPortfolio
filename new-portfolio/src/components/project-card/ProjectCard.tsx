@@ -22,7 +22,9 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   return (
     <div
       className={
-        index % 2 === 0 ? "projectCardwrapperInvert" : "projectCardwrapper"
+        index % 2 === 0
+          ? `projectCardwrapperInvert ${theme.isDarkmode && "cardDark"}`
+          : `projectCardwrapper ${theme.isDarkmode && "cardDark"}`
       }
     >
       <div className="leftPj">
