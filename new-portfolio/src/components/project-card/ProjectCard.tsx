@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { WarningIcon } from "../../assets/icons/icons";
 import "./projectCard.scss";
 import { ThemeContext } from "../../App";
+import { motion, Variants } from "framer-motion";
+import AnimatedText from "../animatedText/AnimatedText";
 
 interface ProjectCardProps {
   projectName: string;
@@ -10,6 +12,38 @@ interface ProjectCardProps {
   link: string;
   index: number;
 }
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: 400,
+  },
+  onscreen: {
+    y: 50,
+    rotate: -4,
+    transition: {
+      type: "spring",
+      bounce: 0.3,
+      duration: 0.1,
+      stiffness: 100,
+    },
+  },
+};
+
+const cardVariantsInvert: Variants = {
+  offscreen: {
+    y: 400,
+  },
+  onscreen: {
+    y: 50,
+    rotate: 4,
+    transition: {
+      type: "spring",
+      bounce: 0.3,
+      duration: 0.1,
+      stiffness: 100,
+    },
+  },
+};
 
 const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   projectName,
@@ -20,20 +54,28 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 }) => {
   const theme = useContext(ThemeContext);
   return (
-    <div
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      exit="offscreen"
+      viewport={{ once: true, amount: 0.8 }}
       className={
         index % 2 === 0
           ? `projectCardwrapperInvert ${theme.isDarkmode && "cardDark"}`
           : `projectCardwrapper ${theme.isDarkmode && "cardDark"}`
       }
     >
-      <div className="leftPj">
+      <motion.div
+        variants={index % 2 === 0 ? cardVariants : cardVariantsInvert}
+        className="leftPj"
+      >
         <img src={image} alt="ridwan ajanaku project" />
-      </div>
+      </motion.div>
       <div className={index % 2 === 0 ? "rightPjInvert" : "rightPj"}>
-        <p className={theme.isDarkmode ? "projectNameDark" : "projectName"}>
-          {projectName}
-        </p>
+        <AnimatedText
+          text={projectName}
+          className={theme.isDarkmode ? "projectNameDark" : "projectName"}
+        />
         <p className={theme.isDarkmode ? "projectDescDark" : "projectDesc"}>
           {description}
         </p>
@@ -49,7 +91,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
           </span>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

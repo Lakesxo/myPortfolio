@@ -8,6 +8,7 @@ import {
 import "./pageHero.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
+import AnimatedText from "../animatedText/AnimatedText";
 
 interface PageHeroProps {
   topIcon: JSX.Element;
@@ -28,12 +29,13 @@ const PageHero: React.FunctionComponent<PageHeroProps> = ({
     <div
       className={theme.isDarkmode ? "pageHeroWrapperDark" : "pageHeroWrapper"}
     >
-      {theme.isDarkmode ? (
+      {theme.isDarkmode && (
         <img
           src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1701866485/phero_lnil62.png"
           alt="bg"
         />
-      ) : (
+      )}
+      {!theme.isDarkmode && (
         <img
           src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700577159/Vectorbg_q6nt9c.png"
           alt="bg"
@@ -44,9 +46,11 @@ const PageHero: React.FunctionComponent<PageHeroProps> = ({
           <span>{topIcon}</span>
           <p>{topText}</p>
         </div>
-        <p className={theme.isDarkmode ? "headingDark" : "heading"}>
-          {pageHeading}
-        </p>
+        <AnimatedText
+          text={pageHeading}
+          className={theme.isDarkmode ? "headingDark" : "heading"}
+          once
+        />
         <div className="extraTextCont">
           <p className={theme.isDarkmode ? "extraTextDark" : "extraText"}>
             {extraText}

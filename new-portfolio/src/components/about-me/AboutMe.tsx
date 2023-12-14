@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "./about.scss";
 import { ThemeContext } from "../../App";
+import AnimatedText from "../animatedText/AnimatedText";
 
 interface AboutMeProps {}
 
@@ -14,9 +15,11 @@ const AboutMe: React.FunctionComponent<AboutMeProps> = () => {
           alt="ridwan ajanaku"
         />
         <div className="details">
-          <p className={theme.isDarkmode ? "meetDark" : "meet"}>
-            Meet Ridwan Ajanaku.
-          </p>
+          <AnimatedText
+            text="Meet Ridwan Ajanaku."
+            className={theme.isDarkmode ? "meetDark" : "meet"}
+            once
+          />
           <p className={theme.isDarkmode ? "deetsTDark" : "deetsT"}>
             Currently leading design efforts at (www.yourcomapny), focusing on
             end-to-end Product Design, including product strategy, visual

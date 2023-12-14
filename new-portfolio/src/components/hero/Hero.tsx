@@ -15,77 +15,75 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
   const theme = useContext(ThemeContext);
   return (
     <div className="hero-container">
-      {!isMobile && (
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          options={{
-            fpsLimit: 120,
-            fullScreen: { enable: false },
-            interactivity: {
-              events: {
-                onClick: {
-                  enable: true,
-                  mode: "push",
-                },
-                onHover: {
-                  enable: true,
-                  mode: "repulse",
-                },
-                resize: true,
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          fpsLimit: isMobile ? 60 : 120,
+          fullScreen: { enable: false },
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "push",
               },
-              modes: {
-                push: {
-                  quantity: 6,
-                },
-                repulse: {
-                  distance: 150,
-                  duration: 0.4,
-                },
+              onHover: {
+                enable: true,
+                mode: "repulse",
               },
+              resize: true,
             },
-            particles: {
-              color: {
-                value: theme.isDarkmode ? "#606874" : "#a6c0ea",
+            modes: {
+              push: {
+                quantity: 5,
               },
-              links: {
-                color: theme.isDarkmode ? "#606874" : "#a6c0ea",
+              repulse: {
                 distance: 150,
-                enable: true,
-                opacity: 0.5,
-                width: 1,
-              },
-              move: {
-                direction: "none",
-                enable: true,
-                outModes: {
-                  default: "bounce",
-                },
-                random: false,
-                speed: 6,
-                straight: false,
-              },
-              number: {
-                density: {
-                  enable: true,
-                  area: 800,
-                },
-                value: 100,
-              },
-              opacity: {
-                value: 0.3,
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                value: { min: 1, max: 4 },
+                duration: 0.4,
               },
             },
-            detectRetina: true,
-          }}
-        />
-      )}
+          },
+          particles: {
+            color: {
+              value: theme.isDarkmode ? "#606874" : "#a6c0ea",
+            },
+            links: {
+              color: theme.isDarkmode ? "#606874" : "#a6c0ea",
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 5,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 30,
+            },
+            opacity: {
+              value: 0.3,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 4 },
+            },
+          },
+          detectRetina: true,
+        }}
+      />
       <div className={theme.isDarkmode ? "heroContainerDark" : "heroContainer"}>
         <div className="heroWrapper">
           <div className="leftHero">

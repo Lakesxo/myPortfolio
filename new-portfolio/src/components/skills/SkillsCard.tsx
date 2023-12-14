@@ -1,3 +1,5 @@
+import AnimatedText from "../animatedText/AnimatedText";
+
 interface SkillsCardProps {
   icon: React.ReactNode;
   name: string;
@@ -10,7 +12,7 @@ const SkillsCard: React.FunctionComponent<SkillsCardProps> = ({
   return (
     <div className="flex-skill">
       <div className="icon">{icon}</div>
-      <p className="skillName">{name}</p>
+      <AnimatedText text={name} className="skillName" once duration={0.03} />
     </div>
   );
 };
