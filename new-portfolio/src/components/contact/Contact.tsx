@@ -9,6 +9,7 @@ import Socials from "../socials/Socials";
 import "./contact.scss";
 import { useNavigate } from "react-router-dom";
 import { ThemeContext } from "../../App";
+import AnimatedText from "../animatedText/AnimatedText";
 
 interface ContactProps {}
 
@@ -17,9 +18,8 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
   const theme = useContext(ThemeContext);
   return (
     <div className={theme.isDarkmode ? "contactwrapperDark" : "contactwrapper"}>
-      <p>
-        Want us to work <br /> together ?
-      </p>
+      <AnimatedText text={`Want us to work`} className="mg-0" />
+      <AnimatedText text={`together ?`} />
       <button
         onClick={() => {
           navigate("/contact");

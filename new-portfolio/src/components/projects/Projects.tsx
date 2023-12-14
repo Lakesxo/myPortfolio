@@ -3,6 +3,7 @@ import ProjectCard from "../project-card/ProjectCard";
 import SectionHeading from "../section-heading/SectionHeading";
 import "./projects.scss";
 import { ThemeContext } from "../../App";
+import { useLocation } from "react-router-dom";
 
 interface ProjectsProps {}
 
@@ -59,6 +60,7 @@ export const projects = [
 
 const Projects: React.FunctionComponent<ProjectsProps> = () => {
   const theme = useContext(ThemeContext);
+  const location = useLocation();
   return (
     <div
       className={theme.isDarkmode ? "projectContainerDark" : "projectContainer"}
@@ -66,7 +68,9 @@ const Projects: React.FunctionComponent<ProjectsProps> = () => {
       <div
         className={theme.isDarkmode ? "projectWrapperDark" : "projectWrapper"}
       >
-        <SectionHeading sectionName="Selected Projects" />
+        {location.pathname === "/" && (
+          <SectionHeading sectionName="Selected Projects" />
+        )}
         <div className="projects">
           {projects.map((project, index) => (
             <ProjectCard

@@ -15,6 +15,9 @@
     line-height: 4.35781rem;
     margin-bottom: 3rem;
   }
+  .mg-0 {
+    margin-bottom: 0;
+  }
   button.contact {
     background: #135fdc;
     color: #fff;
@@ -126,7 +129,6 @@
   }
   .flexMeans,
   .flexMeansDark {
-    flex-direction: column;
     padding: 4rem;
     align-items: center;
   }
@@ -152,7 +154,7 @@
     }
   }
   .flexMeans,
-  flexMeansDark {
+  .flexMeansDark {
     flex-direction: column;
     padding: 4rem;
     align-items: center;
@@ -204,7 +206,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 510px) {
   .contactwrapper,
   .contactwrapperDark {
     padding: 50px;

@@ -10,3 +10,16 @@
 html {
   scroll-behavior: smooth;
 }
+.route-switch-screen,
+.route-switch-screen-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #a6c0ea;
+  z-index: 2000;
+}
+.route-switch-screen-dark {
+  background-color: #3773d4;
+}

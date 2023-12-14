@@ -1,3 +1,20 @@
+import { motion } from "framer-motion";
+
+const draw = {
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: () => {
+    const delay = 0.1;
+    return {
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+        opacity: { delay, duration: 0.01 },
+      },
+    };
+  },
+};
+
 export const MoonIcon = () => {
   return (
     <svg
@@ -146,26 +163,38 @@ export const InstagramIcon = () => {
 
 export const WarningIcon = () => {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
       viewBox="0 0 18 18"
       fill="none"
+      initial="hidden"
+      whileInView="visible"
     >
-      <path
+      <motion.path
         d="M9 15.5C8.78478 15.5 8.57207 15.4895 8.36234 15.4691L8.33813 15.718C7.89119 15.6745 7.45701 15.5874 7.03991 15.461L7.1124 15.2218C6.70146 15.0972 6.3077 14.9331 5.93555 14.7338L5.81751 14.9542C5.42628 14.7446 5.05811 14.4976 4.71778 14.218L4.87649 14.0249C4.54747 13.7545 4.24547 13.4525 3.97514 13.1235L3.78198 13.2822C3.50236 12.9419 3.25538 12.5737 3.04583 12.1825L3.26621 12.0645C3.06688 11.6923 2.90275 11.2985 2.77825 10.8876L2.53899 10.9601C2.41262 10.543 2.32553 10.1088 2.28204 9.66187L2.53086 9.63766C2.51045 9.42793 2.5 9.21522 2.5 9C2.5 8.78478 2.51045 8.57207 2.53086 8.36234L2.28204 8.33813C2.32553 7.89119 2.41262 7.45701 2.53899 7.03991L2.77825 7.1124C2.90275 6.70146 3.06688 6.3077 3.26621 5.93555L3.04583 5.81751C3.25538 5.42628 3.50236 5.05811 3.78198 4.71778L3.97514 4.87649C4.24547 4.54747 4.54747 4.24547 4.87648 3.97514L4.71778 3.78198C5.05811 3.50236 5.42628 3.25538 5.8175 3.04583L5.93554 3.26621C6.30769 3.06688 6.70146 2.90275 7.1124 2.77825L7.03991 2.53899C7.45701 2.41262 7.89119 2.32553 8.33813 2.28204L8.36234 2.53086C8.57207 2.51045 8.78478 2.5 9 2.5C9.21522 2.5 9.42793 2.51045 9.63766 2.53086L9.66187 2.28204C10.1088 2.32553 10.543 2.41262 10.9601 2.53899L10.8876 2.77825C11.2985 2.90275 11.6923 3.06688 12.0645 3.26621L12.1825 3.04583C12.5737 3.25538 12.9419 3.50236 13.2822 3.78198L13.1235 3.97514C13.4525 4.24547 13.7545 4.54747 14.0249 4.87648L14.218 4.71778C14.4976 5.05811 14.7446 5.42628 14.9542 5.8175L14.7338 5.93554C14.9331 6.30769 15.0972 6.70146 15.2218 7.1124L15.461 7.03991C15.5874 7.45701 15.6745 7.89119 15.718 8.33813L15.4691 8.36234C15.4895 8.57207 15.5 8.78478 15.5 9C15.5 9.21522 15.4895 9.42793 15.4691 9.63766L15.718 9.66187C15.6745 10.1088 15.5874 10.543 15.461 10.9601L15.2218 10.8876C15.0972 11.2985 14.9331 11.6923 14.7338 12.0645L14.9542 12.1825C14.7446 12.5737 14.4976 12.9419 14.218 13.2822L14.0249 13.1235C13.7545 13.4525 13.4525 13.7545 13.1235 14.0249L13.2822 14.218C12.9419 14.4976 12.5737 14.7446 12.1825 14.9542L12.0645 14.7338C11.6923 14.9331 11.2985 15.0972 10.8876 15.2218L10.9601 15.461C10.543 15.5874 10.1088 15.6745 9.66187 15.718L9.63766 15.4691C9.42793 15.4895 9.21522 15.5 9 15.5Z"
         stroke="black"
         strokeWidth="0.5"
         strokeMiterlimit="10"
         strokeDasharray="1 1 1 1 1 1 1 1"
+        variants={draw}
+        custom={1}
       />
-      <path d="M9 5.625V9.5625" stroke="black" strokeLinejoin="round" />
-      <path
+      <motion.path
+        d="M9 5.625V9.5625"
+        stroke="black"
+        strokeLinejoin="round"
+        variants={draw}
+        custom={1}
+      />
+      <motion.path
         d="M9 12.9375C9.46599 12.9375 9.84375 12.5597 9.84375 12.0938C9.84375 11.6278 9.46599 11.25 9 11.25C8.53401 11.25 8.15625 11.6278 8.15625 12.0938C8.15625 12.5597 8.53401 12.9375 9 12.9375Z"
         fill="black"
+        variants={draw}
+        custom={1}
       />
-    </svg>
+    </motion.svg>
   );
 };
 
@@ -920,14 +949,19 @@ export const AntDesignIcon = () => {
 
 export const PurpleRects = () => {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       width="61"
       height="44"
       viewBox="0 0 61 44"
       fill="none"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
-      <rect
+      <motion.rect
+        initial={{ pathLength: 0 }}
+        whileInView={{ pathLength: 1 }}
         x="0.199312"
         y="2.4877"
         width="26.8736"
@@ -935,8 +969,10 @@ export const PurpleRects = () => {
         transform="matrix(0.750903 0.660412 -0.636176 0.771544 21.0385 0.436704)"
         stroke="#5A71EB"
         strokeWidth="3.47455"
+        variants={draw}
+        custom={1}
       />
-      <rect
+      <motion.rect
         x="0.199312"
         y="2.4877"
         width="26.8736"
@@ -944,21 +980,26 @@ export const PurpleRects = () => {
         transform="matrix(0.750903 0.660412 -0.636176 0.771544 39.853 0.436704)"
         stroke="#5A71EB"
         strokeWidth="3.47455"
+        variants={draw}
+        custom={2}
       />
-    </svg>
+    </motion.svg>
   );
 };
 
 export const GreenRects = () => {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       width="62"
       height="44"
       viewBox="0 0 62 44"
       fill="none"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
-      <rect
+      <motion.rect
         x="0.178708"
         y="2.23053"
         width="27.2328"
@@ -966,8 +1007,10 @@ export const GreenRects = () => {
         transform="matrix(0.750903 0.660412 -0.636176 0.771544 21.025 0.391558)"
         stroke="#008753"
         strokeWidth="3.11536"
+        variants={draw}
+        custom={1}
       />
-      <rect
+      <motion.rect
         x="0.178708"
         y="2.23053"
         width="27.2328"
@@ -975,21 +1018,26 @@ export const GreenRects = () => {
         transform="matrix(0.750903 0.660412 -0.636176 0.771544 39.8395 0.391558)"
         stroke="#008753"
         strokeWidth="3.11536"
+        variants={draw}
+        custom={1}
       />
-    </svg>
+    </motion.svg>
   );
 };
 
 export const GoldRects = () => {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       width="61"
       height="44"
       viewBox="0 0 61 44"
       fill="none"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
-      <rect
+      <motion.rect
         x="0.178708"
         y="2.23053"
         width="27.2328"
@@ -997,8 +1045,10 @@ export const GoldRects = () => {
         transform="matrix(0.750903 0.660412 -0.636176 0.771544 20.8698 0.391558)"
         stroke="#ECC39F"
         strokeWidth="3.11536"
+        variants={draw}
+        custom={3}
       />
-      <rect
+      <motion.rect
         x="0.178708"
         y="2.23053"
         width="27.2328"
@@ -1006,21 +1056,26 @@ export const GoldRects = () => {
         transform="matrix(0.750903 0.660412 -0.636176 0.771544 39.6842 0.391558)"
         stroke="#ECC39F"
         strokeWidth="3.11536"
+        variants={draw}
+        custom={3}
       />
-    </svg>
+    </motion.svg>
   );
 };
 
 export const PinkRects = () => {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       width="61"
       height="44"
       viewBox="0 0 61 44"
       fill="none"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
-      <rect
+      <motion.rect
         x="0.178708"
         y="2.23053"
         width="27.2328"
@@ -1028,8 +1083,10 @@ export const PinkRects = () => {
         transform="matrix(0.750903 0.660412 -0.636176 0.771544 20.8698 0.391558)"
         stroke="#E977E4"
         strokeWidth="3.11536"
+        variants={draw}
+        custom={3}
       />
-      <rect
+      <motion.rect
         x="0.178708"
         y="2.23053"
         width="27.2328"
@@ -1037,8 +1094,10 @@ export const PinkRects = () => {
         transform="matrix(0.750903 0.660412 -0.636176 0.771544 39.6842 0.391558)"
         stroke="#E977E4"
         strokeWidth="3.11536"
+        variants={draw}
+        custom={3}
       />
-    </svg>
+    </motion.svg>
   );
 };
 

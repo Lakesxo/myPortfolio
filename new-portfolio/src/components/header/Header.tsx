@@ -199,6 +199,15 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           </button>
         </div>
       </div>
+      {showScrollUpButton && (
+        <button
+          onClick={() => scrollTo(0, 0)}
+          className="scrollUp"
+          aria-label="scroll to top"
+        >
+          <ScrollUpButton />
+        </button>
+      )}
     </div>
   );
 };
