@@ -27,7 +27,7 @@ const ContactMe: React.FunctionComponent<ContactMeProps> = () => {
       />
       <MeansOfContact />
       <Contact />
-      {isMobile && (
+      {!isMobile && (
         <motion.div
           initial={{ scaleX: 1 }}
           animate={{

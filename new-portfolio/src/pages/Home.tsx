@@ -23,7 +23,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
       <Projects />
       <Skills />
       <Contact />
-      {isMobile && (
+      {!isMobile && (
         <motion.div
           initial={{ scaleX: 1 }}
           animate={{

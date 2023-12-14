@@ -29,7 +29,7 @@ const Works: React.FunctionComponent<WorksProps> = () => {
       <Projects />
       <Skills />
       <Contact />
-      {isMobile && (
+      {!isMobile && (
         <motion.div
           initial={{ scaleX: 1 }}
           animate={{
