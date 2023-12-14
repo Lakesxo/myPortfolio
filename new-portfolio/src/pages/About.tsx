@@ -29,7 +29,7 @@ const About: React.FunctionComponent<AboutProps> = () => {
       <AboutMe />
       <Skills />
       <Contact />
-      {isMobile && (
+      {!isMobile && (
         <motion.div
           initial={{ scaleX: 1 }}
           animate={{
