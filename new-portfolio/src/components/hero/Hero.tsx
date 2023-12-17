@@ -92,9 +92,9 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
             </p>
             <h2 className="name">I'm Ridwan Ajanaku</h2>
             <p className="extraDetails">
-              I'm a Frontend developer based in Nigeria, specializing in
-              building exceptional websites, applications, and making the web
-              accessible to everyone
+              I'm a Frontend Engineer based in Nigeria, specializing in building
+              exceptional websites, applications, and making the web accessible
+              to everyone.
             </p>
             <div className="socials">
               <Socials />
