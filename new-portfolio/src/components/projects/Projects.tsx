@@ -11,49 +11,33 @@ export const projects = [
   {
     name: "Rankaque",
     description:
-      "I'm a self-taught Front-End Developer from Nigeria. I have a serious passion for UI effects and animations, building amazing web applications, creating dynamic user experiences and making every element on the web accessible to everyone including those with disabilities.",
+      "Rankaque is an e-learning fullstack appliction built with React, Typescript and Python where attendees (students) can ask questions directly to the Facilitators (Lecturers) anonymously. This also helps Facilitators answer questions according to their importance as all questions and ranked.",
     image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700239704/mypally_owlejk.png",
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702639129/ranks_wd3iac.png",
     url: "https://rankaque.com",
-  },
-  {
-    name: "Memezbank",
-    description:
-      "I'm a self-taught Front-End Developer from Nigeria. I have a serious passion for UI effects and animations, building amazing web applications, creating dynamic user experiences and making every element on the web accessible to everyone including those with disabilities.",
-    image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700239704/ranksque_jlwdwe.png",
-    url: "https://placeholder.com",
   },
   {
     name: "Carscanner",
     description:
-      "I'm a self-taught Front-End Developer from Nigeria. I have a serious passion for UI effects and animations, building amazing web applications, creating dynamic user experiences and making every element on the web accessible to everyone including those with disabilities.",
+      "Carscanner is a web application that allows you to scan cars with your mobile phone camera and get details about them instantly. You can get details like the name, model and year of production of the scanned car.",
     image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700239704/becca_aiwalg.png",
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702639129/cscanner_zkoz2k.png",
     url: "https://carscanner.netlify.app",
   },
   {
     name: "Food Recipe",
     description:
-      "I'm a self-taught Front-End Developer from Nigeria. I have a serious passion for UI effects and animations, building amazing web applications, creating dynamic user experiences and making every element on the web accessible to everyone including those with disabilities.",
+      "Food recipe is a web application built with React, Typescript and Sass. It allows you view different varieties of recipes across the world, their respective ingredients and a step by step procedure to prepare each recipe.",
     image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700239706/becca-real_wh4f1h.png",
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702639129/frecipe_hk4dcv.png",
     url: "https://foood-recipe.netlify.app/",
-  },
-  {
-    name: "Image Reviewer",
-    description:
-      "I'm a self-taught Front-End Developer from Nigeria. I have a serious passion for UI effects and animations, building amazing web applications, creating dynamic user experiences and making every element on the web accessible to everyone including those with disabilities.",
-    image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700239704/mypally_owlejk.png",
-    url: "https://image-reviewer-challenge.netlify.app/",
   },
   {
     name: "The Shoppies",
     description:
-      "I'm a self-taught Front-End Developer from Nigeria. I have a serious passion for UI effects and animations, building amazing web applications, creating dynamic user experiences and making every element on the web accessible to everyone including those with disabilities.",
+      "This is a movie listing web application built with React. You can search for any movie and nominate them",
     image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700239704/ranksque_jlwdwe.png",
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702639129/shopies_nbiyxt.png",
     url: "https://the-shopies.netlify.app/",
   },
 ];
