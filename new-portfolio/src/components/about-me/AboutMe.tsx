@@ -29,7 +29,7 @@ const AboutMe: React.FunctionComponent<AboutMeProps> = () => {
           </p>
           <p className={theme.isDarkmode ? "deetsTDark" : "deetsT"}>
             Over the past years I have worked in the gaming industry, the health
-            sector and the finance sector. My experience in working in these
+            sector and the finance sector. My experience working in these
             various sectors has helped increase my knowledge in building
             accessible and user friendly web applications using tools like
             React, Typescript and Electron for desktop apps.
