@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/lakesxod/public_html/
-    - /bin/cp -a * $DEPLOYPATH

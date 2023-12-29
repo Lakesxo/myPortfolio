@@ -1,0 +1,36 @@
+.headingWrapper,
+.headingWrapperDark {
+  position: relative;
+  margin-bottom: 5.5em;
+  text-align: center;
+  p.headName {
+    color: #101828;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .headLine {
+    border-radius: 2px;
+    background: #bfc7d7;
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    top: 45px;
+    left: 48%;
+  }
+}
+.headingWrapperDark {
+  p.headName {
+    color: #fff;
+  }
+}
+
+@media (max-width: 480px) {
+  .headingWrapper,
+  .headingWrapperDark {
+    margin-bottom: 3rem;
+    .headLine {
+      left: 43%;
+    }
+  }
+}

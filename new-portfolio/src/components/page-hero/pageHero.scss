@@ -1,0 +1,260 @@
+.pageHeroWrapper,
+.pageHeroWrapperDark {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #fafcfe;
+  margin-top: 6.5rem;
+  img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+}
+.pageHeroWrapperDark {
+  background-color: #0d1727;
+}
+.pageHeroContainer {
+  padding: 7.5rem 8.875rem 6rem 8.125rem;
+  width: 117rem;
+  position: relative;
+  .topText,
+  .topTextDark {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .topTextDark {
+    color: #bdbdbd;
+  }
+  p.heading,
+  p.headingDark {
+    color: #101828;
+    font-family: Outfit;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 4.6875rem;
+    margin: 1.5rem 0 4.25rem 0;
+  }
+  p.headingDark {
+    color: #fff;
+  }
+  .extraTextCont {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  p.extraText,
+  p.extraTextDark {
+    color: #101828;
+    font-family: Mulish;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+  }
+  p.extraTextDark {
+    color: #bdbdbd;
+  }
+  .purpleRects,
+  .goldRects,
+  .greenRects {
+    position: absolute;
+  }
+  .purpleRects {
+    top: 40px;
+  }
+  .goldRects {
+    top: 330px;
+    right: 650px;
+  }
+  .greenRects {
+    top: 60px;
+    right: 350px;
+  }
+}
+
+@media (min-width: 2500px) {
+  .pageHeroWrapper img,
+  .pageHeroWrapperDark img {
+    width: unset;
+    margin-right: 28rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .pageHeroContainer {
+    padding: 7.5rem 8.875rem 6rem 6rem;
+    p.heading,
+    p.headingDark {
+      font-size: 5.5rem;
+    }
+    .goldRects {
+      right: 220px;
+    }
+    .greenRects {
+      right: 200px;
+    }
+  }
+}
+
+@media (min-width: 835px) and (max-width: 1023px) {
+  .pageHeroContainer {
+    padding: 7.5rem 4rem 6rem 4rem;
+    p.heading,
+    p.headingDark {
+      font-size: 5rem;
+    }
+    .goldRects {
+      right: 150px;
+      top: 370px;
+    }
+    .greenRects {
+      right: 200px;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 834px) {
+  .pageHeroContainer {
+    padding: 7.5rem 4rem 6rem 4rem;
+    p.heading,
+    p.headingDark {
+      font-size: 4rem;
+      margin: 1rem 0 1rem 0;
+    }
+    p.extraText,
+    p.extraTextDark {
+      font-size: 0.875rem;
+    }
+    .purpleRects,
+    .goldRects,
+    .greenRects {
+      svg {
+        height: 28px;
+      }
+    }
+    .purpleRects {
+      top: 60px;
+    }
+    .goldRects {
+      top: 30px;
+      right: 30px;
+    }
+    .greenRects {
+      top: 320px;
+      right: 90px;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 693px) {
+  .pageHeroContainer {
+    p.heading,
+    p.headingDark {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .pageHeroWrapper,
+  .pageHeroWrapperDark {
+    margin-top: 5.4rem;
+    img {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 350px;
+    }
+  }
+  .pageHeroContainer {
+    padding: 7.5rem 1.31rem 6rem 1.31rem;
+    p.heading,
+    p.headingDark {
+      font-size: 2.5rem;
+      margin: 1rem 0 1rem 0;
+    }
+    p.extraText,
+    p.extraTextDark {
+      font-size: 0.875rem;
+    }
+    .purpleRects,
+    .goldRects,
+    .greenRects {
+      svg {
+        height: 28px;
+      }
+    }
+    .purpleRects {
+      top: 60px;
+    }
+    .goldRects {
+      top: 30px;
+      right: 30px;
+    }
+    .greenRects {
+      top: 320px;
+      right: 90px;
+    }
+  }
+}
+
+@media (max-width: 395px) {
+  .pageHeroContainer {
+    p.heading,
+    p.headingDark {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+    p.extraText,
+    p.extraTextDark {
+      font-size: 0.9rem;
+    }
+    span.naij {
+      display: none;
+    }
+    .greenRects {
+      top: 310px;
+      right: 90px;
+    }
+  }
+}
+
+@media (max-width: 354px) {
+  .pageHeroContainer {
+    p.heading,
+    p.headingDark {
+      font-size: 1.7rem;
+    }
+    p.extraText,
+    p.extraTextDark {
+      font-size: 0.9rem;
+    }
+    span.naij {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 290px) {
+  .pageHeroContainer {
+    padding: 7rem 0.9rem 5rem 0.9rem;
+    p.heading,
+    p.headingDark {
+      font-size: 1.7rem;
+      margin: 0;
+    }
+    p.extraText,
+    p.extraTextDark {
+      font-size: 0.9rem;
+    }
+    span.naij {
+      display: none;
+    }
+    .greenRects {
+      top: 300px;
+      right: 50px;
+    }
+  }
+}
