@@ -133,6 +133,9 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
                 >
                   Contact me
                 </p>
+                <a href="/Resume.pdf" target="_blank">
+                  <p>Resumé</p>
+                </a>
               </div>
             </div>
           </nav>
@@ -190,6 +193,9 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           >
             Contact me
           </p>
+          <a href="/Resume.pdf" target="_blank">
+            <p>Resumé</p>
+          </a>
           <button
             className={theme.isDarkmode ? "themeDark" : "theme"}
             onClick={() => theme.toggleTheme()}

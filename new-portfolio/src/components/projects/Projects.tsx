@@ -11,7 +11,7 @@ export const projects = [
   {
     name: "Rankaque",
     description:
-      "Rankaque is an e-learning fullstack appliction built with React, Typescript and Python where attendees (students) can ask questions directly to the Facilitators (Lecturers) anonymously. This also helps Facilitators answer questions according to their importance as all questions and ranked.",
+      "Rankaque is an e-learning fullstack application built with React, Typescript and Python where attendees (students) can ask questions directly to the Facilitators (Lecturers) anonymously. This also helps Facilitators answer questions according to their importance as all questions and ranked.",
     image:
       "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702639129/ranks_wd3iac.png",
     url: "https://rankaque.com",
