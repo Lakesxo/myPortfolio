@@ -4,6 +4,7 @@ import { useCallback, useContext } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { ThemeContext } from "../../App";
+import { RightArrowIcon } from "../../assets/icons/icons";
 
 interface HeroProps {}
 
@@ -96,6 +97,16 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
               exceptional websites, applications, and making the web accessible
               to everyone.
             </p>
+            <div className="resumeContainer">
+              <a className="resume" href="/Resume.pdf" target="_blank">
+                <p className="viewCv">
+                  <span>View my resumé</span>
+                  <span className="arrowIcon">
+                    <RightArrowIcon />
+                  </span>
+                </p>
+              </a>
+            </div>
             <div className="socials">
               <Socials />
             </div>
