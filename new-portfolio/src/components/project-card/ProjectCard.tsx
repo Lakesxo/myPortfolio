@@ -23,7 +23,7 @@ const cardVariants: Variants = {
     transition: {
       type: "spring",
       bounce: 0.3,
-      duration: 0.1,
+      duration: 0,
       stiffness: 100,
     },
   },
@@ -39,7 +39,7 @@ const cardVariantsInvert: Variants = {
     transition: {
       type: "spring",
       bounce: 0.3,
-      duration: 0.1,
+      duration: 0,
       stiffness: 100,
     },
   },
@@ -53,6 +53,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   index,
 }) => {
   const theme = useContext(ThemeContext);
+  const isMobile = window.innerWidth <= 500;
   return (
     <motion.div
       initial="offscreen"
@@ -75,6 +76,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
         <AnimatedText
           text={projectName}
           className={theme.isDarkmode ? "projectNameDark" : "projectName"}
+          duration={isMobile ? 0 : 0.05}
         />
         <p className={theme.isDarkmode ? "projectDescDark" : "projectDesc"}>
           {description}

@@ -23,3 +23,10 @@ html {
 .route-switch-screen-dark {
   background-color: #3773d4;
 }
+
+@media (max-width: 768px) {
+  .route-switch-screen,
+  .route-switch-screen-dark {
+    transition: 0.8s ease-in-out;
+  }
+}
