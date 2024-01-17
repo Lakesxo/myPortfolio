@@ -165,6 +165,7 @@ a.moreDetailsDark {
     align-items: flex-end;
   }
   .leftPj {
+    transition: all 0.1s ease-out;
     img {
       height: 250px;
     }

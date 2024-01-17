@@ -6,6 +6,7 @@ interface AnimatedTextProps {
   className?: string;
   once?: boolean;
   duration?: number;
+  staggerValue?: number;
 }
 
 const AnimatedText: React.FunctionComponent<AnimatedTextProps> = ({
@@ -13,6 +14,7 @@ const AnimatedText: React.FunctionComponent<AnimatedTextProps> = ({
   className,
   once,
   duration,
+  staggerValue,
 }) => {
   const defaultAnimations = {
     hidden: { opacity: 0, y: 20 },
@@ -26,12 +28,15 @@ const AnimatedText: React.FunctionComponent<AnimatedTextProps> = ({
   };
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once: once });
+  const isMobile = window.innerWidth <= 500;
   return (
     <motion.p
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      transition={{ staggerChildren: 0.06 }}
+      transition={{
+        staggerChildren: isMobile && staggerValue ? staggerValue : 0.06,
+      }}
       className={className}
     >
       {text.split(" ").map((word, index) => (

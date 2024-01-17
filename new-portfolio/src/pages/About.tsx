@@ -29,22 +29,21 @@ const About: React.FunctionComponent<AboutProps> = () => {
       <AboutMe />
       <Skills />
       <Contact />
-      {!isMobile && (
-        <motion.div
-          initial={{ scaleX: 1 }}
-          animate={{
-            scaleX: 0,
-            transition: { duration: 0.5, ease: "circOut" },
-          }}
-          exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
-          style={{ originX: isPresent ? 0 : 1 }}
-          className={
-            theme.isDarkmode
-              ? "route-switch-screen-dark"
-              : "route-switch-screen"
-          }
-        />
-      )}
+      <motion.div
+        initial={{ scaleX: 1 }}
+        animate={{
+          scaleX: 0,
+          transition: { duration: isMobile ? 0 : 0.5, ease: "circOut" },
+        }}
+        exit={{
+          scaleX: 1,
+          transition: { duration: isMobile ? 0 : 0.5, ease: "circIn" },
+        }}
+        style={{ originX: isPresent ? 0 : 1 }}
+        className={
+          theme.isDarkmode ? "route-switch-screen-dark" : "route-switch-screen"
+        }
+      />
     </div>
   );
 };
