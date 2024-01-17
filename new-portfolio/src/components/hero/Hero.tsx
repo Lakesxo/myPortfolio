@@ -19,7 +19,7 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
         id="tsparticles"
         init={particlesInit}
         options={{
-          fpsLimit: isMobile ? 60 : 120,
+          fpsLimit: 1000,
           fullScreen: { enable: false },
           interactivity: {
             events: {
@@ -67,9 +67,9 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
             number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 1500,
               },
-              value: 30,
+              value: isMobile ? 50 : 100,
             },
             opacity: {
               value: 0.3,
@@ -81,7 +81,7 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
               value: { min: 1, max: 4 },
             },
           },
-          detectRetina: true,
+          detectRetina: isMobile ? false : true,
         }}
       />
       <div className={theme.isDarkmode ? "heroContainerDark" : "heroContainer"}>
