@@ -38,7 +38,14 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
   });
 
   useEffect(() => {
-    setIsMobile(window.innerWidth <= 820);
+    window.addEventListener("resize", () => {
+      setIsMobile(window.innerWidth <= 900);
+    });
+    return () => {
+      window.removeEventListener("resize", () => {
+        setIsMobile(window.innerWidth <= 900);
+      });
+    };
   });
 
   const handleHomeClick = () => {
