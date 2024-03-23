@@ -11,7 +11,7 @@ const AboutMe: React.FunctionComponent<AboutMeProps> = () => {
     <div className={theme.isDarkmode ? "abtMewrapperDark" : "abtMewrapper"}>
       <div className="abtCont">
         <img
-          src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700581191/Frame_38118_hdhosn.png"
+          src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1711215109/about_wobdfz.png"
           alt="ridwan ajanaku"
         />
         <div className="details">
