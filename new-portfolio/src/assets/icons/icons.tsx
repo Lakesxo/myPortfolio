@@ -1166,24 +1166,6 @@ export const AboutIcon = () => {
   );
 };
 
-export const NaijaIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="21"
-      viewBox="0 0 28 21"
-      fill="none"
-    >
-      <path
-        d="M3.11111 0C1.393 0 0 1.393 0 3.11111V17.1111C0 18.8292 1.393 20.2222 3.11111 20.2222H9.33333V0H3.11111ZM24.8889 0H18.6667V20.2222H24.8889C26.607 20.2222 28 18.8292 28 17.1111V3.11111C28 1.393 26.607 0 24.8889 0Z"
-        fill="#007934"
-      />
-      <rect x="9" width="10" height="20" fill="white" />
-    </svg>
-  );
-};
-
 export const FolderIcon = () => {
   return (
     <svg

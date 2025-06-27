@@ -24,7 +24,7 @@ const About: React.FunctionComponent<AboutProps> = () => {
         topIcon={<AboutIcon />}
         topText="ABOUT RIDWAN AJANAKU"
         pageHeading="Frontend Engineer"
-        extraText="I am a Frontend Engineer based in Lagos, Nigeria"
+        extraText="I’m passionate about crafting intuitive and accessible web experiences."
       />
       <AboutMe />
       <Skills />
