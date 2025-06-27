@@ -1,10 +1,4 @@
-import { useLocation } from "react-router-dom";
-import {
-  GoldRects,
-  GreenRects,
-  NaijaIcon,
-  PurpleRects,
-} from "../../assets/icons/icons";
+import { GoldRects, GreenRects, PurpleRects } from "../../assets/icons/icons";
 import "./pageHero.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
@@ -23,7 +17,6 @@ const PageHero: React.FunctionComponent<PageHeroProps> = ({
   pageHeading,
   extraText,
 }) => {
-  const location = useLocation();
   const theme = useContext(ThemeContext);
   return (
     <div
@@ -55,11 +48,6 @@ const PageHero: React.FunctionComponent<PageHeroProps> = ({
           <p className={theme.isDarkmode ? "extraTextDark" : "extraText"}>
             {extraText}
           </p>{" "}
-          {location.pathname === "/about" && (
-            <span className="naij">
-              <NaijaIcon />
-            </span>
-          )}
         </div>
         <div className="purpleRects">
           <PurpleRects />

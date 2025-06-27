@@ -21,23 +21,28 @@ const AboutMe: React.FunctionComponent<AboutMeProps> = () => {
             once
           />
           <p className={theme.isDarkmode ? "deetsTDark" : "deetsT"}>
-            I am a Frontend Engineer with three years of professional experience
-            based in Lagos, Nigeria. I have a serious passion for UI effects and
-            animations, building pixel perfect web applications, creating
-            dynamic user experiences and making every element on the web
-            accessible to everyone including those with disabilities.
+            I'm a Frontend Engineer with five (5) years of professional
+            experience, passionate about crafting pixel-perfect,
+            high-performance web applications. I specialize in bringing
+            interfaces to life through thoughtful UI effects, smooth animations,
+            and dynamic user experiences — all while ensuring that every element
+            on the web remains accessible, including for users with
+            disabilities.
           </p>
           <p className={theme.isDarkmode ? "deetsTDark" : "deetsT"}>
-            Over the past years I have worked in the gaming industry, the health
-            sector and the finance sector. My experience working in these
-            various sectors has helped increase my knowledge in building
-            accessible and user friendly web applications using tools like
-            React, Typescript and Electron for desktop apps.
+            Throughout my career, I’ve built solutions across diverse sectors
+            including gaming, healthcare, and finance. These experiences have
+            strengthened my ability to design inclusive, user-friendly
+            interfaces tailored to different audiences and use cases. I work
+            primarily with tools like React, TypeScript, and Tailwind CSS, and
+            have also developed cross-platform desktop applications using
+            Electron.
           </p>
           <p className={theme.isDarkmode ? "deetsTDark" : "deetsT"}>
-            When i'm off my computer you might find me playing FIFA, watching
-            movies, bowling, spending time with friends and family and other
-            activities that helps me unwind.
+            When I’m not coding, you’ll probably find me unwinding with a game
+            of FIFA, watching movies, bowling, or spending time with friends and
+            family. I value a balanced life, and those moments away from the
+            screen often inspire creative ideas I bring back into my work.
           </p>
         </div>
       </div>
