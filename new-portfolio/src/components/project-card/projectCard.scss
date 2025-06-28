@@ -35,6 +35,43 @@ p.projectDescDark {
 p.projectDescDark {
   color: #bdbdbd;
 }
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding-right: 40px;
+}
+.techTag {
+  background: rgba(16, 24, 40, 0.1);
+  color: #101828;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(16, 24, 40, 0.15);
+    transform: translateY(-1px);
+  }
+}
+.techTagDark {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+  }
+}
 a.moreDetails,
 a.moreDetailsDark {
   display: flex;
@@ -94,6 +131,9 @@ a.moreDetailsDark {
   p.projectDesc {
     padding-right: 20px;
   }
+  .techStack {
+    padding-right: 20px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 820px) {
@@ -126,6 +166,9 @@ a.moreDetailsDark {
     padding: 4rem;
   }
   p.projectDesc {
+    padding-right: 0px;
+  }
+  .techStack {
     padding-right: 0px;
   }
 }
@@ -178,6 +221,9 @@ a.moreDetailsDark {
     padding: 1.31rem;
   }
   p.projectDesc {
+    padding-right: 0px;
+  }
+  .techStack {
     padding-right: 0px;
   }
 }

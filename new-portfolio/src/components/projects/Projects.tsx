@@ -9,36 +9,54 @@ interface ProjectsProps {}
 
 export const projects = [
   {
-    name: "Rankaque",
+    name: "Accelbyte",
     description:
-      "Rankaque is an e-learning fullstack application built with React, Typescript and Python where attendees (students) can ask questions directly to the Facilitators (Lecturers) anonymously. This also helps Facilitators answer questions according to their importance as all questions and ranked.",
+      "AccelByte provides backend-as-a-service tools for game studios to build, scale, and manage live multiplayer games with features like matchmaking, user accounts, and storefronts.",
     image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702639129/ranks_wd3iac.png",
-    url: "https://rankaque.com",
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1751144584/accelbyte_vxobha.png",
+    url: "https://accelbyte.io/",
+    techStack: ["React", "TypeScript", "Electron", "Go"],
   },
   {
-    name: "Carscanner",
+    name: "Cuvris",
     description:
-      "Carscanner is a web application that allows you to scan cars with your mobile phone camera and get details about them instantly. You can get details like the name, model and year of production of the scanned car.",
+      "Cuvris is a health compliance platform that helps organizations stay aligned with regulatory standards by simplifying compliance workflows, risk tracking, and documentation.",
     image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702639129/cscanner_zkoz2k.png",
-    url: "https://carscanner.netlify.app",
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1751144584/cuvris_koapmq.png",
+    url: "https://www.cuvris.com/",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Prisma",
+      "PostgreSQL",
+      "Azure",
+    ],
   },
   {
-    name: "Food Recipe",
+    name: "SunFi",
     description:
-      "Food recipe is a web application built with React, Typescript and Sass. It allows you view different varieties of recipes across the world, their respective ingredients and a step by step procedure to prepare each recipe.",
+      "SunFi is a fintech platform that helps users access and finance clean solar energy solutions through tailored plans and trusted energy provider matching.",
     image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702639129/frecipe_hk4dcv.png",
-    url: "https://foood-recipe.netlify.app/",
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1751144584/sunfi_oohibx.png",
+    url: "https://www.sunfi.co/",
+    techStack: ["React", "Sass", "Javascript", "Jenkins"],
   },
   {
-    name: "The Shoppies",
+    name: "Github Finds",
     description:
-      "This is a movie listing web application built with React. You can search for any movie and nominate them",
+      "GitHub Finds is a personal project that allows users to discover GitHub users or organizations — with shareable filtered links.",
     image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702639129/shopies_nbiyxt.png",
-    url: "https://the-shopies.netlify.app/",
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1751144584/gtsearch_qgdiaq.png",
+    url: "https://githubfinds.netlify.app/",
+    techStack: [
+      "React",
+      "Typescript",
+      "Tailwind CSSS",
+      "GitHub API",
+      "Netlify",
+    ],
   },
 ];
 
@@ -64,6 +82,7 @@ const Projects: React.FunctionComponent<ProjectsProps> = () => {
               key={project.name}
               link={project.url}
               index={index + 1}
+              techStack={project.techStack}
             />
           ))}
         </div>
