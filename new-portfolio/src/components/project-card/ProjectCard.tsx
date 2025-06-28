@@ -11,6 +11,7 @@ interface ProjectCardProps {
   image: string;
   link: string;
   index: number;
+  techStack: string[];
 }
 
 const cardVariants: Variants = {
@@ -51,6 +52,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   image,
   link,
   index,
+  techStack,
 }) => {
   const theme = useContext(ThemeContext);
   const isMobile = window.innerWidth <= 500;
@@ -81,6 +83,16 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
         <p className={theme.isDarkmode ? "projectDescDark" : "projectDesc"}>
           {description}
         </p>
+        <div className="techStack">
+          {techStack.map((tech, techIndex) => (
+            <span
+              key={techIndex}
+              className={theme.isDarkmode ? "techTagDark" : "techTag"}
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
         <a
           className={theme.isDarkmode ? "moreDetailsDark" : "moreDetails"}
           href={link}
