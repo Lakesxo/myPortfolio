@@ -48,23 +48,8 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
     };
   });
 
-  const handleHomeClick = () => {
-    navigate("/");
-    scrollTo(0, 0);
-  };
-
-  const handleAboutClick = () => {
-    navigate("/about");
-    scrollTo(0, 0);
-  };
-
-  const handleWorksClick = () => {
-    navigate("/works");
-    scrollTo(0, 0);
-  };
-
-  const handleContactClick = () => {
-    navigate("/contact");
+  const handleNavClick = (path: string) => {
+    navigate(path);
     scrollTo(0, 0);
   };
 
@@ -86,7 +71,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
       className={visible ? `hidden headerWrapper` : `visible headerWrapper`}
     >
       <div className="header">
-        <div onClick={handleHomeClick}>
+        <div onClick={() => handleNavClick("/")}>
           <div className="logo">
             <img
               src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700482039/final_jwalyu.png"
@@ -98,7 +83,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
         <div className="header-links">
           <button
             className={theme.isDarkmode ? "themeDark" : "theme"}
-            onClick={() => theme.toggleTheme()}
+            onClick={theme.toggleTheme}
             aria-label="Toggle theme"
           >
             {theme.isDarkmode ? <LightModeIcon /> : <MoonIcon />}
@@ -111,13 +96,13 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
               <span></span>
               <div id={theme.isDarkmode ? "menuDark" : "menu"}>
                 <p
-                  onClick={handleHomeClick}
+                  onClick={() => handleNavClick("/")}
                   className={location.pathname === "/" ? "activeLink" : "links"}
                 >
                   Home
                 </p>
                 <p
-                  onClick={handleAboutClick}
+                  onClick={() => handleNavClick("/about")}
                   className={
                     location.pathname === "/about" ? "activeLink" : "links"
                   }
@@ -125,7 +110,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
                   About me
                 </p>
                 <p
-                  onClick={handleWorksClick}
+                  onClick={() => handleNavClick("/works")}
                   className={
                     location.pathname === "/works" ? "activeLink" : "links"
                   }
@@ -133,7 +118,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
                   Works
                 </p>
                 <p
-                  onClick={handleContactClick}
+                  onClick={() => handleNavClick("/contact")}
                   className={
                     location.pathname === "/contact" ? "activeLink" : "links"
                   }
@@ -164,7 +149,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
       className={visible ? `hidden headerWrapper` : `visible headerWrapper`}
     >
       <div className="header">
-        <div onClick={handleHomeClick}>
+        <div onClick={() => handleNavClick("/")}>
           <div className="logo">
             <img
               src="https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700482039/final_jwalyu.png"
@@ -175,25 +160,25 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
         </div>
         <div className="header-links">
           <p
-            onClick={handleHomeClick}
+            onClick={() => handleNavClick("/")}
             className={location.pathname === "/" ? "activeLink" : "links"}
           >
             Home
           </p>
           <p
-            onClick={handleAboutClick}
+            onClick={() => handleNavClick("/about")}
             className={location.pathname === "/about" ? "activeLink" : "links"}
           >
             About me
           </p>
           <p
-            onClick={handleWorksClick}
+            onClick={() => handleNavClick("/works")}
             className={location.pathname === "/works" ? "activeLink" : "links"}
           >
             Works
           </p>
           <p
-            onClick={handleContactClick}
+            onClick={() => handleNavClick("/contact")}
             className={
               location.pathname === "/contact" ? "activeLink" : "links"
             }
@@ -205,7 +190,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           </a>
           <button
             className={theme.isDarkmode ? "themeDark" : "theme"}
-            onClick={() => theme.toggleTheme()}
+            onClick={theme.toggleTheme}
             aria-label="toggle theme"
           >
             {theme.isDarkmode ? <LightModeIcon /> : <MoonIcon />}

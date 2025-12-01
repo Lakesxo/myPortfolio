@@ -94,7 +94,7 @@ const Hero: React.FunctionComponent<HeroProps> = () => {
             <h2 className="name">I'm Ridwan Ajanaku</h2>
             <p className="extraDetails">
               I'm a Frontend Engineer focused on building exceptional,
-              performant web applications that scale — turning complex problems
+              performant web applications that scale, turning complex problems
               into clean, accessible, and user-friendly experiences.
             </p>
             <div className="resumeContainer">
