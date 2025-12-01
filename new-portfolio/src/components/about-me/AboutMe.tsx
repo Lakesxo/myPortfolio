@@ -25,7 +25,7 @@ const AboutMe: React.FunctionComponent<AboutMeProps> = () => {
             experience, passionate about crafting pixel-perfect,
             high-performance web applications. I specialize in bringing
             interfaces to life through thoughtful UI effects, smooth animations,
-            and dynamic user experiences — all while ensuring that every element
+            and dynamic user experiences, all while ensuring that every element
             on the web remains accessible, including for users with
             disabilities.
           </p>
