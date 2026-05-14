@@ -60,6 +60,23 @@
     />
     <meta property="twitter:image:alt" content="Ridwan Ajanaku's Portfolio" />
     <title>Ridwan Ajanaku | Frontend Software Engineer</title>
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var isDark = stored
+            ? stored === "dark"
+            : window.matchMedia &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.style.backgroundColor = isDark
+            ? "#061122"
+            : "#ffffff";
+        } catch (e) {
+          // localStorage / matchMedia unavailable — skip.
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ContactMe from "./pages/ContactMe";
 import Works from "./pages/Works";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import React from "react";
 
@@ -19,10 +19,44 @@ export const ThemeContext = createContext<ThemeContextType>({
   toggleTheme: () => "",
 });
 
+const THEME_STORAGE_KEY = "theme";
+
+const HTML_BG_DARK = "#061122";
+const HTML_BG_LIGHT = "#ffffff";
+
+const getInitialTheme = (): boolean => {
+  if (typeof window === "undefined") return false;
+  try {
+    const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+    if (stored === "dark") return true;
+    if (stored === "light") return false;
+  } catch {
+    // Storage access failed — fall through to system preference.
+  }
+  return (
+    window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false
+  );
+};
+
 const App: React.FunctionComponent<AppProps> = () => {
-  const [isDarkmode, setIsDarkMode] = useState<boolean>(false);
+  const [isDarkmode, setIsDarkMode] = useState<boolean>(getInitialTheme);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(
+        THEME_STORAGE_KEY,
+        isDarkmode ? "dark" : "light"
+      );
+    } catch {
+      // Storage write failed — non-fatal.
+    }
+    document.documentElement.style.backgroundColor = isDarkmode
+      ? HTML_BG_DARK
+      : HTML_BG_LIGHT;
+  }, [isDarkmode]);
+
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkmode);
+    setIsDarkMode((prev) => !prev);
   };
 
   const element = useRoutes([
