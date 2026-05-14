@@ -43,58 +43,12 @@
     border-bottom: 1px solid var(--hero-hairline);
   }
 
-  &__tagline {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 0;
-    font-family: "Outfit", sans-serif;
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--hero-muted);
-    line-height: 1.4;
-  }
-
   &__tagline-mark {
     display: inline-block;
     width: 2rem;
     height: 1px;
     background: var(--hero-hairline-strong);
     flex-shrink: 0;
-  }
-
-  &__status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin: 0;
-    font-family: "Outfit", sans-serif;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--hero-muted);
-  }
-
-  &__status-dot {
-    position: relative;
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    background: var(--hero-status);
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: -4px;
-      border-radius: 999px;
-      border: 1px solid var(--hero-status);
-      opacity: 0.45;
-      animation: hero-status-pulse 2.4s ease-out infinite;
-    }
   }
 
   &__main {
@@ -142,7 +96,7 @@
     font-weight: 400;
     line-height: 1.65;
     color: var(--hero-ink-soft);
-    max-width: 40rem;
+    max-width: 35rem;
     margin: 0;
   }
 
