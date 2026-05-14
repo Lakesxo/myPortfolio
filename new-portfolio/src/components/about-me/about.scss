@@ -1,118 +1,222 @@
-.abtMewrapper,
-.abtMewrapperDark {
+.about {
+  // Light tokens (default)
+  --about-bg: #fafcfe;
+  --about-ink: #101828;
+  --about-ink-soft: #2a3242;
+  --about-muted: #6b7280;
+  --about-elev: #f0f3f7;
+  --about-hairline: rgba(16, 24, 40, 0.12);
+  --about-hairline-strong: rgba(16, 24, 40, 0.28);
+
+  position: relative;
+  background: var(--about-bg);
+  color: var(--about-ink);
+  padding: 2rem 0rem;
+  @media (max-width: 768px) {
+    padding: 0rem 0rem;
+  }
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
-}
-.abtMewrapperDark {
-  background-color: #061122;
-  background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702285932/three_ehzwtb.png");
-}
-.abtCont {
-  display: flex;
-  align-items: center;
-  padding: 7.4rem;
-  gap: 4.38rem;
-  width: 117rem;
-  img {
-    height: 650px;
+  &--dark {
+    --about-bg: #0d1727;
+    --about-ink: #ffffff;
+    --about-ink-soft: #d8dce4;
+    --about-muted: #9aa3b2;
+    --about-elev: #142036;
+    --about-hairline: rgba(255, 255, 255, 0.1);
+    --about-hairline-strong: rgba(255, 255, 255, 0.3);
   }
-  .details {
-    p.meet,
-    p.meetDark {
-      color: #0e121b;
-      font-family: Outfit;
-      font-size: 2rem;
-      font-weight: 600;
-      line-height: 1.5rem;
-    }
-    p.meetDark {
-      color: #fff;
-    }
-    p.deetsT,
-    p.deetsTDark {
-      margin-top: 30px;
-      color: #0e121b;
-    }
-    p.deetsTDark {
-      color: #bdbdbd;
-    }
-  }
-}
 
-@media (min-width: 1024px) and (max-width: 1240px) {
-  .abtCont {
-    padding: 6.5rem;
-    img {
-      height: 450px;
+  &__inner {
+    max-width: 117rem;
+    width: 100%;
+    padding: 0rem 8.875rem 0rem 8.125rem;
+    @media (max-width: 768px) {
+      padding: 0rem 1.31rem 0rem 1.31rem;
     }
-  }
-}
-
-@media (min-width: 821px) and (max-width: 1023px) {
-  .abtCont {
-    padding: 4rem;
+    display: flex;
     flex-direction: column;
-    img {
-      height: 450px;
+    justify-content: center;
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+
+  &__intro {
+    display: grid;
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    max-width: 48rem;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--about-muted);
+  }
+
+  &__eyebrow-mark {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1px;
+    background: var(--about-hairline-strong);
+  }
+
+  &__title {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--about-ink);
+    margin: 0;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+
+  &__portrait {
+    margin: 0;
+    width: 100%;
+    position: sticky;
+    top: clamp(2rem, 10vh, 6rem);
+  }
+
+  &__portrait-frame {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin: 0 auto;
+    user-select: none;
+    will-change: transform;
+  }
+
+  &__entries {
+    display: grid;
+    gap: clamp(2.5rem, 4vw, 3.5rem);
+  }
+
+  &__entry {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__entry-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--about-hairline);
+  }
+
+  &__entry-index {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--about-muted);
+    line-height: 1;
+    min-width: 1.75rem;
+  }
+
+  &__entry-rule {
+    flex-shrink: 0;
+    width: clamp(1.5rem, 3vw, 2.5rem);
+    height: 1px;
+    background: var(--about-hairline-strong);
+  }
+
+  &__entry-label {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--about-ink);
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__entry-body {
+    font-family: "Mulish", sans-serif;
+    font-size: clamp(1rem, 1.1vw, 1.075rem);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--about-ink-soft);
+    margin: 0;
+    max-width: 38rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    &__body {
+      grid-template-columns: 1fr;
+      gap: clamp(2rem, 5vw, 3rem);
+    }
+
+    &__portrait {
+      position: static;
+      max-width: 22rem;
     }
   }
 }
 
-@media (min-width: 481px) and (max-width: 820px) {
-  .abtCont {
-    flex-direction: column;
-    width: unset;
-    padding: 3rem 4rem;
-    img {
-      height: 460px;
+@media (max-width: 560px) {
+  .about {
+    &__entries {
+      gap: 2rem;
+    }
+
+    &__entry-head {
+      gap: 0.75rem;
+    }
+
+    &__entry-rule {
+      width: 1.5rem;
     }
   }
 }
 
-@media (min-width: 481px) and (max-width: 528px) {
-  .abtCont {
-    padding: 3rem 1.5rem;
-  }
-}
+// Small mobile (≤360px) — minimum viable padding.
+@media (max-width: 360px) {
+  .about {
+    &__portrait {
+      max-width: 100%;
+    }
 
-@media (max-width: 480px) {
-  .abtCont {
-    flex-direction: column;
-    width: unset;
-    padding: 3rem 1.31rem;
-    img {
-      height: 360px;
+    &__entry-body {
+      font-size: 0.975rem;
     }
   }
 }
 
-@media (max-width: 370px) {
-  .abtCont {
-    padding: 3rem 1rem;
-    img {
-      height: 300px;
-    }
-    .details {
-      p.meet,
-      p.meetDark {
-        font-size: 1.7rem;
-      }
-    }
-  }
-}
-
-@media (max-width: 290px) {
-  .abtCont {
-    padding: 3rem 1rem;
-    img {
-      height: 260px;
-    }
-    .details {
-      p.meet,
-      p.meetDark {
-        font-size: 1.45rem;
-      }
+@media (prefers-reduced-motion: reduce) {
+  .about {
+    &__portrait-img {
+      transition: none !important;
+      animation: none !important;
     }
   }
 }

@@ -8,6 +8,218 @@
     gap: 7.5rem;
   }
 }
+
+.projects-more {
+  --projects-more-ink: #101828;
+  --projects-more-muted: #545b6a;
+  --projects-more-stroke: rgba(16, 24, 40, 0.32);
+  --projects-more-stroke-soft: rgba(16, 24, 40, 0.12);
+  --projects-more-surface: #ffffff;
+  --projects-more-accent: #135fdc;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 6rem auto 0;
+  padding: 0 clamp(1.5rem, 6vw, 6rem);
+  max-width: 1400px;
+  text-align: center;
+}
+
+.projectWrapperDark .projects-more {
+  --projects-more-ink: #ffffff;
+  --projects-more-muted: #b9bcc1;
+  --projects-more-stroke: rgba(255, 255, 255, 0.32);
+  --projects-more-stroke-soft: rgba(255, 255, 255, 0.12);
+  --projects-more-surface: #061122;
+  --projects-more-accent: #ffd58a;
+}
+
+// Small editorial count line: "04 / 06 · Showcased"
+.projects-more__count {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--projects-more-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.projects-more__count-num {
+  color: var(--projects-more-ink);
+  font-weight: 600;
+}
+
+.projects-more__count-sep {
+  opacity: 0.5;
+}
+
+.projects-more__count-label {
+  margin-left: 0.4rem;
+  padding-left: 0.85rem;
+  border-left: 1px solid var(--projects-more-stroke-soft);
+}
+
+// Outlined pill button that fills on hover.
+.projects-more__btn {
+  --projects-more-duration: 0.65s;
+  --projects-more-ease: cubic-bezier(0.65, 0, 0.35, 1);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1rem 1.1rem 1rem 2rem;
+  border: 1px solid var(--projects-more-stroke);
+  border-radius: 999px;
+  color: var(--projects-more-ink);
+  background: transparent;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition:
+    background-color var(--projects-more-duration) var(--projects-more-ease),
+    border-color var(--projects-more-duration) var(--projects-more-ease),
+    color var(--projects-more-duration) var(--projects-more-ease);
+
+  &:focus-visible {
+    outline: 2px solid var(--projects-more-accent);
+    outline-offset: 6px;
+  }
+}
+
+// Label sits inside a clip mask so the bottom clone is hidden until hover.
+.projects-more__btn-label {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.projects-more__btn-text {
+  display: block;
+  line-height: 1;
+  transition: transform var(--projects-more-duration) var(--projects-more-ease);
+
+  &--clone {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
+// Arrow inside its own little circular badge; the badge inverts on hover.
+.projects-more__btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--projects-more-stroke);
+  overflow: hidden;
+  flex-shrink: 0;
+  transition:
+    background-color var(--projects-more-duration) var(--projects-more-ease),
+    border-color var(--projects-more-duration) var(--projects-more-ease);
+}
+
+.projects-more__btn-arrow-icon {
+  display: inline-flex;
+  will-change: transform, opacity;
+
+  svg {
+    display: block;
+  }
+}
+
+// Hover gesture: button fills, text flips, arrow flies through horizontally.
+.projects-more__btn:hover {
+  background: var(--projects-more-ink);
+  border-color: var(--projects-more-ink);
+  color: var(--projects-more-surface);
+
+  .projects-more__btn-text {
+    transform: translateY(-100%);
+  }
+
+  .projects-more__btn-arrow {
+    background: var(--projects-more-surface);
+    border-color: var(--projects-more-surface);
+  }
+
+  .projects-more__btn-arrow-icon {
+    color: var(--projects-more-ink);
+    animation: projects-more-arrow-fly var(--projects-more-duration)
+      var(--projects-more-ease) forwards;
+  }
+}
+
+@keyframes projects-more-arrow-fly {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+  45.001% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projects-more__btn,
+  .projects-more__btn-text,
+  .projects-more__btn-arrow,
+  .projects-more__btn-arrow-icon {
+    transition: none !important;
+    animation: none !important;
+  }
+  .projects-more__btn:hover .projects-more__btn-text {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .projects-more {
+    margin-top: 4rem;
+    gap: 1.25rem;
+  }
+
+  .projects-more__btn {
+    padding: 0.9rem 1rem 0.9rem 1.6rem;
+    gap: 0.9rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+  }
+
+  .projects-more__btn-arrow {
+    width: 30px;
+    height: 30px;
+  }
+}
+.projectContainer {
+  background-color: #fff;
+}
 .projectContainerDark,
 .projectWrapperDark {
   background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1702285932/three_ehzwtb.png");
@@ -18,6 +230,7 @@
   display: flex;
   justify-content: center;
   background-image: url("https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700223294/Vector-bg_ijfifv.png");
+  background-color: #fff;
 }
 .introWrapperDark {
   background-color: #061122;
