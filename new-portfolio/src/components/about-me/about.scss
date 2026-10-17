@@ -31,10 +31,8 @@
   &__inner {
     max-width: 117rem;
     width: 100%;
-    padding: 0rem 8.875rem 0rem 8.125rem;
-    @media (max-width: 768px) {
-      padding: 0rem 1.31rem 0rem 1.31rem;
-    }
+    min-width: 0;
+    padding: 0 clamp(1.25rem, 6vw, 8.875rem) clamp(3.5rem, 8vw, 6.5rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,7 +176,8 @@
 
     &__portrait {
       position: static;
-      max-width: 22rem;
+      max-width: min(22rem, 100%);
+      justify-self: start;
     }
   }
 }
@@ -199,7 +198,7 @@
   }
 }
 
-// Small mobile (≤360px) — minimum viable padding.
+// Small mobile (≤360px) - minimum viable padding.
 @media (max-width: 360px) {
   .about {
     &__portrait {

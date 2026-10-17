@@ -219,9 +219,10 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
           <span className="pjc__media">
             <img
               src={image}
-              alt={`${projectName} preview`}
+              alt={`${projectName} project preview by Ridwan Ajanaku`}
               className="pjc__image"
               loading="lazy"
+              decoding="async"
               draggable={false}
             />
             <span className="pjc__live" aria-hidden="true">

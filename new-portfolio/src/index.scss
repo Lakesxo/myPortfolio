@@ -9,24 +9,28 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+body {
+  overflow-x: clip;
+  min-width: 0;
+}
+img,
+svg,
+video {
+  max-width: 100%;
 }
 .route-switch-screen,
 .route-switch-screen-dark {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: #a6c0ea;
   z-index: 2000;
+  pointer-events: none;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 .route-switch-screen-dark {
   background-color: #3773d4;
-}
-
-@media (max-width: 768px) {
-  .route-switch-screen,
-  .route-switch-screen-dark {
-    transition: 0.8s ease-in-out;
-  }
 }

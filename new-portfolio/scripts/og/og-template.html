@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./fonts-local.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #061122;
+        color: #ffffff;
+        font-family: "Outfit", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .canvas {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        background:
+          radial-gradient(
+            900px 520px at 18% 20%,
+            rgba(19, 95, 220, 0.14),
+            transparent 55%
+          ),
+          radial-gradient(
+            700px 480px at 88% 70%,
+            rgba(255, 255, 255, 0.05),
+            transparent 50%
+          ),
+          linear-gradient(180deg, #0a1830 0%, #061122 55%, #040c18 100%);
+        overflow: hidden;
+      }
+
+      /* Faint technical grid - atmosphere, not decoration noise */
+      .canvas::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: radial-gradient(ellipse at 30% 40%, #000 10%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .copy {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 56px 20px 52px 68px;
+        min-width: 0;
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .mark {
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        background: #135fdc;
+        box-shadow: 0 0 0 4px rgba(19, 95, 220, 0.18);
+      }
+
+      .domain {
+        font-family: "Mulish", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        padding-bottom: 8px;
+      }
+
+      .name {
+        font-size: 92px;
+        font-weight: 600;
+        line-height: 0.92;
+        letter-spacing: -0.04em;
+      }
+
+      .name span {
+        display: block;
+      }
+
+      .role {
+        font-family: "Mulish", sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        color: #c5ccd8;
+        letter-spacing: -0.01em;
+      }
+
+      .rule {
+        width: 48px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.28);
+        margin-top: 2px;
+      }
+
+      .pitch {
+        max-width: 420px;
+        font-family: "Mulish", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.55);
+      }
+
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-family: "Mulish", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.42);
+      }
+
+      .meta span + span::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.28);
+        margin-right: 18px;
+        transform: translateY(-2px);
+      }
+
+      .visual {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 56px;
+      }
+
+      /* Soft light behind the portrait */
+      .visual::before {
+        content: "";
+        position: absolute;
+        width: 460px;
+        height: 460px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(19, 95, 220, 0.22) 0%,
+          rgba(19, 95, 220, 0.05) 45%,
+          transparent 70%
+        );
+        filter: blur(2px);
+      }
+
+      .portrait-shell {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        /* Hairline ring - concentric with the photo’s own border */
+        outline: 1px solid rgba(255, 255, 255, 0.1);
+        outline-offset: 14px;
+        filter: drop-shadow(0 32px 64px rgba(0, 0, 0, 0.5));
+      }
+
+      .portrait {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <section class="copy">
+        <div class="top">
+          <span class="mark" aria-hidden="true"></span>
+          <p class="domain">olakunle.dev</p>
+        </div>
+
+        <div class="main">
+          <h1 class="name">
+            <span>Ridwan</span>
+            <span>Ajanaku</span>
+          </h1>
+          <p class="role">Frontend Software Engineer</p>
+          <div class="rule" aria-hidden="true"></div>
+          <p class="pitch">
+            Building performant, accessible interfaces that scale.
+          </p>
+        </div>
+
+        <p class="meta">
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>UI Engineering</span>
+        </p>
+      </section>
+
+      <aside class="visual" aria-hidden="true">
+        <div class="portrait-shell">
+          <img class="portrait" src="./portrait.png" alt="" />
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

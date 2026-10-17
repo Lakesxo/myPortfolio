@@ -15,7 +15,9 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
   const location = useLocation();
   const [position, setPosition] = useState(window.scrollY);
   const [visible, setVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 820);
+  const [isMobile, setIsMobile] = useState<boolean>(
+    () => window.innerWidth <= 900
+  );
   const [showScrollUpButton, setShowScrollUpButton] = useState<boolean>(false);
   const theme = useContext(ThemeContext);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -38,15 +40,10 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
   });
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth <= 900);
-    });
-    return () => {
-      window.removeEventListener("resize", () => {
-        setIsMobile(window.innerWidth <= 900);
-      });
-    };
-  });
+    const onResize = () => setIsMobile(window.innerWidth <= 900);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const handleNavClick = (path: string) => {
     navigate(path);

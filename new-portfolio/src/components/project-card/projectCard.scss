@@ -12,22 +12,17 @@
   display: grid;
   gap: clamp(2rem, 4vw, 3rem);
   position: relative;
-  padding: 0rem 7.75rem 5rem 7.875rem;
+  padding: 0 clamp(1.25rem, 6vw, 7.875rem) clamp(2.5rem, 5vw, 5rem);
   border-bottom: 1px solid var(--pjc-hairline);
   width: 100%;
+  max-width: 117rem;
+  margin-inline: auto;
+  min-width: 0;
   isolation: isolate;
 
   @media (min-width: 2040px) {
-    padding: 0px;
+    padding: 0;
     border-bottom: none;
-  }
-
-  @media (max-width: 1024px) {
-    padding: 3rem 5rem;
-  }
-
-  @media (max-width: 768px) {
-    padding: 2rem 3rem;
   }
 
   // Last card in the list has no terminator rule
@@ -163,6 +158,7 @@
     position: absolute;
     inset: -5% -3%;
     width: calc(100% + 6%);
+    max-width: none;
     height: calc(100% + 10%);
     object-fit: cover;
     object-position: left bottom;
@@ -205,7 +201,7 @@
     gap: 1.5rem;
   }
 
-  // Title — split into char masks for the rise animation
+  // Title - split into char masks for the rise animation
   &__title {
     margin: 0;
     font-family: "Outfit", sans-serif;
@@ -406,7 +402,7 @@
     animation: none !important;
   }
 
-  // Pin the flip in its rest state — top text visible, clone hidden.
+  // Pin the flip in its rest state - top text visible, clone hidden.
   .pjc__cta:hover .pjc__cta-text {
     transform: none !important;
   }

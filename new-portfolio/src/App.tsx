@@ -6,6 +6,7 @@ import Works from "./pages/Works";
 import { createContext, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import React from "react";
+import usePageMeta from "./hooks/usePageMeta";
 
 interface AppProps {}
 
@@ -31,7 +32,7 @@ const getInitialTheme = (): boolean => {
     if (stored === "dark") return true;
     if (stored === "light") return false;
   } catch {
-    // Storage access failed — fall through to system preference.
+    // Storage access failed - fall through to system preference.
   }
   return (
     window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false
@@ -40,6 +41,9 @@ const getInitialTheme = (): boolean => {
 
 const App: React.FunctionComponent<AppProps> = () => {
   const [isDarkmode, setIsDarkMode] = useState<boolean>(getInitialTheme);
+  const location = useLocation();
+
+  usePageMeta();
 
   useEffect(() => {
     try {
@@ -48,7 +52,7 @@ const App: React.FunctionComponent<AppProps> = () => {
         isDarkmode ? "dark" : "light"
       );
     } catch {
-      // Storage write failed — non-fatal.
+      // Storage write failed - non-fatal.
     }
     document.documentElement.style.backgroundColor = isDarkmode
       ? HTML_BG_DARK
@@ -77,8 +81,6 @@ const App: React.FunctionComponent<AppProps> = () => {
       element: <Works />,
     },
   ]);
-
-  const location = useLocation();
 
   if (!element) return null;
 
