@@ -31,6 +31,15 @@ const ArrowRight = ({ size = 14 }: { size?: number }) => (
 
 export const projects = [
   {
+    name: "Celebreet",
+    description:
+      "Celebreet lets people build private celebration pages with photos, video, music, and messages, then share one lasting link for birthdays, anniversaries, and everything in between.",
+    image: "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1792218292/5a3631b5-be94-432b-8b7f-f4b5f0d9137c_zqhfdy.png",
+    url: "https://celebreet.com",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    role: "Software Engineer",
+  },
+  {
     name: "Dynasty Africa",
     description:
       "Dynasty Africa is a full-service creative and marketing agency that helps brands grow through digital marketing, influencer campaigns, media production, branding, PR, and tech-driven creative solutions focused on culturally impactful storytelling.",
@@ -51,6 +60,16 @@ export const projects = [
     role: "Software Engineer",
   },
   {
+    name: "Free QR Code",
+    description:
+      "Free QR Code is a browser-only tool that turns any link into a scannable QR. Paste a URL, preview instantly, and download a PNG. Nothing leaves your device.",
+    image:
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1792218795/a1616f61-bce5-443b-825a-baf1f6681819_uzbwxr.png",
+    url: "https://freeqr-code.netlify.app/",
+    techStack: ["React", "TypeScript", "Vite", "Netlify"],
+    role: "Software Engineer",
+  },
+  {
     name: "Cuvris",
     description:
       "Cuvris is a health compliance platform that helps organizations stay aligned with regulatory standards by simplifying compliance workflows, risk tracking, and documentation.",
@@ -66,7 +85,7 @@ export const projects = [
       "PostgreSQL",
       "Azure",
     ],
-    role: "Fullstack Engineer",
+    role: "Software Engineer",
   },
   {
     name: "SunFi",

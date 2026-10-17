@@ -54,9 +54,11 @@
   &__main {
     display: flex;
     justify-content: space-between;
-    padding: 4.375rem 8.875rem 6rem 8.125rem;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    padding: 4.375rem clamp(1.25rem, 6vw, 8.875rem) 6rem;
     width: 100%;
     max-width: 117rem;
+    min-width: 0;
   }
 
   // Text column: padded to align with the top band, vertically centered.
@@ -65,6 +67,8 @@
     flex-direction: column;
     justify-content: center;
     gap: clamp(1.25rem, 2.5vw, 2rem);
+    min-width: 0;
+    flex: 1 1 18rem;
   }
 
   &__title {
@@ -77,6 +81,7 @@
     margin: 0;
     display: grid;
     gap: clamp(0.05rem, 0.3vw, 0.25rem);
+    overflow-wrap: anywhere;
   }
 
   &__title-mask {
@@ -216,10 +221,9 @@
     position: relative;
     margin: 0;
     height: 100%;
-    @media (max-width: 768px) {
-      height: 350px;
-      display: none;
-    }
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: min(100%, 34rem);
   }
 
   &__portrait-frame {
@@ -231,9 +235,12 @@
 
   &__portrait-img {
     height: 550px;
+    width: auto;
+    max-width: 100%;
     display: block;
     user-select: none;
     will-change: transform;
+    object-fit: cover;
   }
 
   &__portrait-meta {
@@ -305,30 +312,21 @@
 
 @media (max-width: 1440px) {
   .hero {
-    &__main {
-      padding: 3.75rem 4.5rem 5rem 4.5rem;
-    }
-
     &__portrait-img {
-      height: 600px;
+      height: min(560px, 55vh);
     }
   }
 }
 
-// Laptop / small desktop (≤1200px) — text column was getting crushed.
+// Laptop / small desktop (≤1200px) - text column was getting crushed.
 @media (max-width: 1200px) {
   .hero {
-    &__main {
-      padding: 3rem 3rem 4.5rem 3rem;
-      gap: 2.5rem;
-    }
-
     &__title {
-      font-size: clamp(3.5rem, 7vw, 5.5rem);
+      font-size: clamp(3.25rem, 6.5vw, 5rem);
     }
 
     &__portrait-img {
-      height: 500px;
+      height: min(480px, 50vh);
     }
   }
 }
@@ -341,17 +339,18 @@
     &__main {
       flex-direction: column;
       justify-content: flex-start;
-      padding: 2.5rem 1.5rem 0;
+      padding: 2.5rem clamp(1.25rem, 4vw, 1.5rem) 0;
       gap: 2.5rem;
       max-width: none;
     }
 
     &__text {
       gap: 1.25rem;
+      flex: 1 1 auto;
     }
 
     &__title {
-      font-size: clamp(3rem, 11vw, 4.5rem);
+      font-size: clamp(2.75rem, 10vw, 4.5rem);
     }
 
     &__bio {
@@ -362,6 +361,7 @@
     &__portrait {
       order: -1;
       width: 100%;
+      max-width: none;
       height: auto;
     }
 
@@ -380,7 +380,7 @@
   }
 }
 
-// Mobile (≤560px) — square portrait, tightened actions row.
+// Mobile (≤560px) - square portrait, tightened actions row.
 @media (max-width: 560px) {
   .hero {
     &__main {
@@ -410,7 +410,7 @@
   }
 }
 
-// Small mobile (≤360px) — minimum viable padding and typography.
+// Small mobile (≤360px) - minimum viable padding and typography.
 @media (max-width: 360px) {
   .hero {
     &__main {

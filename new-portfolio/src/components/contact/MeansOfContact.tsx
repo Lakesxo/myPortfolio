@@ -19,8 +19,8 @@ const MeansOfContact: React.FunctionComponent<MeansOfContactProps> = () => {
       icon: theme.isDarkmode ? <GmailDarkIcon /> : <GmailIcon />,
       appText: "Send me an email",
       appDetails: (
-        <a href="mailto:lakes.ajanaku@gmail.com" aria-label="send lakes a mail">
-          lakes.ajanaku@gmail.com
+        <a href="mailto:ridwan@olakunle.dev" aria-label="send lakes a mail">
+          ridwan@olakunle.dev
         </a>
       ),
     },

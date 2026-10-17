@@ -1,4 +1,6 @@
 .socialswrapper {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(0.85rem, 2vw, 1.5rem);
 }

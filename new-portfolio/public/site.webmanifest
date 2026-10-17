@@ -1,0 +1,24 @@
+{
+  "name": "Ridwan Ajanaku, Frontend Software Engineer",
+  "short_name": "Ridwan Ajanaku",
+  "description": "Portfolio of Ridwan Ajanaku, a Frontend Engineer building performant, accessible web experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#061122",
+  "theme_color": "#061122",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1700482039/final_jwalyu.png",
+      "type": "image/png",
+      "sizes": "75x75",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.jpg",
+      "type": "image/jpeg",
+      "sizes": "180x180",
+      "purpose": "any"
+    }
+  ]
+}

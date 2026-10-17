@@ -3,22 +3,27 @@
   position: relative;
   margin-bottom: 5.5em;
   text-align: center;
+  padding-inline: 1rem;
+
   p.headName {
     color: #101828;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-style: normal;
     font-weight: 600;
   }
+
   .headLine {
     border-radius: 2px;
     background: #bfc7d7;
     height: 4px;
     width: 50px;
     position: absolute;
-    top: 45px;
-    left: 48%;
+    top: calc(100% + 0.65rem);
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
+
 .headingWrapperDark {
   p.headName {
     color: #fff;
@@ -29,8 +34,5 @@
   .headingWrapper,
   .headingWrapperDark {
     margin-bottom: 3rem;
-    .headLine {
-      left: 43%;
-    }
   }
 }

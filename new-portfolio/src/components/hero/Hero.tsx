@@ -181,9 +181,10 @@ const Hero: React.FunctionComponent = () => {
               <img
                 className="hero__portrait-img"
                 src={PORTRAIT_SRC}
-                alt="Portrait of Ridwan Ajanaku"
+                alt="Portrait of Ridwan Ajanaku, Frontend Software Engineer"
                 draggable={false}
                 loading="eager"
+                decoding="async"
               />
             </div>
           </figure>

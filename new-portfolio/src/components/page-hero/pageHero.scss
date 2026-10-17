@@ -4,73 +4,105 @@
   display: flex;
   justify-content: center;
   background: #fafcfe;
-  margin-top: 6.5rem;
+  // padding (not margin) so section bg fills under the fixed header -
+  // margin left a strip of the darker body color (#061122) showing through
+  padding-top: 6.5rem;
+  overflow: hidden;
+
   img {
     position: absolute;
     z-index: 1;
     width: 100%;
     height: 100%;
+    max-width: none;
+    object-fit: cover;
+    pointer-events: none;
   }
 }
+
 .pageHeroWrapperDark {
   background-color: #0d1727;
 }
+
 .pageHeroContainer {
-  padding: 7.5rem 8.875rem 6rem 8.125rem;
-  width: 117rem;
+  // Match the reference: airy top, left content stack, corner accents
+  padding: 7.5rem clamp(1.5rem, 6vw, 8.875rem) 6rem clamp(1.5rem, 6vw, 8.125rem);
+  width: 100%;
+  max-width: 117rem;
   position: relative;
+  min-width: 0;
+
   .topText,
   .topTextDark {
     display: flex;
     align-items: center;
     gap: 15px;
   }
+
   .topTextDark {
     color: #bdbdbd;
   }
+
   p.heading,
   p.headingDark {
+    // Stay under the strip bg image (z-index: 1) so the line texture overlays the type
     color: #101828;
-    font-family: Outfit;
-    font-size: 8rem;
+    font-family: Outfit, sans-serif;
+    font-size: clamp(2.5rem, 8vw, 8rem);
     font-weight: 700;
-    line-height: 4.6875rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    // Reference rhythm: modest gap after eyebrow, large gap before description
     margin: 1.5rem 0 4.25rem 0;
+    word-break: break-word;
   }
+
   p.headingDark {
     color: #fff;
   }
+
   .extraTextCont {
     display: flex;
     align-items: center;
     gap: 5px;
+    max-width: 36rem;
   }
+
   p.extraText,
   p.extraTextDark {
     color: #101828;
-    font-family: Mulish;
+    font-family: Mulish, sans-serif;
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.75rem;
   }
+
   p.extraTextDark {
     color: #bdbdbd;
   }
+
   .purpleRects,
   .goldRects,
   .greenRects {
     position: absolute;
+    z-index: 2;
+    pointer-events: none;
   }
+
+  // Reference placement: purple above-left, gold top-right, green lower-right
   .purpleRects {
     top: 40px;
+    left: clamp(1.5rem, 6vw, 8.125rem);
   }
+
   .goldRects {
-    top: 330px;
-    right: 650px;
-  }
-  .greenRects {
     top: 60px;
-    right: 350px;
+    right: clamp(2rem, 18vw, 350px);
+  }
+
+  .greenRects {
+    top: 330px;
+    right: clamp(2rem, 28vw, 650px);
   }
 }
 
@@ -84,66 +116,81 @@
 
 @media (min-width: 1024px) and (max-width: 1400px) {
   .pageHeroContainer {
-    padding: 7.5rem 8.875rem 6rem 6rem;
     p.heading,
     p.headingDark {
       font-size: 5.5rem;
     }
+
     .goldRects {
-      right: 220px;
-    }
-    .greenRects {
       right: 200px;
+    }
+
+    .greenRects {
+      right: 220px;
     }
   }
 }
 
 @media (min-width: 835px) and (max-width: 1023px) {
   .pageHeroContainer {
-    padding: 7.5rem 4rem 6rem 4rem;
+    padding: 7.5rem 4rem 6rem;
+
     p.heading,
     p.headingDark {
       font-size: 5rem;
+      margin: 1.5rem 0 3.5rem 0;
     }
+
     .goldRects {
+      right: 200px;
+      top: 60px;
+    }
+
+    .greenRects {
       right: 150px;
       top: 370px;
-    }
-    .greenRects {
-      right: 200px;
     }
   }
 }
 
 @media (min-width: 481px) and (max-width: 834px) {
   .pageHeroContainer {
-    padding: 7.5rem 4rem 6rem 4rem;
+    padding: 7.5rem 4rem 6rem;
+
     p.heading,
     p.headingDark {
       font-size: 4rem;
-      margin: 1rem 0 1rem 0;
+      margin: 1.25rem 0 2.75rem 0;
     }
+
     p.extraText,
     p.extraTextDark {
-      font-size: 0.875rem;
+      font-size: 0.95rem;
     }
+
+    .purpleRects {
+      top: 28px;
+      left: 4rem;
+    }
+
+    .goldRects {
+      top: 40px;
+      right: 2rem;
+    }
+
+    .greenRects {
+      top: auto;
+      bottom: 2.5rem;
+      right: 2rem;
+    }
+
     .purpleRects,
     .goldRects,
     .greenRects {
       svg {
         height: 28px;
+        width: auto;
       }
-    }
-    .purpleRects {
-      top: 60px;
-    }
-    .goldRects {
-      top: 30px;
-      right: 30px;
-    }
-    .greenRects {
-      top: 320px;
-      right: 90px;
     }
   }
 }
@@ -152,7 +199,7 @@
   .pageHeroContainer {
     p.heading,
     p.headingDark {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
     }
   }
 }
@@ -160,42 +207,51 @@
 @media (max-width: 480px) {
   .pageHeroWrapper,
   .pageHeroWrapperDark {
-    margin-top: 5.4rem;
+    padding-top: 5.4rem;
+
     img {
-      position: absolute;
-      z-index: 1;
-      width: 100%;
       height: 350px;
     }
   }
+
   .pageHeroContainer {
-    padding: 7.5rem 1.31rem 6rem 1.31rem;
+    padding: 6.5rem 1.31rem 5rem;
+
     p.heading,
     p.headingDark {
       font-size: 2.5rem;
-      margin: 1rem 0 1rem 0;
+      margin: 1.25rem 0 2.5rem 0;
     }
+
     p.extraText,
     p.extraTextDark {
-      font-size: 0.875rem;
+      font-size: 0.95rem;
+      line-height: 1.6rem;
     }
+
+    .purpleRects {
+      top: 24px;
+      left: 1.31rem;
+    }
+
+    .goldRects {
+      top: 32px;
+      right: 1.25rem;
+    }
+
+    .greenRects {
+      top: auto;
+      bottom: 2rem;
+      right: 1.25rem;
+    }
+
     .purpleRects,
     .goldRects,
     .greenRects {
       svg {
-        height: 28px;
+        height: 26px;
+        width: auto;
       }
-    }
-    .purpleRects {
-      top: 60px;
-    }
-    .goldRects {
-      top: 30px;
-      right: 30px;
-    }
-    .greenRects {
-      top: 320px;
-      right: 90px;
     }
   }
 }
@@ -205,15 +261,6 @@
     p.heading,
     p.headingDark {
       font-size: 2.2rem;
-      margin: 0;
-    }
-    p.extraText,
-    p.extraTextDark {
-      font-size: 0.9rem;
-    }
-    .greenRects {
-      top: 310px;
-      right: 90px;
     }
   }
 }
@@ -222,30 +269,7 @@
   .pageHeroContainer {
     p.heading,
     p.headingDark {
-      font-size: 1.7rem;
-    }
-    p.extraText,
-    p.extraTextDark {
-      font-size: 0.9rem;
-    }
-  }
-}
-
-@media (max-width: 290px) {
-  .pageHeroContainer {
-    padding: 7rem 0.9rem 5rem 0.9rem;
-    p.heading,
-    p.headingDark {
-      font-size: 1.7rem;
-      margin: 0;
-    }
-    p.extraText,
-    p.extraTextDark {
-      font-size: 0.9rem;
-    }
-    .greenRects {
-      top: 300px;
-      right: 50px;
+      font-size: 1.85rem;
     }
   }
 }

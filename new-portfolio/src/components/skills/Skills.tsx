@@ -54,7 +54,7 @@ const categories: Category[] = [
     ],
   },
   {
-    label: "Frameworks & Libraries",
+    label: "Frameworks & libraries",
     items: [
       { name: "React", icon: <ReactIcon /> },
       { name: "Next.js", icon: <NextIcon /> },
@@ -69,7 +69,7 @@ const categories: Category[] = [
     ],
   },
   {
-    label: "Tooling & Platforms",
+    label: "Tooling & platforms",
     items: [
       { name: "Git", icon: <GitIcon /> },
       { name: "Webpack", icon: <WebpackIcon /> },
@@ -101,7 +101,7 @@ const Skills: React.FunctionComponent = () => {
         autoAlpha: 0,
         duration: 0.85,
         ease: "power3.out",
-        stagger: 0.08,
+        stagger: 0.1,
         scrollTrigger: {
           trigger: ".skills__intro",
           start: "top 88%",
@@ -115,15 +115,15 @@ const Skills: React.FunctionComponent = () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: cat,
-            start: "top 82%",
+            start: "top 84%",
           },
         });
 
         if (head) {
           tl.from(head, {
-            y: 22,
+            y: 20,
             autoAlpha: 0,
-            duration: 0.7,
+            duration: 0.65,
             ease: "power3.out",
           });
         }
@@ -131,13 +131,13 @@ const Skills: React.FunctionComponent = () => {
         tl.from(
           items,
           {
-            y: 18,
+            y: 14,
             autoAlpha: 0,
-            duration: 0.55,
+            duration: 0.5,
             ease: "power2.out",
-            stagger: 0.045,
+            stagger: 0.035,
           },
-          "-=0.35"
+          "-=0.3"
         );
       });
     },
@@ -150,25 +150,39 @@ const Skills: React.FunctionComponent = () => {
       className={`skills ${theme.isDarkmode ? "skills--dark" : "skills--light"}`}
       aria-labelledby="skills-title"
     >
+      <div className="skills__atmosphere" aria-hidden="true" />
+
       <div className="skills__inner">
         <header className="skills__intro">
+          <p className="skills__eyebrow">
+            <span className="skills__eyebrow-mark" aria-hidden="true" />
+            Toolkit
+          </p>
           <h2 className="skills__title" id="skills-title">
             Languages, libraries, and tools I work with daily.
           </h2>
+          <p className="skills__lede">
+            A working set shaped by shipping products, not a checklist of
+            everything I've tried once.
+          </p>
         </header>
 
         <div className="skills__list">
           {categories.map((cat, i) => (
-            <article className="skills__category" key={cat.label}>
+            <article
+              className={`skills__category skills__category--${i + 1}`}
+              key={cat.label}
+            >
               <header className="skills__cat-head">
                 <span className="skills__cat-index" aria-hidden="true">
                   {(i + 1).toString().padStart(2, "0")}
                 </span>
-                <span className="skills__cat-rule" aria-hidden="true" />
-                <h3 className="skills__cat-label">{cat.label}</h3>
+                <div className="skills__cat-meta">
+                  <h3 className="skills__cat-label">{cat.label}</h3>
+                </div>
               </header>
 
-              <ul className="skills__grid">
+              <ul className="skills__flow">
                 {cat.items.map((item) => (
                   <li className="skills__item" key={item.name}>
                     <span className="skills__icon" aria-hidden="true">

@@ -62,7 +62,7 @@ const AboutMe: React.FunctionComponent = () => {
         return;
       }
 
-      // Intro (eyebrow + title) — fade up on entry.
+      // Intro (eyebrow + title) - fade up on entry.
       gsap.from(".about__intro > *", {
         y: 24,
         autoAlpha: 0,
@@ -75,7 +75,7 @@ const AboutMe: React.FunctionComponent = () => {
         },
       });
 
-      // Portrait — clip-mask reveal + slow image zoom-out, matching Hero.
+      // Portrait - clip-mask reveal + slow image zoom-out, matching Hero.
       gsap.from(".about__portrait-frame", {
         clipPath: "inset(100% 0 0 0)",
         duration: 1.1,
@@ -95,7 +95,7 @@ const AboutMe: React.FunctionComponent = () => {
         },
       });
 
-      // Entries — each head + body fade up in sequence when scrolled into view.
+      // Entries - each head + body fade up in sequence when scrolled into view.
       gsap.utils.toArray<HTMLElement>(".about__entry").forEach((entry) => {
         const head = entry.querySelector(".about__entry-head");
         const body = entry.querySelector(".about__entry-body");
@@ -154,9 +154,12 @@ const AboutMe: React.FunctionComponent = () => {
               <img
                 className="about__portrait-img"
                 src={PORTRAIT_SRC}
-                alt="Portrait of Ridwan Ajanaku"
+                alt="Portrait of Ridwan Ajanaku, Frontend Software Engineer"
+                width={560}
+                height={700}
                 draggable={false}
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </figure>
