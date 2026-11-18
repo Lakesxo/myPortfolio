@@ -60,12 +60,12 @@ export const projects = [
     role: "Software Engineer",
   },
   {
-    name: "Free QR Code",
+    name: "QRbie",
     description:
-      "Free QR Code is a browser-only tool that turns any link into a scannable QR. Paste a URL, preview instantly, and download a PNG. Nothing leaves your device.",
+      "QRbie is a browser-only tool that turns any link into a scannable QR. Paste a URL, preview instantly, and download a PNG. Nothing leaves your device.",
     image:
-      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1792218795/a1616f61-bce5-443b-825a-baf1f6681819_uzbwxr.png",
-    url: "https://freeqr-code.netlify.app/",
+      "https://res.cloudinary.com/dt9pwfpi5/image/upload/v1794995592/Frame_38158_zj50ed.png",
+    url: "https://qrbie.netlify.app/",
     techStack: ["React", "TypeScript", "Vite", "Netlify"],
     role: "Software Engineer",
   },
